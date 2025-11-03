@@ -1,0 +1,12 @@
+/.quarto/
+/_site/
+/.DS_Store
+
+# R/RStudio
+.Rproj.user/
+.Rhistory
+.RData
+
+# Quarto cache and resource directories
+*_cache/
+*_files/

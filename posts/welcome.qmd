@@ -1,0 +1,48 @@
+---
+title: "Welcome to My Blog"
+author: "Clarke Bishop"
+date: "2025-11-01"
+categories: [announcement]
+description: "Introducing a new resource for technical leadership and AI implementation insights"
+---
+
+## From Pilot to Production
+
+Welcome to my blog. After 26 years building systems that scale, I'm sharing insights on turning AI experiments into production-ready solutions.
+
+### What You'll Find Here
+
+This blog focuses on practical, actionable guidance for:
+
+- **AI Implementation**: Moving from proof-of-concept to production
+- **Technical Leadership**: Building and scaling engineering teams
+- **System Architecture**: Designing systems that handle real-world load
+- **ROI Measurement**: Demonstrating value from technical initiatives
+
+### The Challenge
+
+Too many organizations get stuck in the "pilot phase" with AI. They have interesting demos but can't get to production. The gap isn't technology—it's execution.
+
+### My Approach
+
+I help bridge that gap with:
+
+1. Specific, actionable guidance (not buzzwords)
+2. Focus on measurable outcomes
+3. Practical implementation strategies
+4. Real-world experience from 26+ years
+
+```python
+# Example: Simple AI validation pattern
+def validate_ai_output(result, threshold=0.85):
+    """Ensure AI outputs meet quality standards before production use."""
+    if result.confidence < threshold:
+        return fallback_to_human_review(result)
+    return result
+```
+
+Stay tuned for detailed posts on AI implementation, technical leadership, and building systems that scale.
+
+---
+
+*Connect with me on [LinkedIn](https://linkedin.com/in/yourprofile) to discuss your technical challenges.*

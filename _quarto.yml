@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "!docs/"
+
+website:
+  title: "Clarke Bishop"
+  description: "Fractional CTO | Turning AI Pilots into $2M+ Savings"
+  favicon: favicon.svg
+  navbar:
+    background: "#1E293B"
+    foreground: "#FFFFFF"
+    left:
+      - text: "Blog"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/clarkebishop/
+        aria-label: LinkedIn
+  page-footer:
+    center: "© 2025 Inbound Team, LLC."
+
+format:
+  html:
+    theme:
+      dark: [darkly, custom.scss]
+      light: [cosmo, custom.scss]
+    css: custom.scss
+    page-layout: article
+    toc: true
+    toc-depth: 3
+    code-fold: false
+    code-tools: true
+    code-copy: true
+    link-external-newwindow: true
+    smooth-scroll: true

@@ -1,0 +1,23 @@
+---
+title: "Clarke Bishop"
+subtitle: "Fractional CTO | Turning AI Pilots into $2M+ Savings"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+## Welcome
+
+After 26 years building systems that scale, I help mid-market companies turn AI experiments into production-ready solutions. No buzzwords—just specific, actionable guidance that gets your technical team from "pilot phase" to measurable ROI.
+
+This blog shares insights from my work helping organizations leverage AI and build scalable technical systems.
+
+---
+
+## Latest Posts

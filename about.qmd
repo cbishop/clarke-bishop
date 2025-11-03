@@ -1,0 +1,17 @@
+---
+title: "About Clarke Bishop"
+---
+
+## Fractional CTO
+
+After 26 years building systems that scale, I help mid-market companies turn AI experiments into production-ready solutions. No buzzwords—just specific, actionable guidance that gets your technical team from "pilot phase" to measurable ROI.
+
+### Experience
+
+- 26+ years building scalable technical systems
+- Specializing in AI implementation and production readiness
+- Helping organizations achieve measurable ROI from technical initiatives
+
+### Get in Touch
+
+Connect with me on [LinkedIn](https://www.linkedin.com/in/clarkebishop/) to discuss how I can help your organization scale its technical capabilities.
