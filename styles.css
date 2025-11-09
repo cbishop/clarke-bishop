@@ -325,6 +325,48 @@ ul.navbar-nav {
   display: flex;
   align-items: center;
   height: 100%;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Active/current page styling */
+.navbar .nav-link.active {
+  font-weight: 600;
+  color: #5B21B6;
+  background-color: rgba(124, 58, 237, 0.1);
+  border-radius: 6px;
+}
+
+.navbar .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background-color: #5B21B6;
+  border-radius: 2px 2px 0 0;
+}
+
+/* Hover state for non-active links */
+.navbar .nav-link:not(.active):hover {
+  background-color: rgba(124, 58, 237, 0.05);
+  border-radius: 6px;
+}
+
+/* Dark mode active link styling */
+.quarto-dark .navbar .nav-link.active {
+  color: #A78BFA;
+  background-color: rgba(167, 139, 250, 0.15);
+}
+
+.quarto-dark .navbar .nav-link.active::after {
+  background-color: #A78BFA;
+}
+
+.quarto-dark .navbar .nav-link:not(.active):hover {
+  background-color: rgba(167, 139, 250, 0.08);
 }
 
 .navbar .nav-link .bi-linkedin {
