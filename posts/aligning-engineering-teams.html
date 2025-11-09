@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Clarke Bishop">
+<meta name="dcterms.date" content="2025-11-04">
+<meta name="description" content="How to translate between technical teams and business goals to drive measurable impact">
+
+<title>ClarkeBishop.com - Aligning Engineering Teams with Business Goals: A Framework</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ClarkeBishop.com</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-misalignment-problem" id="toc-the-misalignment-problem" class="nav-link active" data-scroll-target="#the-misalignment-problem">The Misalignment Problem</a></li>
+  <li><a href="#why-misalignment-happens" id="toc-why-misalignment-happens" class="nav-link" data-scroll-target="#why-misalignment-happens">Why Misalignment Happens</a></li>
+  <li><a href="#the-framework-five-pillars-of-alignment" id="toc-the-framework-five-pillars-of-alignment" class="nav-link" data-scroll-target="#the-framework-five-pillars-of-alignment">The Framework: Five Pillars of Alignment</a>
+  <ul class="collapse">
+  <li><a href="#pillar-1-shared-context-business-literacy" id="toc-pillar-1-shared-context-business-literacy" class="nav-link" data-scroll-target="#pillar-1-shared-context-business-literacy">Pillar 1: Shared Context &amp; Business Literacy</a></li>
+  <li><a href="#pillar-2-translate-between-technical-and-business" id="toc-pillar-2-translate-between-technical-and-business" class="nav-link" data-scroll-target="#pillar-2-translate-between-technical-and-business">Pillar 2: Translate Between Technical and Business</a></li>
+  <li><a href="#pillar-3-ruthless-prioritization" id="toc-pillar-3-ruthless-prioritization" class="nav-link" data-scroll-target="#pillar-3-ruthless-prioritization">Pillar 3: Ruthless Prioritization</a></li>
+  <li><a href="#pillar-4-measure-outcomes-not-activity" id="toc-pillar-4-measure-outcomes-not-activity" class="nav-link" data-scroll-target="#pillar-4-measure-outcomes-not-activity">Pillar 4: Measure Outcomes, Not Activity</a></li>
+  <li><a href="#pillar-5-continuous-feedback-iteration" id="toc-pillar-5-continuous-feedback-iteration" class="nav-link" data-scroll-target="#pillar-5-continuous-feedback-iteration">Pillar 5: Continuous Feedback &amp; Iteration</a></li>
+  </ul></li>
+  <li><a href="#case-study-transforming-misaligned-team" id="toc-case-study-transforming-misaligned-team" class="nav-link" data-scroll-target="#case-study-transforming-misaligned-team">Case Study: Transforming Misaligned Team</a></li>
+  <li><a href="#common-mistakes-to-avoid" id="toc-common-mistakes-to-avoid" class="nav-link" data-scroll-target="#common-mistakes-to-avoid">Common Mistakes to Avoid</a></li>
+  <li><a href="#your-assessment-is-your-team-aligned" id="toc-your-assessment-is-your-team-aligned" class="nav-link" data-scroll-target="#your-assessment-is-your-team-aligned">Your Assessment: Is Your Team Aligned?</a></li>
+  <li><a href="#the-bottom-line" id="toc-the-bottom-line" class="nav-link" data-scroll-target="#the-bottom-line">The Bottom Line</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Aligning Engineering Teams with Business Goals: A Framework</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">leadership</div>
+    <div class="quarto-category">team-management</div>
+    <div class="quarto-category">strategy</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How to translate between technical teams and business goals to drive measurable impact
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Clarke Bishop </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 4, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-misalignment-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-misalignment-problem">The Misalignment Problem</h2>
+<p><strong>“Our tech team is brilliant but not aligned to business goals.”</strong></p>
+<p>This is one of the most frustrating challenges CEOs face. You have talented engineers. They’re smart, capable, hardworking. Sprints are completed. Code is shipped.</p>
+<p>But somehow, none of it translates to business impact.</p>
+<ul>
+<li>Your engineering team is excited about refactoring the microservices architecture</li>
+<li>Your business team needs to reduce customer churn by 20%</li>
+<li>These feel like different universes</li>
+</ul>
+<p>After 26 years building and leading technical teams—and hiring over 100 technical professionals—I’ve learned that team performance problems are rarely about capability. They’re about <strong>clarity, communication, and focus.</strong></p>
+<p>Here’s the framework I use to align technical teams with business outcomes.</p>
+<hr>
+</section>
+<section id="why-misalignment-happens" class="level2">
+<h2 class="anchored" data-anchor-id="why-misalignment-happens">Why Misalignment Happens</h2>
+<p>Before solving misalignment, let’s understand the root causes:</p>
+<section id="different-languages" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="different-languages">1. Different Languages</h3>
+<p>Engineers speak in technical terms: - “We need to refactor our microservices to improve maintainability” - “Let’s implement event-driven architecture for better decoupling” - “We should migrate to Kubernetes for improved scalability”</p>
+<p>Business leaders speak in outcomes: - “We need to reduce operational costs by 25%” - “Customer acquisition cost needs to drop” - “We’re losing deals because our product is too slow”</p>
+<p><strong>Neither is wrong—but they’re not connecting the dots.</strong></p>
+</section>
+<section id="lack-of-context" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="lack-of-context">2. Lack of Context</h3>
+<p>Engineers often don’t understand: - Why the company exists and what makes it successful - What customers actually care about - What the competitive pressures are - Why certain features matter more than others</p>
+<p>Business leaders often don’t understand: - Why technical work takes so long - What technical debt is and why it matters - How architecture decisions affect business outcomes - Why “just make it work” isn’t always feasible</p>
+<p><strong>Without shared context, alignment is impossible.</strong></p>
+</section>
+<section id="reactive-vs-strategic-thinking" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="reactive-vs-strategic-thinking">3. Reactive vs Strategic Thinking</h3>
+<p>Many engineering teams operate reactively: - Leadership asks for Feature A → team builds Feature A - Customer complains about Bug B → team fixes Bug B - Sales needs Feature C for a deal → team rushes Feature C</p>
+<p>This creates a pattern of constant firefighting. Teams stay busy but never get ahead. <strong>Reactive teams can’t be strategic teams.</strong></p>
+</section>
+<section id="missing-feedback-loops" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="missing-feedback-loops">4. Missing Feedback Loops</h3>
+<p>Engineers ship features but often don’t know: - Did customers actually use it? - Did it solve the business problem? - What could have been done differently?</p>
+<p>Without feedback loops, teams can’t learn or improve. They keep building in the dark.</p>
+<hr>
+</section>
+</section>
+<section id="the-framework-five-pillars-of-alignment" class="level2">
+<h2 class="anchored" data-anchor-id="the-framework-five-pillars-of-alignment">The Framework: Five Pillars of Alignment</h2>
+<p>Here’s how I align technical teams with business goals:</p>
+<section id="pillar-1-shared-context-business-literacy" class="level3">
+<h3 class="anchored" data-anchor-id="pillar-1-shared-context-business-literacy">Pillar 1: Shared Context &amp; Business Literacy</h3>
+<p><strong>Make sure your technical team understands the business.</strong></p>
+<p>I start every engagement by ensuring engineers know:</p>
+<ul>
+<li><strong>The business model</strong> - How does the company make money? What are the unit economics?</li>
+<li><strong>The customer</strong> - Who are they? What problems are we solving? What do they care about?</li>
+<li><strong>The competition</strong> - Who are we competing against? What’s our differentiation?</li>
+<li><strong>The strategy</strong> - Where are we going? What are the key goals for the next 6-12 months?</li>
+</ul>
+<p><strong>How to do this:</strong></p>
+<ul>
+<li>Monthly “business update” sessions where leadership shares numbers, challenges, wins</li>
+<li>Include engineers in customer calls or user research sessions</li>
+<li>Share board deck highlights with the team</li>
+<li>Explain the “why” behind every major initiative</li>
+</ul>
+<p>When engineers understand the business, they make better technical decisions.</p>
+</section>
+<section id="pillar-2-translate-between-technical-and-business" class="level3">
+<h3 class="anchored" data-anchor-id="pillar-2-translate-between-technical-and-business">Pillar 2: Translate Between Technical and Business</h3>
+<p><strong>Bridge the language gap in both directions.</strong></p>
+<p>This is where fractional CTOs like me add tremendous value. I translate constantly:</p>
+<p><strong>Technical → Business:</strong></p>
+<p>“We need to refactor our microservices” becomes “This will reduce infrastructure costs by 30% and let us ship features 2x faster.”</p>
+<p>“We should implement caching” becomes “This will improve page load time from 4 seconds to under 1 second, which typically increases conversion by 15-20%.”</p>
+<p><strong>Business → Technical:</strong></p>
+<p>“We need to reduce churn” becomes “Let’s analyze user behavior before churn, identify early warning signs, and build automated interventions.”</p>
+<p>“We’re losing enterprise deals because of performance” becomes “Let’s benchmark query performance, identify bottlenecks, and optimize the top 10 slowest operations.”</p>
+<p><strong>This translation is the job.</strong> If you’re not doing this constantly, alignment suffers.</p>
+</section>
+<section id="pillar-3-ruthless-prioritization" class="level3">
+<h3 class="anchored" data-anchor-id="pillar-3-ruthless-prioritization">Pillar 3: Ruthless Prioritization</h3>
+<p><strong>Focus on the vital few, not the trivial many.</strong></p>
+<p>Most teams try to do everything at once. When you try to do everything, nothing ships.</p>
+<p>My prioritization framework:</p>
+<p><strong>Step 1: Identify Business Goals</strong> - What are the top 3 business goals for the next quarter? - Examples: Reduce churn by 15%, increase trial-to-paid by 20%, launch enterprise tier</p>
+<p><strong>Step 2: Map Technical Work to Goals</strong> - For each potential project, ask: “Which business goal does this serve?” - If the answer is “none,” it’s probably not a priority - If it serves multiple goals, it might be high leverage</p>
+<p><strong>Step 3: Estimate Impact vs Effort</strong> - High impact + Low effort = Do now - High impact + High effort = Plan carefully, probably do - Low impact + Low effort = Maybe, if time permits - Low impact + High effort = Don’t do</p>
+<p><strong>Step 4: Say No to Everything Else</strong> - The hardest part of prioritization is saying no - “That’s a good idea, but not for this quarter” - Create a backlog for future consideration, but don’t commit</p>
+<p><strong>Example:</strong></p>
+<p>If the business goal is “Reduce churn by 15%,” we might prioritize:</p>
+<ol type="1">
+<li><strong>High impact, low effort:</strong> Add automated email when users go inactive</li>
+<li><strong>High impact, high effort:</strong> Build predictive churn model and intervention workflow</li>
+<li><strong>Low priority:</strong> Redesign the settings page (doesn’t impact churn)</li>
+</ol>
+</section>
+<section id="pillar-4-measure-outcomes-not-activity" class="level3">
+<h3 class="anchored" data-anchor-id="pillar-4-measure-outcomes-not-activity">Pillar 4: Measure Outcomes, Not Activity</h3>
+<p><strong>Track business metrics, not just technical metrics.</strong></p>
+<p>Most engineering teams track activity: - Velocity (story points per sprint) - Number of features shipped - Lines of code written - Number of bugs fixed</p>
+<p>These matter, but they don’t tell you if you’re succeeding. <strong>Measure outcomes:</strong></p>
+<ul>
+<li>Did churn decrease?</li>
+<li>Did conversion increase?</li>
+<li>Did operational costs go down?</li>
+<li>Did customer satisfaction improve?</li>
+<li>Did we close more enterprise deals?</li>
+</ul>
+<p><strong>How to do this:</strong></p>
+<p>Create a simple dashboard showing: - The business goal (e.g., reduce churn by 15%) - Current performance (e.g., churn is at 8%, down from 10%) - Technical initiatives in flight (e.g., predictive churn system, automated re-engagement)</p>
+<p>Review this weekly with the team. Celebrate when metrics improve. Pivot when they don’t.</p>
+</section>
+<section id="pillar-5-continuous-feedback-iteration" class="level3">
+<h3 class="anchored" data-anchor-id="pillar-5-continuous-feedback-iteration">Pillar 5: Continuous Feedback &amp; Iteration</h3>
+<p><strong>Build learning loops into your process.</strong></p>
+<p>After shipping a major feature or initiative:</p>
+<ol type="1">
+<li><strong>Did it work?</strong> - Check the business metrics</li>
+<li><strong>What did we learn?</strong> - What surprised us? What would we do differently?</li>
+<li><strong>What’s next?</strong> - How do we build on this success (or learn from this failure)?</li>
+</ol>
+<p><strong>Example: Post-Launch Review</strong></p>
+<p>We shipped a feature to reduce churn. Let’s review:</p>
+<ul>
+<li><strong>Goal:</strong> Reduce churn by 15%</li>
+<li><strong>What we did:</strong> Built automated re-engagement emails for inactive users</li>
+<li><strong>Results:</strong> Churn decreased by 8% (not quite 15%, but meaningful)</li>
+<li><strong>Learnings:</strong> Email worked for SMB segment, but enterprise customers needed phone calls</li>
+<li><strong>Next steps:</strong> Add automated alerting for CSMs when enterprise customers go inactive</li>
+</ul>
+<p>This loop ensures the team keeps learning and improving.</p>
+<hr>
+</section>
+</section>
+<section id="case-study-transforming-misaligned-team" class="level2">
+<h2 class="anchored" data-anchor-id="case-study-transforming-misaligned-team">Case Study: Transforming Misaligned Team</h2>
+<p>An enterprise software company had a talented team of 15 engineers. They shipped features regularly. But the CEO was frustrated—<strong>nothing seemed to move the business forward.</strong></p>
+<section id="the-problem" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="the-problem">The Problem</h3>
+<ul>
+<li>Engineering team was reactive, building whatever leadership requested</li>
+<li>No shared understanding of business priorities</li>
+<li>Initiatives took months with unclear ROI</li>
+<li>Team morale was low—they felt like “order takers”</li>
+</ul>
+</section>
+<section id="what-we-did" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="what-we-did">What We Did</h3>
+<p><strong>Month 1: Build Shared Context</strong> - Conducted business literacy sessions with engineering team - Shared customer pain points, competitive pressures, financial constraints - Explained how the company made money and what success looked like</p>
+<p><strong>Month 2: Establish Priorities</strong> - Identified top 3 business goals with leadership - Worked with engineering to map all current projects to these goals - Killed or postponed projects that didn’t align (hard conversations, but necessary)</p>
+<p><strong>Month 3: Create Feedback Loops</strong> - Built dashboard showing business metrics and technical initiatives - Implemented monthly retrospectives with business and technical teams together - Started including engineers in customer calls</p>
+<p><strong>Months 4-6: Execute &amp; Iterate</strong> - Focused engineering effort on highest-impact work - Tracked business outcomes, not just features shipped - Celebrated wins publicly when metrics improved</p>
+</section>
+<section id="the-results" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="the-results">The Results</h3>
+<ul>
+<li><strong>70% reduction in client onboarding time</strong> - A key business goal we prioritized</li>
+<li><strong>Higher activation rates</strong> - Customers got value faster</li>
+<li><strong>Improved team morale</strong> - Engineers felt connected to business impact</li>
+<li><strong>Better relationship between engineering and business</strong> - Shared language and goals</li>
+</ul>
+<p>Timeline: 6 months from misaligned to high-performing.</p>
+<hr>
+</section>
+</section>
+<section id="common-mistakes-to-avoid" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
+<section id="mistake-1-just-tell-us-what-to-build" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="mistake-1-just-tell-us-what-to-build">Mistake 1: “Just tell us what to build”</h3>
+<p>If engineers don’t understand the why, they’ll build exactly what you asked for—even if it’s the wrong solution.</p>
+</section>
+<section id="mistake-2-technical-debt-as-an-excuse" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="mistake-2-technical-debt-as-an-excuse">Mistake 2: Technical debt as an excuse</h3>
+<p>Technical debt is real, but it can become an excuse for avoiding business priorities. Frame technical work in business terms: “This refactoring will reduce bug rates by 40%, freeing the team to work on new features.”</p>
+</section>
+<section id="mistake-3-over-indexing-on-short-term-requests" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="mistake-3-over-indexing-on-short-term-requests">Mistake 3: Over-indexing on short-term requests</h3>
+<p>Reactive teams stay busy but never get strategic. Reserve time for proactive work that prevents future fires.</p>
+</section>
+<section id="mistake-4-lack-of-decision-making-authority" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="mistake-4-lack-of-decision-making-authority">Mistake 4: Lack of decision-making authority</h3>
+<p>If engineers can’t make technical decisions without constant approval, velocity suffers. Give them context and autonomy.</p>
+<hr>
+</section>
+</section>
+<section id="your-assessment-is-your-team-aligned" class="level2">
+<h2 class="anchored" data-anchor-id="your-assessment-is-your-team-aligned">Your Assessment: Is Your Team Aligned?</h2>
+<p>Ask yourself these questions:</p>
+<ol type="1">
+<li><p><strong>Can your engineers explain your business model?</strong> If not, they lack context.</p></li>
+<li><p><strong>Do technical initiatives translate to business metrics?</strong> If you can’t connect the dots, neither can your team.</p></li>
+<li><p><strong>Are you saying “no” to things?</strong> If everything is a priority, nothing is.</p></li>
+<li><p><strong>Does your team know if their work succeeded?</strong> If they ship features but never see the impact, they’re flying blind.</p></li>
+<li><p><strong>Do engineers feel like “order takers” or strategic partners?</strong> The best teams feel ownership of outcomes, not just tasks.</p></li>
+</ol>
+<p>If you answered “no” to any of these, you have an alignment problem—and it’s costing you velocity, morale, and business results.</p>
+<hr>
+</section>
+<section id="the-bottom-line" class="level2">
+<h2 class="anchored" data-anchor-id="the-bottom-line">The Bottom Line</h2>
+<p>Brilliant engineers without alignment are like a powerful car without a steering wheel—lots of horsepower, but you’re not getting where you need to go.</p>
+<p>The framework: 1. Build shared context—make engineers business-literate 2. Translate constantly between technical and business language 3. Prioritize ruthlessly—focus on vital few, not trivial many 4. Measure outcomes, not just activity 5. Create feedback loops so teams learn and improve</p>
+<p>Companies that master this alignment ship faster, pivot smarter, and win in the market. Companies that don’t waste talent on misaligned work.</p>
+<hr>
+<p><em>Struggling to align your technical team with business goals? I help growth-stage companies bridge the gap between engineering and business outcomes. <a href="mailto:clarke@clarkebishop.com">Let’s talk</a> about your challenges.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/clarkebishop\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Inbound Team, LLC.</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fractional CTO | Gen AI • Data Strategy • Cloud Architecture</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
