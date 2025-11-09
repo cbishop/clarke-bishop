@@ -194,8 +194,8 @@ th {
 
 /* Columns layout improvements */
 .columns {
-  display: flex;
-  gap: 2rem;
+  display: flex !important;
+  gap: 1rem !important;
   margin: 2rem 0;
 }
 
