@@ -74,7 +74,7 @@
     "href": "services.html#lets-explore-whether-were-a-fit",
     "title": "Services",
     "section": "Let’s Explore Whether We’re a Fit",
-    "text": "Let’s Explore Whether We’re a Fit\nIf you’re a founder, CEO, or board member of a growth-stage company that needs strategic technology leadership without the full-time overhead, let’s talk.\n\n\n\n\n\n\nWays to Connect\n\n\n\n\nSchedule a call: Book a 30-minute strategy session (add your calendar link)\nLinkedIn: Connect with me\n\nBased in Roswell, Georgia | Serving clients nationwide (remote-first) | Available for select on-site engagements\n\n\n\n\n\n\n\n\n\nWhat Happens Next?\n\n\n\nWhen you reach out, here’s what to expect:\n\n30-minute discovery call - I’ll learn about your business challenges and technology needs\nCustom proposal - If there’s a fit, I’ll outline how I can help and what success looks like\nFlexible start - We can begin with a focused project or ongoing fractional engagement\nTransparent communication - You’ll always know what I’m working on and why it matters\n\nNo pressure, no sales tactics. Just an honest conversation about whether I can help your business."
+    "text": "Let’s Explore Whether We’re a Fit\nIf you’re a founder, CEO, or board member of a growth-stage company that needs strategic technology leadership without the full-time overhead, let’s talk.\n\n\n\n\n\n\nWays to Connect\n\n\n\n\nSchedule a call: Book a 30-minute strategy session\nLinkedIn: Connect with me\n\nBased in Roswell, Georgia | Serving clients nationwide (remote-first) | Available for select on-site engagements\n\n\n\n\n\n\n\n\n\nWhat Happens Next?\n\n\n\nWhen you reach out, here’s what to expect:\n\n30-minute discovery call - I’ll learn about your business challenges and technology needs\nCustom proposal - If there’s a fit, I’ll outline how I can help and what success looks like\nFlexible start - We can begin with a focused project or ongoing fractional engagement\nTransparent communication - You’ll always know what I’m working on and why it matters\n\nNo pressure, no sales tactics. Just an honest conversation about whether I can help your business."
   },
   {
     "objectID": "posts/welcome.html",
@@ -144,7 +144,7 @@
     "href": "posts/breaking-data-silos.html#the-modern-data-stack",
     "title": "Breaking Down Data Silos: A Practical Architecture Guide",
     "section": "The Modern Data Stack",
-    "text": "The Modern Data Stack\nHere’s the typical stack I recommend:\nIngestion:\n\nFivetran, Airbyte (pre-built connectors)\nCustom pipelines (Python, AWS Glue) when needed\n\nStorage:\n\nAWS S3 / Azure Data Lake (data lake)\nSnowflake / Databricks (data warehouse)\nPostgreSQL with PGVector (vector database for AI)\n\nTransformation:\n\ndbt (data modeling and transformation)\nApache Spark / PySpark (complex transformations)\nAirflow (workflow orchestration)\n\nConsumption:\n\nTableau, Looker, PowerBI (business intelligence)\nPython notebooks (data science)\nFastAPI / GraphQL (application APIs)\n\nGovernance:\n\nData catalogs (Alation, Collibra)\nQuality monitoring (Great Expectations, dbt tests)\nAccess control (Okta, IAM policies)"
+    "text": "The Modern Data Stack\nHere’s the typical stack I recommend:\nIngestion:\n\nFivetran, Airbyte (pre-built connectors)\nCustom pipelines (Python, AWS Glue) when needed\n\nStorage:\n\nAWS S3 / Azure Data Lake (data lake)\nSnowflake / Databricks (data warehouse)\nPostgreSQL with PGVector (vector database for AI)\n\nTransformation:\n\ndbt (data modeling and transformation)\nApache Spark / PySpark (complex transformations)\nAirflow (workflow orchestration)\n\nConsumption:\n\nTableau, Looker, PowerBI (business intelligence)\nPython notebooks (data science)\nFastAPI / GraphQL (application APIs)\n\nGovernance:\n\nData catalogs (Alation, Collibra, Atlan)\nQuality monitoring (Great Expectations, dbt tests)\nAccess control (Okta, IAM policies)"
   },
   {
     "objectID": "posts/breaking-data-silos.html#your-assessment-is-your-data-ready",
@@ -217,11 +217,39 @@
     "text": "The Bottom Line\nGetting AI from pilot to production isn’t about perfect technology. It’s about having the right framework:\n\nArchitecture that’s compliant from day one\nInfrastructure that enables rapid iteration\nObservability that shows what’s working\nA continuous improvement loop\n\nCompanies that follow this framework ship in weeks, not months. Companies that don’t stay stuck in the pilot phase indefinitely.\n\nStruggling to move AI from experiment to production? I help growth-stage companies build MLOps frameworks that enable rapid deployment while meeting enterprise requirements. Let’s talk about your challenges."
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "booking.html",
+    "href": "booking.html",
+    "title": "Schedule a Strategy Session",
     "section": "",
-    "text": "Welcome to my blog where I share insights on AI adoption, cloud architecture, and technology leadership for growth-stage companies.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Art of Technical Prioritization in Growth-Stage Companies\n\n\n\n\n\n\nstrategy\n\n\nprioritization\n\n\nleadership\n\n\n\nA practical framework for deciding what to build when everything feels urgent\n\n\n\n\n\nNov 5, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nAligning Engineering Teams with Business Goals: A Framework\n\n\n\n\n\n\nleadership\n\n\nteam-management\n\n\nstrategy\n\n\n\nHow to translate between technical teams and business goals to drive measurable impact\n\n\n\n\n\nNov 4, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nBreaking Down Data Silos: A Practical Architecture Guide\n\n\n\n\n\n\ndata-architecture\n\n\ndata-strategy\n\n\nplatforms\n\n\n\nHow to architect unified data platforms that unlock trapped data and scale globally\n\n\n\n\n\nNov 3, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nFrom AI Pilot to Production: A Framework for Getting Unstuck\n\n\n\n\n\n\nai\n\n\nmlops\n\n\nimplementation\n\n\n\nWhy most companies get stuck in the AI pilot phase—and the practical framework for shipping to production\n\n\n\n\n\nNov 2, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Blog\n\n\n\n\n\n\nannouncement\n\n\n\nIntroducing a new resource for technical leadership and AI implementation insights\n\n\n\n\n\nNov 1, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Most Fractional CTOs Fail (And What Makes the Difference)\n\n\n\n\n\n\nfractional-cto\n\n\nleadership\n\n\nstrategy\n\n\n\nThe three capabilities that separate effective fractional CTOs from the rest—and why most fall short\n\n\n\n\n\nNov 1, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\nNo matching items"
+    "text": "I offer a free 30-minute strategy call where we’ll discuss:\n\nYour current technology challenges\nWhat you’ve tried that hasn’t worked\nWhere you want to be in 6-12 months\nWhether a fractional CTO engagement makes sense for you\n\nNo pressure, no sales tactics. Just an honest conversation about whether I can help your business."
+  },
+  {
+    "objectID": "booking.html#lets-explore-whether-were-a-fit",
+    "href": "booking.html#lets-explore-whether-were-a-fit",
+    "title": "Schedule a Strategy Session",
+    "section": "",
+    "text": "I offer a free 30-minute strategy call where we’ll discuss:\n\nYour current technology challenges\nWhat you’ve tried that hasn’t worked\nWhere you want to be in 6-12 months\nWhether a fractional CTO engagement makes sense for you\n\nNo pressure, no sales tactics. Just an honest conversation about whether I can help your business."
+  },
+  {
+    "objectID": "booking.html#book-your-call",
+    "href": "booking.html#book-your-call",
+    "title": "Schedule a Strategy Session",
+    "section": "Book Your Call",
+    "text": "Book Your Call\n\n\n\n\n\n\n\n\n\n\nWhat Happens Next?\n\n\n\nAfter you book:\n\nYou’ll receive a confirmation email with the meeting details\nI’ll send a brief questionnaire to understand your needs before the call\nWe’ll have our 30-minute conversation where I’ll learn about your challenges\nIf there’s a fit, I’ll follow up with a custom proposal outlining how I can help\n\nIf we’re not a good fit, I’ll tell you honestly—and may recommend other resources or approaches."
+  },
+  {
+    "objectID": "booking.html#current-availability",
+    "href": "booking.html#current-availability",
+    "title": "Schedule a Strategy Session",
+    "section": "Current Availability",
+    "text": "Current Availability\nI work with up to 3 companies at a time and have capacity for 1 additional engagement starting Q1 2026.\nI’m selective about clients because I want to ensure I can deliver real value—and that we enjoy working together."
+  },
+  {
+    "objectID": "booking.html#other-ways-to-connect",
+    "href": "booking.html#other-ways-to-connect",
+    "title": "Schedule a Strategy Session",
+    "section": "Other Ways to Connect",
+    "text": "Other Ways to Connect\n\nLinkedIn: Connect with me\nBased in: Roswell, Georgia\nService Area: Nationwide (remote-first) | Available for select on-site engagements"
   },
   {
     "objectID": "about.html",
@@ -305,7 +333,7 @@
     "href": "about.html#lets-have-a-conversation",
     "title": "About Clarke Bishop",
     "section": "Let’s Have a Conversation",
-    "text": "Let’s Have a Conversation\nThe best way to determine if we’re a fit is a conversation.\nI offer a free 30-minute strategy call where we’ll discuss:\n\nYour current technology challenges\nWhat you’ve tried that hasn’t worked\nWhere you want to be in 6-12 months\nWhether fractional CTO engagement makes sense for you\n\nNo pressure, no sales tactics. Just an honest conversation.\n\n\n\n\n\n\nGet in Touch\n\n\n\nLinkedIn: linkedin.com/in/clarkebishop\nSchedule: Book a strategy call (add your Calendly link)\nLocation: Roswell, Georgia\nService Area: Nationwide (remote-first) + select on-site engagements"
+    "text": "Let’s Have a Conversation\nThe best way to determine if we’re a fit is a conversation.\nI offer a free 30-minute strategy call where we’ll discuss:\n\nYour current technology challenges\nWhat you’ve tried that hasn’t worked\nWhere you want to be in 6-12 months\nWhether fractional CTO engagement makes sense for you\n\nNo pressure, no sales tactics. Just an honest conversation.\n\n\n\n\n\n\nGet in Touch\n\n\n\nLinkedIn: linkedin.com/in/clarkebishop Schedule: Book a strategy call\nLocation: Roswell, Georgia\nService Area: Nationwide (remote-first) + select on-site engagements"
   },
   {
     "objectID": "about.html#a-few-final-thoughts",
@@ -313,6 +341,13 @@
     "title": "About Clarke Bishop",
     "section": "A Few Final Thoughts",
     "text": "A Few Final Thoughts\nTechnology changes rapidly. Strategic thinking doesn’t.\nThe fundamentals of good architecture, clear communication, focused execution, and outcome-oriented development remain constant even as tools evolve. That’s what 25+ years of experience really means—not that I’ve used outdated tools, but that I’ve seen what works and what doesn’t across multiple technology cycles.\nRight now, we’re in the middle of the Gen AI revolution. Most companies know they need to leverage it but don’t know how. That’s exactly where I can help.\nIf you’re a CEO or founder who needs strategic technology leadership—someone who can both guide your team and explain complex topics to your board—let’s talk.\nI might be exactly what your company needs.\n- Clarke Bishop\n\n\n\n\n\n\n\nQuestions I’m Often Asked\n\n\n\nQ: Are you looking for full-time roles?\nA: No. I’m exclusively doing fractional CTO work. It lets me work with multiple interesting companies and bring cross-company insights to each engagement.\nQ: Can you help us hire a full-time CTO?\nA: Absolutely. I can help you define the role, recruit candidates (using Topgrading methodology), interview them, and even onboard them. Then I can transition out or stay on in a reduced advisory capacity.\nQ: What if we just need help with one specific project?\nA: I can do project-based work, but I’m most valuable as an ongoing strategic partner. Let’s discuss your needs and find the right structure.\nQ: Do you sign NDAs and work with confidential information?\nA: Yes. All my client work is confidential. The outcomes I share publicly are anonymized and approved by clients.\nQ: What if we’re not sure we need a fractional CTO?\nA: That’s what the strategy call is for. We’ll discuss your challenges and I’ll give you my honest assessment—even if that means recommending a different solution.\nQ: Can you work on-site?\nA: I’m based in Roswell, GA (Atlanta area) and primarily work remotely, but I’m available for periodic on-site strategic sessions, leadership meetings, or team workshops."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Welcome to my blog where I share insights on AI adoption, cloud architecture, and technology leadership for growth-stage companies.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Art of Technical Prioritization in Growth-Stage Companies\n\n\n\n\n\n\nstrategy\n\n\nprioritization\n\n\nleadership\n\n\n\nA practical framework for deciding what to build when everything feels urgent\n\n\n\n\n\nNov 5, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nAligning Engineering Teams with Business Goals: A Framework\n\n\n\n\n\n\nleadership\n\n\nteam-management\n\n\nstrategy\n\n\n\nHow to translate between technical teams and business goals to drive measurable impact\n\n\n\n\n\nNov 4, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nBreaking Down Data Silos: A Practical Architecture Guide\n\n\n\n\n\n\ndata-architecture\n\n\ndata-strategy\n\n\nplatforms\n\n\n\nHow to architect unified data platforms that unlock trapped data and scale globally\n\n\n\n\n\nNov 3, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nFrom AI Pilot to Production: A Framework for Getting Unstuck\n\n\n\n\n\n\nai\n\n\nmlops\n\n\nimplementation\n\n\n\nWhy most companies get stuck in the AI pilot phase—and the practical framework for shipping to production\n\n\n\n\n\nNov 2, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to My Blog\n\n\n\n\n\n\nannouncement\n\n\n\nIntroducing a new resource for technical leadership and AI implementation insights\n\n\n\n\n\nNov 1, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Most Fractional CTOs Fail (And What Makes the Difference)\n\n\n\n\n\n\nfractional-cto\n\n\nleadership\n\n\nstrategy\n\n\n\nThe three capabilities that separate effective fractional CTOs from the rest—and why most fall short\n\n\n\n\n\nNov 1, 2025\n\n\nClarke Bishop\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -340,7 +375,7 @@
     "href": "index.html#lets-talk",
     "title": "Clarke Bishop",
     "section": "Let’s Talk",
-    "text": "Let’s Talk\nI work with up to 3 companies and have capacity for 1 more engagement starting in Q1 2026.\nIf you’re a founder, CEO, or board member of a growth-stage company that needs strategic technology leadership without the full-time overhead, let’s explore whether we’re a fit.\n\n\n\n\n\n\nWays to Connect\n\n\n\n\nSchedule a call: Book a 30-minute strategy session (add your calendar link)\nLinkedIn: Connect with me\n\nBased in Roswell, Georgia | Serving clients nationwide (remote-first) | Available for select on-site engagements\n\n\n\n\n\n\n\n\n\nWhat Happens Next?\n\n\n\nWhen you reach out, here’s what to expect:\n\n30-minute discovery call - I’ll learn about your business challenges and technology needs\nCustom proposal - If there’s a fit, I’ll outline how I can help and what success looks like\nFlexible start - We can begin with a focused project or ongoing fractional engagement\nTransparent communication - You’ll always know what I’m working on and why it matters\n\nNo pressure, no sales tactics. Just an honest conversation about whether I can help your business."
+    "text": "Let’s Talk\nI work with up to 3 companies and have capacity for 1 more engagement starting in Q1 2026.\nIf you’re a founder, CEO, or board member of a growth-stage company that needs strategic technology leadership without the full-time overhead, let’s explore whether we’re a fit.\n\n\n\n\n\n\nWays to Connect\n\n\n\n\nSchedule a call: Book a 30-minute strategy session\nLinkedIn: Connect with me\n\nBased in Roswell, Georgia | Serving clients nationwide (remote-first) | Available for select on-site engagements\n\n\n\n\n\n\n\n\n\nWhat Happens Next?\n\n\n\nWhen you reach out, here’s what to expect:\n\n30-minute discovery call - I’ll learn about your business challenges and technology needs\nCustom proposal - If there’s a fit, I’ll outline how I can help and what success looks like\nFlexible start - We can begin with a focused project or ongoing fractional engagement\nTransparent communication - You’ll always know what I’m working on and why it matters\n\nNo pressure, no sales tactics. Just an honest conversation about whether I can help your business."
   },
   {
     "objectID": "posts/aligning-engineering-teams.html",
