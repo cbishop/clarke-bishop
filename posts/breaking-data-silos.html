@@ -339,9 +339,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="layer-2-unified-data-storage" class="level3">
 <h3 class="anchored" data-anchor-id="layer-2-unified-data-storage">Layer 2: Unified Data Storage</h3>
 <p>Store data in formats optimized for analytics and AI:</p>
-<p><strong>Data Lake (S3, Azure Data Lake, GCS)</strong> - Raw, unprocessed data - Historical archives - Cheap, scalable storage - Parquet or Delta format for performance</p>
-<p><strong>Data Warehouse (Snowflake, Databricks, Redshift)</strong> - Structured, curated data - Optimized for queries and analytics - Tables organized by business domain - Performance tuning for common queries</p>
-<p><strong>Vector Database (PGVector, Pinecone, Weaviate)</strong> - Embeddings for Gen AI and RAG systems - Semantic search capabilities - Integration with LLM workflows</p>
+<p><strong>Data Lake (S3, Azure Data Lake, GCS)</strong></p>
+<ul>
+<li>Raw, unprocessed data</li>
+<li>Historical archives</li>
+<li>Cheap, scalable storage</li>
+<li>Parquet or Delta format for performance</li>
+</ul>
+<p><strong>Data Warehouse (Snowflake, Databricks, Redshift)</strong></p>
+<ul>
+<li>Structured, curated data</li>
+<li>Optimized for queries and analytics</li>
+<li>Tables organized by business domain</li>
+<li>Performance tuning for common queries</li>
+</ul>
+<p><strong>Vector Database (PGVector, Pinecone, Weaviate)</strong></p>
+<ul>
+<li>Embeddings for Gen AI and RAG systems</li>
+<li>Semantic search capabilities</li>
+<li>Integration with LLM workflows</li>
+</ul>
 </section>
 <section id="layer-3-data-transformation-modeling" class="level3">
 <h3 class="anchored" data-anchor-id="layer-3-data-transformation-modeling">Layer 3: Data Transformation &amp; Modeling</h3>
@@ -383,9 +400,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-solution" class="level3 unlisted">
 <h3 class="unlisted anchored" data-anchor-id="the-solution">The Solution</h3>
 <p>We architected a unified data platform:</p>
-<p><strong>Week 1-3: Foundation</strong> - Set up AWS data lake (S3) and Snowflake warehouse - Built ELT pipelines from all source systems - Established unified customer identifier</p>
-<p><strong>Week 4-6: Transformation</strong> - Created customer 360 view combining all data sources - Built data quality monitoring and alerting - Implemented row-level security for data access</p>
-<p><strong>Week 7-9: Integration</strong> - Connected BI tools for self-service analytics - Built APIs for real-time customer data access - Integrated with support and CRM systems</p>
+<p><strong>Week 1-3: Foundation</strong></p>
+<ul>
+<li>Set up AWS data lake (S3) and Snowflake warehouse</li>
+<li>Built ELT pipelines from all source systems</li>
+<li>Established unified customer identifier</li>
+</ul>
+<p><strong>Week 4-6: Transformation</strong></p>
+<ul>
+<li>Created customer 360 view combining all data sources</li>
+<li>Built data quality monitoring and alerting</li>
+<li>Implemented row-level security for data access</li>
+</ul>
+<p><strong>Week 7-9: Integration</strong></p>
+<ul>
+<li>Connected BI tools for self-service analytics</li>
+<li>Built APIs for real-time customer data access</li>
+<li>Integrated with support and CRM systems</li>
+</ul>
 </section>
 <section id="the-results" class="level3 unlisted">
 <h3 class="unlisted anchored" data-anchor-id="the-results">The Results</h3>
@@ -426,11 +458,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-modern-data-stack" class="level2">
 <h2 class="anchored" data-anchor-id="the-modern-data-stack">The Modern Data Stack</h2>
 <p>Here’s the typical stack I recommend:</p>
-<p><strong>Ingestion:</strong> - Fivetran, Airbyte (pre-built connectors) - Custom pipelines (Python, AWS Glue) when needed</p>
-<p><strong>Storage:</strong> - AWS S3 / Azure Data Lake (data lake) - Snowflake / Databricks (data warehouse) - PostgreSQL with PGVector (vector database for AI)</p>
-<p><strong>Transformation:</strong> - dbt (data modeling and transformation) - Apache Spark / PySpark (complex transformations) - Airflow (workflow orchestration)</p>
-<p><strong>Consumption:</strong> - Tableau, Looker, PowerBI (business intelligence) - Python notebooks (data science) - FastAPI / GraphQL (application APIs)</p>
-<p><strong>Governance:</strong> - Data catalogs (Alation, Collibra) - Quality monitoring (Great Expectations, dbt tests) - Access control (Okta, IAM policies)</p>
+<p><strong>Ingestion:</strong></p>
+<ul>
+<li>Fivetran, Airbyte (pre-built connectors)</li>
+<li>Custom pipelines (Python, AWS Glue) when needed</li>
+</ul>
+<p><strong>Storage:</strong></p>
+<ul>
+<li>AWS S3 / Azure Data Lake (data lake)</li>
+<li>Snowflake / Databricks (data warehouse)</li>
+<li>PostgreSQL with PGVector (vector database for AI)</li>
+</ul>
+<p><strong>Transformation:</strong></p>
+<ul>
+<li>dbt (data modeling and transformation)</li>
+<li>Apache Spark / PySpark (complex transformations)</li>
+<li>Airflow (workflow orchestration)</li>
+</ul>
+<p><strong>Consumption:</strong></p>
+<ul>
+<li>Tableau, Looker, PowerBI (business intelligence)</li>
+<li>Python notebooks (data science)</li>
+<li>FastAPI / GraphQL (application APIs)</li>
+</ul>
+<p><strong>Governance:</strong></p>
+<ul>
+<li>Data catalogs (Alation, Collibra)</li>
+<li>Quality monitoring (Great Expectations, dbt tests)</li>
+<li>Access control (Okta, IAM policies)</li>
+</ul>
 <hr>
 </section>
 <section id="your-assessment-is-your-data-ready" class="level2">
@@ -450,7 +506,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="the-bottom-line">The Bottom Line</h2>
 <p>Breaking down data silos isn’t optional—it’s foundational. You can’t leverage AI, serve enterprise customers, or make data-driven decisions if your data is trapped.</p>
 <p>The good news: Modern data platforms (data lakes, cloud warehouses, ELT pipelines) make this achievable in months, not years.</p>
-<p>The framework: 1. Start with high-value use cases 2. Build incrementally, prove value early 3. Unify customer identifiers and core entities 4. Make data accessible but governed 5. Scale as you learn</p>
+<p>The framework:</p>
+<ol type="1">
+<li>Start with high-value use cases</li>
+<li>Build incrementally, prove value early</li>
+<li>Unify customer identifiers and core entities</li>
+<li>Make data accessible but governed</li>
+<li>Scale as you learn</li>
+</ol>
 <p>Companies that solve this unlock competitive advantages. Companies that don’t fall further behind every quarter.</p>
 <hr>
 <p><em>Struggling with data trapped across multiple systems? I help companies architect unified data platforms that make trapped data valuable. <a href="mailto:clarke@clarkebishop.com">Let’s talk</a> about your data challenges.</em></p>
