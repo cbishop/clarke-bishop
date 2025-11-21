@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Clarke Bishop">
+<meta name="dcterms.date" content="2025-11-20">
+<meta name="description" content="Why the most successful AI implementations keep humans accountable—and why over-automation leads to billion-dollar failures">
+
+<title>Clarke Bishop - AI Doesn’t Care If It’s Wrong—That’s Why You Need Humans in the Loop</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/clarke-bishop-logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PQS92ZVBZ6"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PQS92ZVBZ6', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/clarke-bishop-logo.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Clarke Bishop</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-care-gap" id="toc-the-care-gap" class="nav-link active" data-scroll-target="#the-care-gap">The Care Gap</a></li>
+  <li><a href="#what-ai-fundamentally-cannot-do" id="toc-what-ai-fundamentally-cannot-do" class="nav-link" data-scroll-target="#what-ai-fundamentally-cannot-do">What AI Fundamentally Cannot Do</a></li>
+  <li><a href="#the-evidence-when-humans-stay-in-vs-get-cut-out" id="toc-the-evidence-when-humans-stay-in-vs-get-cut-out" class="nav-link" data-scroll-target="#the-evidence-when-humans-stay-in-vs-get-cut-out">The Evidence: When Humans Stay In vs Get Cut Out</a>
+  <ul class="collapse">
+  <li><a href="#healthcare-augmentation-vs-replacement" id="toc-healthcare-augmentation-vs-replacement" class="nav-link" data-scroll-target="#healthcare-augmentation-vs-replacement">Healthcare: Augmentation vs Replacement</a></li>
+  <li><a href="#fintech-context-vs-automation" id="toc-fintech-context-vs-automation" class="nav-link" data-scroll-target="#fintech-context-vs-automation">Fintech: Context vs Automation</a></li>
+  <li><a href="#manufacturing-validation-vs-blind-trust" id="toc-manufacturing-validation-vs-blind-trust" class="nav-link" data-scroll-target="#manufacturing-validation-vs-blind-trust">Manufacturing: Validation vs Blind Trust</a></li>
+  </ul></li>
+  <li><a href="#the-four-stakes-that-keep-humans-accountable" id="toc-the-four-stakes-that-keep-humans-accountable" class="nav-link" data-scroll-target="#the-four-stakes-that-keep-humans-accountable">The Four Stakes That Keep Humans Accountable</a></li>
+  <li><a href="#the-human-in-the-loop-framework" id="toc-the-human-in-the-loop-framework" class="nav-link" data-scroll-target="#the-human-in-the-loop-framework">The Human-In-The-Loop Framework</a>
+  <ul class="collapse">
+  <li><a href="#high-stakes-high-uncertainty-human-in-loop-required" id="toc-high-stakes-high-uncertainty-human-in-loop-required" class="nav-link" data-scroll-target="#high-stakes-high-uncertainty-human-in-loop-required">High-Stakes + High-Uncertainty = Human-In-Loop Required</a></li>
+  <li><a href="#high-stakes-high-certainty-human-in-loop-for-validation" id="toc-high-stakes-high-certainty-human-in-loop-for-validation" class="nav-link" data-scroll-target="#high-stakes-high-certainty-human-in-loop-for-validation">High-Stakes + High-Certainty = Human-In-Loop for Validation</a></li>
+  <li><a href="#low-stakes-high-uncertainty-human-on-call-for-escalation" id="toc-low-stakes-high-uncertainty-human-on-call-for-escalation" class="nav-link" data-scroll-target="#low-stakes-high-uncertainty-human-on-call-for-escalation">Low-Stakes + High-Uncertainty = Human-On-Call for Escalation</a></li>
+  <li><a href="#low-stakes-high-certainty-ai-autonomy-acceptable" id="toc-low-stakes-high-certainty-ai-autonomy-acceptable" class="nav-link" data-scroll-target="#low-stakes-high-certainty-ai-autonomy-acceptable">Low-Stakes + High-Certainty = AI Autonomy Acceptable</a></li>
+  </ul></li>
+  <li><a href="#why-curiosity-and-accountability-go-together" id="toc-why-curiosity-and-accountability-go-together" class="nav-link" data-scroll-target="#why-curiosity-and-accountability-go-together">Why Curiosity and Accountability Go Together</a></li>
+  <li><a href="#the-governance-imperative" id="toc-the-governance-imperative" class="nav-link" data-scroll-target="#the-governance-imperative">The Governance Imperative</a></li>
+  <li><a href="#what-this-means-for-your-organization" id="toc-what-this-means-for-your-organization" class="nav-link" data-scroll-target="#what-this-means-for-your-organization">What This Means for Your Organization</a></li>
+  <li><a href="#the-competitive-advantage-of-getting-this-right" id="toc-the-competitive-advantage-of-getting-this-right" class="nav-link" data-scroll-target="#the-competitive-advantage-of-getting-this-right">The Competitive Advantage of Getting This Right</a></li>
+  <li><a href="#the-bottom-line" id="toc-the-bottom-line" class="nav-link" data-scroll-target="#the-bottom-line">The Bottom Line</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AI Doesn’t Care If It’s Wrong—That’s Why You Need Humans in the Loop</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">ai</div>
+    <div class="quarto-category">leadership</div>
+    <div class="quarto-category">human-ai-collaboration</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Why the most successful AI implementations keep humans accountable—and why over-automation leads to billion-dollar failures
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Clarke Bishop </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 20, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="../images/posts/ai-human-care-gap.png" class="img-fluid"></p>
+<section id="the-care-gap" class="level2">
+<h2 class="anchored" data-anchor-id="the-care-gap">The Care Gap</h2>
+<p><strong>AI doesn’t worry about bankruptcy. It doesn’t care if customers leave. It has no family to feed, no reputation to protect, no mortgage to pay.</strong></p>
+<p>This isn’t philosophical—it’s the fundamental difference between human and artificial intelligence that determines whether AI implementations succeed or catastrophically fail.</p>
+<p>When <a href="https://www.quantumloopai.com/blog/ai-in-healthcare-implementation-case-studies-in-the-nhs">NHS deployed AI for lung cancer diagnostics and achieved 45% accuracy improvement</a>, radiologists retained final decision authority. When <a href="https://www.henricodolfing.com/2024/12/case-study-ibm-watson-for-oncology-failure.html">IBM Watson for Oncology gave dangerous treatment recommendations—after IBM invested $4 billion and sold the division for just $1 billion</a>—the system attempted to replace clinical judgment rather than augment it.</p>
+<p>The difference? Humans with skin in the game stayed in the loop.</p>
+<p>After helping multiple companies deploy production AI systems—and researching why <a href="https://www.atlassian.com/blog/productivity/ai-collaboration-report">42% of companies now abandon most AI initiatives</a>—I’ve identified a pattern: <strong>Organizations that keep accountable humans in the loop <a href="https://magai.co/human-oversight-in-ai-why-it-matters/">avoid 2.3x higher costs from AI failures</a> and <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">achieve up to 3x higher returns than slow adopters</a>. Those that don’t face regulatory penalties, reputational damage, and billion-dollar losses.</strong></p>
+<p>Here’s why the human element isn’t optional.</p>
+<hr>
+</section>
+<section id="what-ai-fundamentally-cannot-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-ai-fundamentally-cannot-do">What AI Fundamentally Cannot Do</h2>
+<p>AI excels at pattern recognition, computation, and processing massive datasets. But research from Harvard, MIT, and leading business schools reveals what AI cannot replicate:</p>
+<p><strong>AI lacks practical wisdom.</strong> Aristotle called it <em>phronesis</em>—the ability to wisely resolve problems in specific situations by balancing different values based on contextual knowledge. AI possesses theoretical knowledge and can execute specific tasks, but completely lacks the capacity to navigate competing priorities in complex contexts.</p>
+<p><strong>AI doesn’t experience consequences.</strong> When an AI system recommends a treatment that harms a patient, fires an employee unfairly, or approves a fraudulent loan—the AI experiences nothing. No legal liability. No reputational damage. No sleepless nights.</p>
+<p>Humans do. That’s not a bug—it’s the feature that makes human oversight irreplaceable.</p>
+<p><strong>AI can’t be curious about what it’s missing.</strong> <a href="https://mitsloan.mit.edu/ideas-made-to-matter/when-humans-and-ai-work-best-together-and-when-each-better-alone">A Harvard Business School study of 640 entrepreneurs in Kenya</a> found high-performing entrepreneurs using AI saw 10-15% profit increases, while low-performing entrepreneurs using identical AI saw 8% performance <em>decreases</em>. The technology was the same. The difference was human judgment knowing when to question AI outputs, explore alternatives, and broaden the solution space.</p>
+<hr>
+</section>
+<section id="the-evidence-when-humans-stay-in-vs-get-cut-out" class="level2">
+<h2 class="anchored" data-anchor-id="the-evidence-when-humans-stay-in-vs-get-cut-out">The Evidence: When Humans Stay In vs Get Cut Out</h2>
+<section id="healthcare-augmentation-vs-replacement" class="level3">
+<h3 class="anchored" data-anchor-id="healthcare-augmentation-vs-replacement">Healthcare: Augmentation vs Replacement</h3>
+<p><strong>Success: <a href="https://www.quantumloopai.com/blog/ai-in-healthcare-implementation-case-studies-in-the-nhs">NHS + Annalise.ai</a></strong></p>
+<ul>
+<li>AI flagged anomalies in 50%+ of chest X-rays</li>
+<li>Radiologists validated findings before patient care decisions</li>
+<li>Result: 45% diagnostic accuracy improvement, 27% increase in early-stage detection, 9-day reduction in treatment start times</li>
+</ul>
+<p><strong>Failure: IBM Watson for Oncology</strong></p>
+<ul>
+<li>System trained on synthetic cases created by engineers, not real patient data</li>
+<li>Only 1-2 physicians per cancer type provided input</li>
+<li><a href="https://www.statnews.com/2018/07/25/ibm-watson-recommended-unsafe-incorrect-treatments/">Internal documents revealed “unsafe and incorrect treatments”</a></li>
+<li>Example: Recommended treatment for lung cancer patient with severe bleeding that had explicit black-box warnings against use in that scenario</li>
+<li>Result: <a href="https://www.ethics.harvard.edu/blog/post-8-abyss-examining-ai-failures-and-lessons-learned">IBM invested ~$4 billion building Watson Health; sold it for approximately $1 billion</a></li>
+</ul>
+<p>The difference? One kept doctors—who care deeply about patient outcomes—in the decision loop. The other tried to replace them.</p>
+</section>
+<section id="fintech-context-vs-automation" class="level3">
+<h3 class="anchored" data-anchor-id="fintech-context-vs-automation">Fintech: Context vs Automation</h3>
+<p><strong>Success: Allica Bank</strong></p>
+<ul>
+<li><a href="https://www.readspeaker.com/blog/anti-fraud-ai/">AI screens documents for manipulation invisible to human review</a></li>
+<li>Human fraud analysts review high-confidence alerts</li>
+<li>Relationship managers maintain customer communication</li>
+<li>Result: <a href="https://www.marqeta.com/blog/ai-in-payments-and-fintech-enhancing-human-decision-making-and-innovation">Prevents over £1 million weekly in fraudulent applications</a> without harming legitimate customers with false positives</li>
+</ul>
+<p>The bank’s fraud team has mortgages to pay. Families to support. Career reputations to protect. When the AI flags something suspicious, they don’t blindly trust it—they investigate with the healthy skepticism of someone who cares about consequences.</p>
+</section>
+<section id="manufacturing-validation-vs-blind-trust" class="level3">
+<h3 class="anchored" data-anchor-id="manufacturing-validation-vs-blind-trust">Manufacturing: Validation vs Blind Trust</h3>
+<p><a href="https://www.wwdmag.com/utility-management/article/10940027/how-ai-is-helping-the-water-industry-wash-away-unplanned-downtime">Water utilities are adopting AI for predictive maintenance</a>, using smart sensors and machine learning to identify failing equipment before catastrophic failures occur. But the implementations that succeed follow a critical pattern: human validation of AI outputs before maintenance actions, ongoing algorithm tuning based on operational feedback, and explicit positioning of AI as empowering operators rather than replacing them.</p>
+<p>As industry experts note: <a href="https://www.nacwa.org/news-publications/news-detail/2023/11/16/the-rise-of-ai-in-water-and-wastewater-management-ensuring-a-sustainable-future">“AI supplements, not supplants, human decision-making”</a>—a principle critical for AI systems to yield beneficial outcomes.</p>
+<p>Why? Plant engineers care about environmental spills—personally and professionally. The AI doesn’t.</p>
+<hr>
+</section>
+</section>
+<section id="the-four-stakes-that-keep-humans-accountable" class="level2">
+<h2 class="anchored" data-anchor-id="the-four-stakes-that-keep-humans-accountable">The Four Stakes That Keep Humans Accountable</h2>
+<section id="economic-stakes" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="economic-stakes">1. Economic Stakes</h3>
+<p><strong>What AI doesn’t experience:</strong> Bankruptcy, unemployment, poverty, financial ruin</p>
+<p><strong>What humans care about:</strong> Mortgages, college tuition, retirement savings, career security</p>
+<p>When a financial services analyst validates an AI-generated recommendation before approving a $10M loan, they’re not just following process—they’re protecting their career, their company’s capital, and their professional reputation.</p>
+<p>That personal stake creates a level of diligence AI cannot replicate.</p>
+</section>
+<section id="relational-stakes" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="relational-stakes">2. Relational Stakes</h3>
+<p><strong>What AI doesn’t experience:</strong> Trust, relationships, social consequences, reputation</p>
+<p><strong>What humans care about:</strong> Professional reputation, customer relationships, team trust, stakeholder confidence</p>
+<p>When <a href="https://www.cbsnews.com/news/aircanada-chatbot-discount-customer/">Air Canada’s chatbot gave incorrect bereavement fare information, the tribunal ruled the company was responsible</a>. But no executive at Air Canada woke up that morning planning to damage customer trust—the lack of human oversight meant no one with relational stakes was in the loop until after the damage occurred.</p>
+<p>Contrast that with Allica Bank’s fraud analysts, who know that false positives harm legitimate customer relationships they’ve worked to build.</p>
+</section>
+<section id="ethical-stakes" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="ethical-stakes">3. Ethical Stakes</h3>
+<p><strong>What AI doesn’t experience:</strong> Moral responsibility, ethical conflict, values-based judgment</p>
+<p><strong>What humans care about:</strong> Right vs wrong, fairness, justice, doing no harm</p>
+<p><a href="https://sloanreview.mit.edu/article/what-humans-lose-when-we-let-ai-decide/">MIT Sloan research warns that we are “increasingly, unsuspectingly yet willingly, abdicating our power to make decisions based on our own judgment.”</a> Judgment relies not only on reasoning but critically on imagination, reflection, examination, valuation, and <strong>empathy</strong>—capabilities AI fundamentally cannot replicate.</p>
+<p>When healthcare professionals override AI recommendations based on patient-specific factors the model couldn’t consider, they’re exercising ethical judgment grounded in the Hippocratic oath to “first, do no harm.”</p>
+</section>
+<section id="legal-stakes" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="legal-stakes">4. Legal Stakes</h3>
+<p><strong>What AI doesn’t experience:</strong> Legal liability, regulatory penalties, criminal prosecution</p>
+<p><strong>What humans care about:</strong> Compliance, liability, personal legal risk, professional licenses</p>
+<p><a href="https://korra.ai/the-67-billion-warning-how-ai-hallucinations-hurt-enterprises-and-how-to-stop-them/">AI hallucinations caused $67.4 billion in business losses in 2024</a>. Companies cannot argue AI is a “separate legal entity”—humans remain legally accountable. But without humans actively in the loop during decisions, that accountability becomes reactive (cleaning up messes) rather than proactive (preventing them).</p>
+<hr>
+</section>
+</section>
+<section id="the-human-in-the-loop-framework" class="level2">
+<h2 class="anchored" data-anchor-id="the-human-in-the-loop-framework">The Human-In-The-Loop Framework</h2>
+<p>Based on research across healthcare, fintech, and manufacturing, here’s when humans must stay in the loop:</p>
+<section id="high-stakes-high-uncertainty-human-in-loop-required" class="level3">
+<h3 class="anchored" data-anchor-id="high-stakes-high-uncertainty-human-in-loop-required">High-Stakes + High-Uncertainty = Human-In-Loop Required</h3>
+<ul>
+<li>Healthcare diagnostics</li>
+<li>Financial fraud detection</li>
+<li>Legal decisions</li>
+<li>Safety-critical systems</li>
+<li>Treatment recommendations</li>
+</ul>
+<p><strong>Why:</strong> Both significant consequences AND ambiguous situations where AI confidence may not reflect actual reliability.</p>
+</section>
+<section id="high-stakes-high-certainty-human-in-loop-for-validation" class="level3">
+<h3 class="anchored" data-anchor-id="high-stakes-high-certainty-human-in-loop-for-validation">High-Stakes + High-Certainty = Human-In-Loop for Validation</h3>
+<ul>
+<li>Automated trading within parameters</li>
+<li>Manufacturing quality control</li>
+<li>Regulatory compliance checks</li>
+</ul>
+<p><strong>Why:</strong> Consequences matter, but patterns are well-established. Humans validate rather than decide.</p>
+</section>
+<section id="low-stakes-high-uncertainty-human-on-call-for-escalation" class="level3">
+<h3 class="anchored" data-anchor-id="low-stakes-high-uncertainty-human-on-call-for-escalation">Low-Stakes + High-Uncertainty = Human-On-Call for Escalation</h3>
+<ul>
+<li>Content recommendations</li>
+<li>Initial customer support triage</li>
+<li>Preliminary research assistance</li>
+</ul>
+<p><strong>Why:</strong> Low immediate consequences, but humans available when AI confidence drops or outcomes matter more than initially apparent.</p>
+</section>
+<section id="low-stakes-high-certainty-ai-autonomy-acceptable" class="level3">
+<h3 class="anchored" data-anchor-id="low-stakes-high-certainty-ai-autonomy-acceptable">Low-Stakes + High-Certainty = AI Autonomy Acceptable</h3>
+<ul>
+<li>Spam filtering</li>
+<li>Routine data processing</li>
+<li>Basic pattern matching</li>
+</ul>
+<p><strong>Why:</strong> Both low consequences and well-established patterns make human oversight inefficient.</p>
+<p><strong>The critical insight:</strong> Task characteristics, not blanket policies, should determine collaboration approach.</p>
+<hr>
+</section>
+</section>
+<section id="why-curiosity-and-accountability-go-together" class="level2">
+<h2 class="anchored" data-anchor-id="why-curiosity-and-accountability-go-together">Why Curiosity and Accountability Go Together</h2>
+<p><a href="https://magai.co/human-oversight-in-ai-why-it-matters/">AI systems without human oversight exhibit 2.4x more bias than supervised counterparts</a>. Algorithmic failures occur 3.7x more frequently without human supervision. When failures happen, unsupervised systems incur 2.3x higher costs.</p>
+<p>Why? Because <strong>humans with something to lose stay curious about what might go wrong.</strong></p>
+<p>When you care about outcomes—when your career, reputation, relationships, and livelihood depend on results—you ask questions AI never thinks to ask:</p>
+<ul>
+<li>“What edge cases might we be missing?”</li>
+<li>“What could go wrong that hasn’t happened yet?”</li>
+<li>“Are we optimizing for the right metrics?”</li>
+<li>“What unintended consequences might this create?”</li>
+<li>“Who might this harm that we’re not considering?”</li>
+</ul>
+<p>A Harvard study found that high-performing entrepreneurs using AI asked these questions constantly, broadening the solution space beyond what AI suggested. Low-performing entrepreneurs took AI outputs at face value.</p>
+<p><strong>Curiosity isn’t a personality trait—it’s a survival mechanism for people with skin in the game.</strong></p>
+<hr>
+</section>
+<section id="the-governance-imperative" class="level2">
+<h2 class="anchored" data-anchor-id="the-governance-imperative">The Governance Imperative</h2>
+<p><a href="https://www.uctoday.com/collaboration/ai-risk-mitigation-it-leaders/">Trust and governance emerged as top CEO concerns in 2025, with AI risk, security, and compliance becoming the #1 spiking area of enterprise intent</a>. Over 30,000 large organizations actively research AI security and risk management.</p>
+<p>This isn’t compliance theater—it’s strategic risk management driven by recognition that:</p>
+<ul>
+<li><a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/ai-governance">60% of C-suite executives placed clearly defined GenAI champions throughout organizations</a></li>
+<li><a href="https://babl.ai/the-role-of-transparency-and-accountability-in-ai-adoption/">68% of AI success depends on integrating governance upfront in design phase</a></li>
+<li><a href="https://www.gallup.com/workplace/660572/play-long-game-human-ai-collaboration.aspx">98% of CEOs believe their organizations would benefit from AI, but only 30% of consumers trust AI systems</a>—a 60-percentage-point trust gap</li>
+</ul>
+<p><strong>The trust gap exists because consumers intuitively understand what research confirms: AI systems without accountable humans in the loop make mistakes no one cares enough to prevent.</strong></p>
+<p>Organizations succeeding in building trust follow three principles:</p>
+<ol type="1">
+<li><strong>Purposeful design</strong> - Integrating capabilities to advance well-defined goals mindful of constraints and risks</li>
+<li><strong>Agile governance</strong> - Tracking emergent issues across social, regulatory, and ethical domains</li>
+<li><strong>Vigilant supervision</strong> - Continuously fine-tuning systems to achieve reliability and remediate bias</li>
+</ol>
+<p>Each principle requires humans who care about consequences to be actively involved—not just “monitoring dashboards” but making judgment calls.</p>
+<hr>
+</section>
+<section id="what-this-means-for-your-organization" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<p>If you’re implementing AI, ask yourself:</p>
+<p><strong>1. Who has skin in the game at decision points?</strong></p>
+<p>Not “who monitors the system” but “who experiences consequences when it fails?”</p>
+<p><strong>2. Are humans reviewing outputs before high-stakes actions?</strong></p>
+<p>If AI recommends a loan approval, treatment plan, or quality failure—does a human with accountability validate before action?</p>
+<p><strong>3. Do your humans have authority to override AI?</strong></p>
+<p>Or are they just “rubber stamping” automated decisions?</p>
+<p><strong>4. Are you measuring human curiosity in the system?</strong></p>
+<p>How often do humans question AI outputs, explore alternatives, or identify edge cases? If rarely, your humans may be disengaged.</p>
+<p><strong>5. Who carries personal risk if this goes wrong?</strong></p>
+<p>If the answer is “no one” or “just the company generally,” you have accountability gaps.</p>
+<hr>
+</section>
+<section id="the-competitive-advantage-of-getting-this-right" class="level2">
+<h2 class="anchored" data-anchor-id="the-competitive-advantage-of-getting-this-right">The Competitive Advantage of Getting This Right</h2>
+<p><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">Organizations achieving AI success are 3x more likely to have senior leaders demonstrating ownership and commitment</a>. They follow the <a href="https://media-publications.bcg.com/BCG-Wheres-the-Value-in-AI.pdf"><strong>10-20-70 rule</strong>: 10% on algorithms, 20% on technology and data, 70% on people and processes</a>.</p>
+<p>These aren’t companies with better AI tools—they’re companies with better strategic leadership applying AI. They recognize that AI should augment, not replace, judgment, empathy, and accountability.</p>
+<p>For mid-market CEOs, this presents both challenge and opportunity:</p>
+<p><strong>The challenge:</strong> Implementing AI successfully requires expertise most mid-market companies don’t have in-house, particularly knowing where humans must stay in the loop.</p>
+<p><strong>The opportunity:</strong> Getting this right creates sustainable competitive advantage. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">Organizations leading in AI transformation report returns 3x higher than slow adopters</a>, with <a href="https://news.microsoft.com/en-xm/2025/01/14/generative-ai-delivering-substantial-roi-to-businesses-integrating-the-technology-across-operations-microsoft-sponsored-idc-report/">top performers achieving ROI of $10.30 for every dollar invested versus $3.70 average</a>.</p>
+<p><strong>The difference isn’t the sophistication of the AI—it’s the quality of human judgment, governance, and oversight surrounding it.</strong></p>
+<hr>
+</section>
+<section id="the-bottom-line" class="level2">
+<h2 class="anchored" data-anchor-id="the-bottom-line">The Bottom Line</h2>
+<p>AI is a powerful tool. But tools don’t care about outcomes—humans do.</p>
+<p>The most successful AI implementations keep accountable humans in the loop at decision points:</p>
+<ul>
+<li>Humans who care about consequences</li>
+<li>Humans who stay curious about edge cases</li>
+<li>Humans who have reputations to protect</li>
+<li>Humans who experience real stakes when things go wrong</li>
+<li>Humans who can exercise ethical judgment in ambiguous situations</li>
+</ul>
+<p><strong>The companies winning aren’t those with the most advanced AI—they’re those with the wisdom to deploy it strategically, the governance to deploy it responsibly, and the human judgment to deploy it effectively.</strong></p>
+<p>AI provides the engine, but humans with something to lose remain the essential drivers.</p>
+<p>If your AI implementations don’t have humans with skin in the game actively in the loop at high-stakes decision points, you’re not deploying AI strategically—you’re rolling dice with your company’s future.</p>
+<hr>
+<p><em>Implementing AI but unsure where humans should stay in the loop? I help growth-stage companies design human-AI collaboration models that maximize AI’s benefits while maintaining the accountability that prevents billion-dollar failures. <a href="../booking.html">Let’s talk</a> about your AI strategy.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/clarkebishop\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Clarke Bishop Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fractional CTO | Gen AI • Data Strategy • Cloud Architecture</p>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

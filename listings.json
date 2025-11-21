@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/ai-human-care-gap.html",
       "/posts/technical-prioritization.html",
       "/posts/aligning-engineering-teams.html",
       "/posts/breaking-data-silos.html",
