@@ -472,7 +472,17 @@ cookieconsent.run({
 
 </section>
 
-</main> <!-- /main -->
+<div id="cta-bar" class="cta-bar">
+<p><a href="https://clarkebishop.com/booking.html" class="cta-bar-link"> Schedule a Strategy Call → </a></p>
+</div></main> <!-- /main -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname.includes('booking')) {
+      var ctaBar = document.getElementById('cta-bar');
+      if (ctaBar) ctaBar.style.display = 'none';
+    }
+  });
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
