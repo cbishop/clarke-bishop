@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Clarke Bishop">
-<meta name="dcterms.date" content="2025-11-05">
-<meta name="description" content="A practical framework for deciding what to build when everything feels urgent">
+<meta name="dcterms.date" content="2025-12-13">
+<meta name="description" content="73-95% of GenAI pilots never reach production. Learn the 5 failure patterns from RAND and MIT research—and what the successful 27% do differently.">
 
-<title>Clarke Bishop - The Art of Technical Prioritization in Growth-Stage Companies</title>
+<title>Clarke Bishop - Why 73% of GenAI Pilots Fail to Reach Production</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -104,7 +104,7 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="canonical" href="https://clarkebishop.com/posts/technical-prioritization.html">
+<link rel="canonical" href="https://clarkebishop.com/posts/why-73-percent-genai-pilots-fail-production.html">
 </head>
 
 <body class="nav-fixed">
@@ -167,21 +167,31 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
-  <li><a href="#the-prioritization-crisis" id="toc-the-prioritization-crisis" class="nav-link" data-scroll-target="#the-prioritization-crisis">The Prioritization Crisis</a></li>
-  <li><a href="#why-prioritization-is-so-hard" id="toc-why-prioritization-is-so-hard" class="nav-link" data-scroll-target="#why-prioritization-is-so-hard">Why Prioritization Is So Hard</a></li>
-  <li><a href="#the-framework-strategic-prioritization" id="toc-the-framework-strategic-prioritization" class="nav-link" data-scroll-target="#the-framework-strategic-prioritization">The Framework: Strategic Prioritization</a>
+  <li><a href="#how-bad-is-it" id="toc-how-bad-is-it" class="nav-link" data-scroll-target="#how-bad-is-it">How bad is it?</a></li>
+  <li><a href="#why-projects-really-fail" id="toc-why-projects-really-fail" class="nav-link" data-scroll-target="#why-projects-really-fail">Why projects really fail</a>
   <ul class="collapse">
-  <li><a href="#step-1-define-clear-business-goals-the-north-star" id="toc-step-1-define-clear-business-goals-the-north-star" class="nav-link" data-scroll-target="#step-1-define-clear-business-goals-the-north-star">Step 1: Define Clear Business Goals (The North Star)</a></li>
-  <li><a href="#step-2-map-every-initiative-to-business-goals" id="toc-step-2-map-every-initiative-to-business-goals" class="nav-link" data-scroll-target="#step-2-map-every-initiative-to-business-goals">Step 2: Map Every Initiative to Business Goals</a></li>
-  <li><a href="#step-3-estimate-impact-vs-effort" id="toc-step-3-estimate-impact-vs-effort" class="nav-link" data-scroll-target="#step-3-estimate-impact-vs-effort">Step 3: Estimate Impact vs Effort</a></li>
-  <li><a href="#step-4-factor-in-dependencies-and-sequencing" id="toc-step-4-factor-in-dependencies-and-sequencing" class="nav-link" data-scroll-target="#step-4-factor-in-dependencies-and-sequencing">Step 4: Factor in Dependencies and Sequencing</a></li>
-  <li><a href="#step-5-say-no-the-hardest-part" id="toc-step-5-say-no-the-hardest-part" class="nav-link" data-scroll-target="#step-5-say-no-the-hardest-part">Step 5: Say No (The Hardest Part)</a></li>
+  <li><a href="#pattern-1-solving-the-wrong-problem" id="toc-pattern-1-solving-the-wrong-problem" class="nav-link" data-scroll-target="#pattern-1-solving-the-wrong-problem">Pattern 1: Solving the wrong problem</a></li>
+  <li><a href="#pattern-2-the-data-quality-crisis" id="toc-pattern-2-the-data-quality-crisis" class="nav-link" data-scroll-target="#pattern-2-the-data-quality-crisis">Pattern 2: The data quality crisis</a></li>
+  <li><a href="#pattern-3-pilot-paralysis" id="toc-pattern-3-pilot-paralysis" class="nav-link" data-scroll-target="#pattern-3-pilot-paralysis">Pattern 3: Pilot paralysis</a></li>
+  <li><a href="#pattern-4-infrastructure-gaps" id="toc-pattern-4-infrastructure-gaps" class="nav-link" data-scroll-target="#pattern-4-infrastructure-gaps">Pattern 4: Infrastructure gaps</a></li>
+  <li><a href="#pattern-5-organizational-unreadiness" id="toc-pattern-5-organizational-unreadiness" class="nav-link" data-scroll-target="#pattern-5-organizational-unreadiness">Pattern 5: Organizational unreadiness</a></li>
   </ul></li>
-  <li><a href="#special-cases-technical-debt-security-and-infrastructure" id="toc-special-cases-technical-debt-security-and-infrastructure" class="nav-link" data-scroll-target="#special-cases-technical-debt-security-and-infrastructure">Special Cases: Technical Debt, Security, and Infrastructure</a></li>
-  <li><a href="#case-study-from-chaos-to-clarity" id="toc-case-study-from-chaos-to-clarity" class="nav-link" data-scroll-target="#case-study-from-chaos-to-clarity">Case Study: From Chaos to Clarity</a></li>
-  <li><a href="#common-prioritization-mistakes" id="toc-common-prioritization-mistakes" class="nav-link" data-scroll-target="#common-prioritization-mistakes">Common Prioritization Mistakes</a></li>
-  <li><a href="#your-prioritization-assessment" id="toc-your-prioritization-assessment" class="nav-link" data-scroll-target="#your-prioritization-assessment">Your Prioritization Assessment</a></li>
-  <li><a href="#the-bottom-line" id="toc-the-bottom-line" class="nav-link" data-scroll-target="#the-bottom-line">The Bottom Line</a></li>
+  <li><a href="#what-the-27-do-differently" id="toc-what-the-27-do-differently" class="nav-link" data-scroll-target="#what-the-27-do-differently">What the 27% do differently</a>
+  <ul class="collapse">
+  <li><a href="#start-with-business-pain-not-technology" id="toc-start-with-business-pain-not-technology" class="nav-link" data-scroll-target="#start-with-business-pain-not-technology">Start with business pain, not technology</a></li>
+  <li><a href="#right-size-the-problem" id="toc-right-size-the-problem" class="nav-link" data-scroll-target="#right-size-the-problem">Right-size the problem</a></li>
+  <li><a href="#plan-for-production-from-day-one" id="toc-plan-for-production-from-day-one" class="nav-link" data-scroll-target="#plan-for-production-from-day-one">Plan for production from day one</a></li>
+  </ul></li>
+  <li><a href="#five-questions-before-your-next-pilot" id="toc-five-questions-before-your-next-pilot" class="nav-link" data-scroll-target="#five-questions-before-your-next-pilot">Five questions before your next pilot</a>
+  <ul class="collapse">
+  <li><a href="#what-specific-business-problem-does-this-solve" id="toc-what-specific-business-problem-does-this-solve" class="nav-link" data-scroll-target="#what-specific-business-problem-does-this-solve">1. What specific business problem does this solve?</a></li>
+  <li><a href="#do-you-have-the-dataand-is-it-clean" id="toc-do-you-have-the-dataand-is-it-clean" class="nav-link" data-scroll-target="#do-you-have-the-dataand-is-it-clean">2. Do you have the data—and is it clean?</a></li>
+  <li><a href="#what-does-production-look-like" id="toc-what-does-production-look-like" class="nav-link" data-scroll-target="#what-does-production-look-like">3. What does production look like?</a></li>
+  <li><a href="#is-your-organization-ready" id="toc-is-your-organization-ready" class="nav-link" data-scroll-target="#is-your-organization-ready">4. Is your organization ready?</a></li>
+  <li><a href="#build-or-buy" id="toc-build-or-buy" class="nav-link" data-scroll-target="#build-or-buy">5. Build or buy?</a></li>
+  </ul></li>
+  <li><a href="#the-real-question" id="toc-the-real-question" class="nav-link" data-scroll-target="#the-real-question">The real question</a></li>
+  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">Takeaways</a></li>
   </ul>
 </nav>
     </div>
@@ -190,17 +200,17 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Art of Technical Prioritization in Growth-Stage Companies</h1>
+<h1 class="title">Why 73% of GenAI Pilots Fail to Reach Production</h1>
   <div class="quarto-categories">
+    <div class="quarto-category">ai</div>
     <div class="quarto-category">strategy</div>
-    <div class="quarto-category">prioritization</div>
     <div class="quarto-category">leadership</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A practical framework for deciding what to build when everything feels urgent
+    73-95% of GenAI pilots never reach production. Learn the 5 failure patterns from RAND and MIT research—and what the successful 27% do differently.
   </div>
 </div>
 
@@ -217,7 +227,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 5, 2025</p>
+      <p class="date">December 13, 2025</p>
     </div>
   </div>
   
@@ -229,392 +239,140 @@ cookieconsent.run({
 </header>
 
 
+<p><img src="../images/posts/why-73-percent-genai-pilots-fail-production.png" class="img-fluid"></p>
 <section id="tldr" class="level2">
 <h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
 <ul>
-<li><strong>If everything is urgent, nothing is</strong>—define 3 clear business goals per quarter, not 10</li>
-<li><strong>Map every initiative to goals</strong>—if work doesn’t clearly support a goal, it’s probably not a priority</li>
-<li><strong>Say no ruthlessly</strong>—every “yes” to low-priority work is an implicit “no” to high-priority work</li>
-<li><strong>Focus wins</strong>—companies that do fewer things better outperform those trying to do everything</li>
+<li><strong>73-95% of GenAI pilots never reach production</strong>—not because the technology fails, but because organizations skip the fundamentals</li>
+<li><strong>Five failure patterns</strong> cause most failures: wrong problem, bad data, pilot paralysis, infrastructure gaps, and organizational unreadiness</li>
+<li><strong>Reframe the question</strong>: Ask “What problems were too expensive to fix?” not “Where can we use AI?”</li>
+<li><strong>Answer five questions</strong> before your next pilot—if you can’t, you’re building a demo, not a product</li>
 </ul>
+<hr>
+<p>Your GenAI pilot is probably going to fail.</p>
+<p>Not because the technology doesn’t work. Not because you picked the wrong model. Because <strong>73% of AI initiatives never escape the sandbox</strong>—and the real numbers are likely worse.</p>
+<p>I’ve watched this pattern repeat across dozens of companies. The technology demos beautifully. Executives get excited. Six months later, the pilot is quietly shelved while everyone moves on to the next shiny thing.</p>
+<p>Enterprise buyers poured $4.6 billion into GenAI applications in 2024, an 8x increase from the year before. Yet according to <a href="https://www.rand.org/pubs/research_reports/RRA2680-1.html">RAND Corporation research</a>, more than 80% of AI projects fail. That’s twice the failure rate of IT projects that don’t involve AI.</p>
+<p>The problem isn’t the AI. It’s how we’re approaching it.</p>
 </section>
-<section id="the-prioritization-crisis" class="level2">
-<h2 class="anchored" data-anchor-id="the-prioritization-crisis">The Prioritization Crisis</h2>
-<p><strong>“We need to move faster but don’t know what to prioritize.”</strong></p>
-<p>This is the reality for most growth-stage companies. You have:</p>
-<ul>
-<li>A backlog of 200+ feature requests</li>
-<li>Customer demands from every sales call</li>
-<li>Technical debt that’s slowing you down</li>
-<li>Competitive threats requiring quick response</li>
-<li>Infrastructure that needs upgrading</li>
-<li>Security concerns that can’t be ignored</li>
-</ul>
-<p>Everything feels urgent. Everything feels important. Your team is trying to do it all at once.</p>
-<p><strong>Result? Nothing ships. Or everything ships half-finished.</strong></p>
-<p>After more than 25 years of building systems and advising companies across industries, I’ve learned that prioritization isn’t just about ranking items on a list. It’s about <strong>pattern recognition, strategic thinking, and having the courage to say no.</strong></p>
-<p>Here’s the framework I use to help companies decide what to build when everything feels urgent.</p>
+<section id="how-bad-is-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-bad-is-it">How bad is it?</h2>
+<p>The failure rates are worse than most executives realize—and multiple independent studies confirm the pattern.</p>
+<p><a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/">MIT’s 2025 GenAI Divide report</a> found that 60% of organizations evaluated enterprise AI systems, but only 20% reached the pilot stage. Of those, just 5% made it to production. That’s a 95% failure rate from evaluation to deployment.</p>
+<p><a href="https://www.gartner.com/en/newsroom/press-releases/2024-07-29-gartner-predicts-30-percent-of-generative-ai-projects-will-be-abandoned-after-proof-of-concept-by-end-of-2025">Gartner predicts</a> that 30% of GenAI projects will be abandoned after proof of concept by the end of 2025. IDC found that companies ran an average of 23 POCs between 2023 and 2024—but only 3 reached production.</p>
+<p>The math is brutal. If you’re running GenAI pilots, the odds are stacked against you.</p>
+<p>Unless you understand what separates the 27% that succeed.</p>
 <blockquote class="blockquote">
-<p>If you have more than 3 primary goals, you don’t have goals—you have a wishlist.</p>
+<p>The 73% failure rate isn’t a technology problem—it’s a strategy problem.</p>
 <p>— Clarke Bishop</p>
 </blockquote>
-<hr>
 </section>
-<section id="why-prioritization-is-so-hard" class="level2">
-<h2 class="anchored" data-anchor-id="why-prioritization-is-so-hard">Why Prioritization Is So Hard</h2>
-<p>Before diving into solutions, let’s acknowledge why this is difficult:</p>
-<section id="competing-stakeholders" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="competing-stakeholders">1. Competing Stakeholders</h3>
-<ul>
-<li><strong>Sales</strong> wants features to close deals</li>
-<li><strong>Support</strong> wants bug fixes to reduce ticket volume</li>
-<li><strong>Product</strong> wants strategic capabilities</li>
-<li><strong>Engineering</strong> wants to pay down technical debt</li>
-<li><strong>Security</strong> wants compliance and hardening</li>
-<li><strong>Leadership</strong> wants growth and cost reduction</li>
-</ul>
-<p>Each stakeholder has legitimate needs. But you can’t satisfy everyone simultaneously.</p>
+<section id="why-projects-really-fail" class="level2">
+<h2 class="anchored" data-anchor-id="why-projects-really-fail">Why projects really fail</h2>
+<p>RAND researchers interviewed 65 experienced data scientists and engineers to understand why AI projects fail. They identified five root causes—and most struggling organizations hit multiple patterns simultaneously.</p>
+<section id="pattern-1-solving-the-wrong-problem" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-1-solving-the-wrong-problem">Pattern 1: Solving the wrong problem</h3>
+<p>Teams build what’s technically interesting, not what the business needs. There’s a persistent disconnect between technical staff and business stakeholders about what problem actually needs solving.</p>
+<p>I call this “technology bias”—chasing the latest models instead of solving real problems. When your AI team is more excited about fine-tuning techniques than about the business outcome, you have a problem.</p>
 </section>
-<section id="hidden-costs" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="hidden-costs">2. Hidden Costs</h3>
-<p>Every project has:</p>
-<ul>
-<li><strong>Direct cost</strong> - Engineering time to build<br>
-</li>
-<li><strong>Opportunity cost</strong> - What else could we have built?<br>
-</li>
-<li><strong>Maintenance cost</strong> - Ongoing support and updates<br>
-</li>
-<li><strong>Cognitive load</strong> - More complexity in the system<br>
-</li>
-<li><strong>Technical debt</strong> - Shortcuts taken to ship faster</li>
-</ul>
-<p>Teams often focus only on direct costs, ignoring the others.</p>
+<section id="pattern-2-the-data-quality-crisis" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-2-the-data-quality-crisis">Pattern 2: The data quality crisis</h3>
+<p>“Beneath every AI failure lies a data quality problem.” That’s from Informatica, and it matches what I’ve seen repeatedly.</p>
+<p>Gartner estimates that through 2025, at least 50% of GenAI projects will be abandoned at the pilot stage due to poor data quality. Organizations consistently underestimate data preparation requirements. They budget for model development but not for the unglamorous work of cleaning, labeling, and organizing their data.</p>
 </section>
-<section id="uncertainty" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="uncertainty">3. Uncertainty</h3>
-<p>You don’t know:</p>
-<ul>
-<li>Which features customers will actually use</li>
-<li>What technical problems you’ll encounter</li>
-<li>How long things will really take</li>
-<li>Whether the market will shift</li>
-</ul>
-<p>Perfect information doesn’t exist. You have to make decisions anyway.</p>
+<section id="pattern-3-pilot-paralysis" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-3-pilot-paralysis">Pattern 3: Pilot paralysis</h3>
+<p>POCs run in safe sandboxes with no clear path to production. Integration challenges—authentication, compliance workflows, user training—get ignored until someone asks for a go-live date.</p>
+<p>The technology works in isolation. But when it’s time to connect to real systems with real users, everything falls apart. The pilot becomes permanent, never graduating to production.</p>
 </section>
-<section id="sunk-cost-fallacy" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="sunk-cost-fallacy">4. Sunk Cost Fallacy</h3>
-<p>“We’ve already invested 3 months in this—we can’t stop now!”</p>
-<p>Yes, you can. If it’s the wrong direction, more investment makes it worse.</p>
-<hr>
+<section id="pattern-4-infrastructure-gaps" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-4-infrastructure-gaps">Pattern 4: Infrastructure gaps</h3>
+<p>Models that work in Jupyter notebooks fail at scale. Organizations lack MLOps pipelines, deployment infrastructure, and monitoring capabilities.</p>
+<p>Gartner found it takes an average of <strong>8 months to go from prototype to production</strong>. That’s not because the AI is slow—it’s because the infrastructure to deploy, monitor, and maintain AI systems doesn’t exist.</p>
+</section>
+<section id="pattern-5-organizational-unreadiness" class="level3">
+<h3 class="anchored" data-anchor-id="pattern-5-organizational-unreadiness">Pattern 5: Organizational unreadiness</h3>
+<p>This is the silent killer. Teams accumulate “implementation debt”—shortcuts and oversights that compound until they derail the project.</p>
+<p>There’s a skills gap between data scientists who build models and production engineers who deploy systems. Nobody owns the model post-launch. The organization isn’t ready for AI, even if the technology is ready for the organization.</p>
+<p>Which of these patterns do you recognize? Most struggling organizations hit two or three simultaneously.</p>
 </section>
 </section>
-<section id="the-framework-strategic-prioritization" class="level2">
-<h2 class="anchored" data-anchor-id="the-framework-strategic-prioritization">The Framework: Strategic Prioritization</h2>
-<p>Here’s the prioritization framework I use with clients:</p>
-<section id="step-1-define-clear-business-goals-the-north-star" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-define-clear-business-goals-the-north-star">Step 1: Define Clear Business Goals (The North Star)</h3>
-<p>Everything starts here. <strong>What are you actually trying to achieve?</strong></p>
-<p>Not “ship more features” or “make customers happy”—those are too vague. Specific, measurable goals:</p>
-<ul>
-<li>Reduce churn by 15% in the next quarter</li>
-<li>Increase trial-to-paid conversion by 20%</li>
-<li>Launch enterprise tier by Q3</li>
-<li>Reduce infrastructure costs by 25%</li>
-<li>Achieve SOC 2 compliance by year-end</li>
-</ul>
-<p><strong>Why this matters:</strong> If you don’t know where you’re going, every road looks equally good (or bad).</p>
-<p>Typically, I help companies identify <strong>3 primary goals for the quarter</strong>. Not 10. Not 20. Three.</p>
-<p>If you have more than 3 primary goals, you don’t have goals—you have a wishlist.</p>
-</section>
-<section id="step-2-map-every-initiative-to-business-goals" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-map-every-initiative-to-business-goals">Step 2: Map Every Initiative to Business Goals</h3>
-<p>For every item in your backlog, ask: <strong>“Which business goal does this serve?”</strong></p>
-<p>Create a simple matrix:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Initiative</th>
-<th>Goal</th>
-<th>Impact</th>
-<th>Effort</th>
-<th>Priority</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Predictive churn system</td>
-<td>Reduce churn 15%</td>
-<td>High</td>
-<td>High</td>
-<td>Must do</td>
-</tr>
-<tr class="even">
-<td>Auto-save feature</td>
-<td>Improve conversion</td>
-<td>Medium</td>
-<td>Low</td>
-<td>Do soon</td>
-</tr>
-<tr class="odd">
-<td>Redesign settings page</td>
-<td>???</td>
-<td>Low</td>
-<td>Medium</td>
-<td>Defer</td>
-</tr>
-<tr class="even">
-<td>Multi-region deployment</td>
-<td>Enterprise launch</td>
-<td>High</td>
-<td>High</td>
-<td>Must do</td>
-</tr>
-</tbody>
-</table>
-<p>Notice what happens:</p>
-<ul>
-<li>Some initiatives clearly support goals (predictive churn system)</li>
-<li>Some have unclear connection (redesign settings page)</li>
-<li>Some have high impact despite high effort (multi-region deployment)</li>
-</ul>
-<p><strong>If an initiative doesn’t clearly support a business goal, it’s probably not a priority.</strong></p>
-</section>
-<section id="step-3-estimate-impact-vs-effort" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-estimate-impact-vs-effort">Step 3: Estimate Impact vs Effort</h3>
-<p>For each initiative that supports a goal, estimate:</p>
-<p><strong>Impact:</strong> How much does this move the needle on the goal?</p>
-<ul>
-<li><strong>High</strong> - Major impact on the goal</li>
-<li><strong>Medium</strong> - Moderate impact</li>
-<li><strong>Low</strong> - Minor impact</li>
-</ul>
-<p><strong>Effort:</strong> How much engineering time and complexity?</p>
-<ul>
-<li><strong>Low</strong> - Days to a week</li>
-<li><strong>Medium</strong> - 2-4 weeks</li>
-<li><strong>High</strong> - Months</li>
-</ul>
-<p>This creates a 2x2 matrix:</p>
-<table class="table">
-<colgroup>
-<col style="width: 24%">
-<col style="width: 36%">
-<col style="width: 39%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th style="text-align: center;">Low Effort</th>
-<th style="text-align: center;">High Effort</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>High Impact</strong></td>
-<td style="text-align: center;"><strong>DO NOW</strong><br>(Quick wins)</td>
-<td style="text-align: center;"><strong>PLAN CAREFULLY, PROBABLY DO</strong><br>(Strategic)</td>
-</tr>
-<tr class="even">
-<td><strong>Low Impact</strong></td>
-<td style="text-align: center;"><strong>MAYBE</strong><br>(If time)</td>
-<td style="text-align: center;"><strong>DON’T DO</strong><br>(Waste of time)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>High impact + Low effort = Quick wins</strong> - Do these immediately</p>
-<p><strong>High impact + High effort = Strategic bets</strong> - Plan carefully, sequence properly, but probably do them</p>
-<p><strong>Low impact + Low effort = Nice-to-haves</strong> - Do if you have spare capacity</p>
-<p><strong>Low impact + High effort = Avoid</strong> - These are traps that waste months of time</p>
-</section>
-<section id="step-4-factor-in-dependencies-and-sequencing" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-factor-in-dependencies-and-sequencing">Step 4: Factor in Dependencies and Sequencing</h3>
-<p>Some high-priority items can’t be done yet because:</p>
-<ul>
-<li>They depend on other work first</li>
-<li>The team lacks necessary skills</li>
-<li>External factors aren’t ready (partnerships, compliance, etc.)</li>
-</ul>
-<p>Create a sequencing plan:</p>
-<p><strong>Phase 1 (Now - Next 6 weeks):</strong></p>
-<ul>
-<li>Quick wins that unblock progress</li>
-<li>Foundation work for strategic bets</li>
-</ul>
-<p><strong>Phase 2 (6-12 weeks):</strong></p>
-<ul>
-<li>Strategic bets that build on Phase 1</li>
-<li>Medium-impact items if capacity allows</li>
-</ul>
-<p><strong>Phase 3 (12+ weeks):</strong></p>
-<ul>
-<li>Longer-term initiatives</li>
-<li>Items dependent on Phase 1 &amp; 2 completion</li>
-</ul>
-</section>
-<section id="step-5-say-no-the-hardest-part" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-say-no-the-hardest-part">Step 5: Say No (The Hardest Part)</h3>
-<p>Once you have priorities, <strong>defend them ruthlessly.</strong></p>
-<p>When someone asks “Can we also add Feature X?”, the answer is usually:</p>
-<ul>
-<li>“That’s interesting, but it doesn’t support our Q3 goals. Let’s revisit in Q4.”</li>
-<li>“If we add that, what should we remove? Everything has a cost.”</li>
-<li>“Let’s put it in the backlog and evaluate against other priorities later.”</li>
-</ul>
-<p><strong>Saying no is a leadership skill.</strong> Every “yes” to a low-priority item is an implicit “no” to a high-priority item (because time is finite).</p>
+<section id="what-the-27-do-differently" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-27-do-differently">What the 27% do differently</h2>
+<p>Successful GenAI deployments share three characteristics. None of them are about picking the right model.</p>
+<p><strong>OBJECTION:</strong> “We already know to start with a business problem. Everyone says that.”</p>
+<p>I’m sure you do. And yet most pilots still fail. Knowing isn’t the same as doing. The companies that succeed don’t just <em>say</em> they start with business problems—they refuse to write a single line of code until they can quantify exactly what the current problem costs.</p>
+<section id="start-with-business-pain-not-technology" class="level3">
+<h3 class="anchored" data-anchor-id="start-with-business-pain-not-technology">Start with business pain, not technology</h3>
+<p>The most reliable predictor of success is starting with process bottlenecks that already cost real money.</p>
+<p>Successful teams ask “What’s costing us?” not “Where can we use AI?” Salesforce’s legal team built a GenAI assistant for contract drafting and trimmed outside-counsel spend by over $5 million. Lloyds Banking Group reduced income verification from days to seconds. Both started with expensive, painful problems.</p>
+<p>But here’s the thing: <strong>“start with a business problem” is incomplete.</strong> Many executives lack vision about what’s actually possible. They think “automation” when they should think “capability.”</p>
+<p>Here’s a better question: What could you do with an army of smart, minimum-wage employees? What problems have you been ignoring because they were too expensive to fix?</p>
+<p>This reframe surfaces latent demand—problems that got written off as “too expensive” are now viable. It shifts the mindset from “replace what we do” to “do what we couldn’t.”</p>
 <blockquote class="blockquote">
-<p>The hardest part of prioritization isn’t ranking—it’s defending your choices.</p>
+<p>If you can’t quantify the cost of the current problem, you’re not ready for an AI solution.</p>
 <p>— Clarke Bishop</p>
 </blockquote>
-<hr>
+</section>
+<section id="right-size-the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="right-size-the-problem">Right-size the problem</h3>
+<p>Successful deployments have three things in common: lots of content to process, clear boundaries on what the AI does, and obvious connection points to existing systems.</p>
+<p>Don’t boil the ocean. Start narrow, prove value, then expand.</p>
+<p>MIT’s research found that <strong>vendor solutions succeed twice as often</strong> as internal builds (67% vs 33%). That’s a big gap. Before building custom, ask whether you’re solving a problem that really requires proprietary AI—or whether you’re building because building feels more impressive than buying.</p>
+</section>
+<section id="plan-for-production-from-day-one" class="level3">
+<h3 class="anchored" data-anchor-id="plan-for-production-from-day-one">Plan for production from day one</h3>
+<p>Treat AI as a lifecycle project, not a prototype.</p>
+<p>Involve DevOps, SRE, and IT partners early. Build deployment, monitoring, and governance into the pilot scope—not as afterthoughts. Define who owns the model post-launch before you build it.</p>
+<p>Accenture’s Knowledge Assist is a good example. They used a multi-model architecture with Claude-2, Amazon Titan, Pinecone, and Kendra. Results: 50% reduction in new hire training time, 40% drop in query escalations. The success factor wasn’t the models—it was clear metrics, defined scope, and production architecture planned from the start.</p>
 </section>
 </section>
-<section id="special-cases-technical-debt-security-and-infrastructure" class="level2">
-<h2 class="anchored" data-anchor-id="special-cases-technical-debt-security-and-infrastructure">Special Cases: Technical Debt, Security, and Infrastructure</h2>
-<p>Some work doesn’t directly map to business goals but still matters:</p>
-<section id="technical-debt" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="technical-debt">Technical Debt</h3>
-<p><strong>Bad framing:</strong> “We need to refactor the codebase because it’s messy.”</p>
-<p><strong>Good framing:</strong> “This refactoring will reduce bug rates by 40%, freeing the team to work on features. It also improves onboarding time for new engineers from 3 months to 1 month.”</p>
-<p><strong>Connect technical work to business outcomes.</strong> If you can’t, it’s probably not a priority.</p>
+<section id="five-questions-before-your-next-pilot" class="level2">
+<h2 class="anchored" data-anchor-id="five-questions-before-your-next-pilot">Five questions before your next pilot</h2>
+<p>Before launching your next GenAI pilot, run it through this filter. If you can’t answer these questions clearly, you’re building a demo, not a product.</p>
+<section id="what-specific-business-problem-does-this-solve" class="level3">
+<h3 class="anchored" data-anchor-id="what-specific-business-problem-does-this-solve">1. What specific business problem does this solve?</h3>
+<p>If you can’t quantify the cost of the current problem, stop.</p>
+<p>“We want to use AI for customer service” is not a clear problem definition. “We’re spending $2M per year on Tier 1 support tickets that could be automated” is a clear business problem.</p>
 </section>
-<section id="security-compliance" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="security-compliance">Security &amp; Compliance</h3>
-<p>Some things are non-negotiable:</p>
+<section id="do-you-have-the-dataand-is-it-clean" class="level3">
+<h3 class="anchored" data-anchor-id="do-you-have-the-dataand-is-it-clean">2. Do you have the data—and is it clean?</h3>
+<p>Audit data availability and quality before committing to a pilot. Budget 40-60% of project time for data preparation.</p>
+<p>If your data isn’t ready, that’s your first project—not AI.</p>
+</section>
+<section id="what-does-production-look-like" class="level3">
+<h3 class="anchored" data-anchor-id="what-does-production-look-like">3. What does production look like?</h3>
+<p>Define the deployment environment, integration points, and scale requirements upfront. Who will own it post-launch? Who monitors performance? Who retrains the model when it drifts?</p>
+<p>If you can’t answer these, you’re not ready for production.</p>
+</section>
+<section id="is-your-organization-ready" class="level3">
+<h3 class="anchored" data-anchor-id="is-your-organization-ready">4. Is your organization ready?</h3>
+<p>Do stakeholders understand what AI can and can’t do? Is there executive sponsorship for the full lifecycle, not just the pilot?</p>
+<p>RAND recommends committing to at least 12 months on a specific problem. AI projects that hop between use cases rarely succeed.</p>
+</section>
+<section id="build-or-buy" class="level3">
+<h3 class="anchored" data-anchor-id="build-or-buy">5. Build or buy?</h3>
+<p>Internal builds succeed 33% of the time. Vendor solutions succeed 67%.</p>
+<p>Ask: Does this need to be proprietary, or can you buy and customize? Often the best answer is buy the platform, build the application layer.</p>
+</section>
+</section>
+<section id="the-real-question" class="level2">
+<h2 class="anchored" data-anchor-id="the-real-question">The real question</h2>
+<p>The 73% failure rate isn’t a technology problem. It’s a strategy problem.</p>
+<p>The companies successfully deploying GenAI treat it as a business initiative with clear ROI targets, not a technology experiment with vague potential. They start with expensive problems, right-size their scope, and plan for production from day one.</p>
+<p>Every failed pilot is an expensive lesson. The question isn’t whether GenAI can deliver value—it clearly can for the companies doing it right. The question is whether your organization is set up to be in the 27%.</p>
+</section>
+<section id="takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="takeaways">Takeaways</h2>
 <ul>
-<li>Legal compliance (GDPR, HIPAA, SOC 2)</li>
-<li>Critical security vulnerabilities</li>
-<li>Data breach risks</li>
-</ul>
-<p>These don’t always map neatly to quarterly goals, but they’re necessary. <strong>Treat them as prerequisites, not priorities.</strong></p>
-<p>Example: “We can’t launch enterprise tier without SOC 2 compliance, so compliance is a Phase 1 prerequisite.”</p>
-</section>
-<section id="infrastructure-scalability" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="infrastructure-scalability">Infrastructure &amp; Scalability</h3>
-<p><strong>Bad approach:</strong> “Let’s upgrade everything preemptively in case we scale.”</p>
-<p><strong>Good approach:</strong> “Our current infrastructure can handle 10x growth. Once we hit 5x, we’ll reassess. Until then, focus on business goals.”</p>
-<p>Don’t optimize for problems you don’t have yet.</p>
-<hr>
-</section>
-</section>
-<section id="case-study-from-chaos-to-clarity" class="level2">
-<h2 class="anchored" data-anchor-id="case-study-from-chaos-to-clarity">Case Study: From Chaos to Clarity</h2>
-<p>An enterprise software company was paralyzed by competing priorities. Engineering was working on 15 initiatives simultaneously. Leadership was frustrated. The team was burned out. Nothing was shipping.</p>
-<section id="the-problem" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="the-problem">The Problem</h3>
-<ul>
-<li>No clear business goals—just a list of “important things”</li>
-<li>Every stakeholder demanded their priorities first</li>
-<li>Engineering was context-switching constantly</li>
-<li>Morale was low, velocity was slowing</li>
-</ul>
-</section>
-<section id="what-we-did" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="what-we-did">What We Did</h3>
-<p><strong>Week 1: Define Goals</strong></p>
-<ul>
-<li><p>Worked with leadership to identify 3 primary business goals:</p>
-<ol type="1">
-<li>Reduce client onboarding time by 50%</li>
-<li>Increase activation rate from 60% to 80%</li>
-<li>Launch self-service tier by Q4</li>
-</ol></li>
-</ul>
-<p><strong>Week 2: Audit Backlog</strong></p>
-<ul>
-<li>Reviewed all 15 in-flight initiatives</li>
-<li>Mapped each to business goals (or lack thereof)</li>
-<li>Estimated impact vs effort</li>
-</ul>
-<p><strong>Week 3: Make Hard Decisions</strong></p>
-<ul>
-<li><strong>Killed 8 initiatives</strong> that didn’t support goals</li>
-<li><strong>Deferred 3 initiatives</strong> to next quarter</li>
-<li><strong>Focused on 4 initiatives</strong> with highest impact on goals</li>
-</ul>
-<p><strong>Weeks 4-12: Execute Focused Roadmap</strong></p>
-<ul>
-<li>Team focused on just 4 initiatives</li>
-<li>Reduced context switching</li>
-<li>Shipped faster, with higher quality</li>
-</ul>
-</section>
-<section id="the-results" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="the-results">The Results</h3>
-<ul>
-<li><strong>70% reduction in client onboarding time</strong> (exceeded goal)</li>
-<li><strong>Activation improved to 75%</strong> (close to goal)</li>
-<li><strong>Self-service tier launched on time</strong></li>
-<li><strong>Team morale improved dramatically</strong> - Focus feels better than chaos</li>
-</ul>
-<p>Timeline: 3 months from chaos to high-performing execution.</p>
-<hr>
-</section>
-</section>
-<section id="common-prioritization-mistakes" class="level2">
-<h2 class="anchored" data-anchor-id="common-prioritization-mistakes">Common Prioritization Mistakes</h2>
-<section id="mistake-1-lets-do-all-of-it" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="mistake-1-lets-do-all-of-it">Mistake 1: “Let’s do all of it”</h3>
-<p>You can’t. Trying to do everything means nothing gets done well. Focus wins.</p>
-</section>
-<section id="mistake-2-whoever-shouts-loudest-gets-resources" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="mistake-2-whoever-shouts-loudest-gets-resources">Mistake 2: “Whoever shouts loudest gets resources”</h3>
-<p>This creates a culture where stakeholders compete by volume, not logic. Prioritize based on goals, not noise.</p>
-</section>
-<section id="mistake-3-well-revisit-priorities-later" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="mistake-3-well-revisit-priorities-later">Mistake 3: “We’ll revisit priorities later”</h3>
-<p>Priorities should be reviewed regularly (monthly or quarterly), not set-and-forget. Markets shift. Goals evolve.</p>
-</section>
-<section id="mistake-4-small-tasks-dont-need-prioritization" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="mistake-4-small-tasks-dont-need-prioritization">Mistake 4: “Small tasks don’t need prioritization”</h3>
-<p>Death by a thousand cuts. Small tasks add up. If every engineer spends 20% of time on “small stuff,” you’ve lost 20% of your capacity.</p>
-</section>
-<section id="mistake-5-innovation-isnt-on-the-roadmap" class="level3 unlisted">
-<h3 class="unlisted anchored" data-anchor-id="mistake-5-innovation-isnt-on-the-roadmap">Mistake 5: “Innovation isn’t on the roadmap”</h3>
-<p>Reserve some capacity (10-20%) for exploration and innovation. But make it explicit, not random.</p>
-<hr>
-</section>
-</section>
-<section id="your-prioritization-assessment" class="level2">
-<h2 class="anchored" data-anchor-id="your-prioritization-assessment">Your Prioritization Assessment</h2>
-<p>Ask yourself:</p>
-<ol type="1">
-<li><p><strong>Can you name your top 3 business goals for this quarter?</strong> If not, you don’t have priorities.</p></li>
-<li><p><strong>Can every engineer explain how their current work supports a business goal?</strong> If not, you have alignment problems.</p></li>
-<li><p><strong>Have you said “no” to anything in the past month?</strong> If not, you’re not prioritizing—you’re accepting everything.</p></li>
-<li><p><strong>Are you working on more than 5 major initiatives simultaneously?</strong> If so, you’re likely under-delivering on all of them.</p></li>
-<li><p><strong>Do you revisit priorities at least quarterly?</strong> If not, you’re optimizing for yesterday’s problems.</p></li>
-</ol>
-<p>If you answered “no” to any of these, you have a prioritization problem—and it’s slowing your company down.</p>
-<hr>
-</section>
-<section id="the-bottom-line" class="level2">
-<h2 class="anchored" data-anchor-id="the-bottom-line">The Bottom Line</h2>
-<p>Prioritization isn’t about clever frameworks or sophisticated tools. It’s about:</p>
-<ol type="1">
-<li><strong>Clarity</strong> - Know your goals</li>
-<li><strong>Discipline</strong> - Map work to goals</li>
-<li><strong>Courage</strong> - Say no to everything else</li>
-<li><strong>Focus</strong> - Do fewer things better</li>
-<li><strong>Iteration</strong> - Revisit regularly</li>
-</ol>
-<p>Companies that master prioritization ship faster, deliver more impact, and outmaneuver competitors. Companies that don’t prioritize well stay busy but never get ahead.</p>
-<p>The framework:</p>
-<ul>
-<li>Define 3 clear business goals per quarter<br>
-</li>
-<li>Map every initiative to goals<br>
-</li>
-<li>Estimate impact vs effort<br>
-</li>
-<li>Sequence thoughtfully<br>
-</li>
-<li>Say no ruthlessly<br>
-</li>
-<li>Revisit quarterly</li>
+<li>73% of AI projects fail—and it’s rarely a technology problem</li>
+<li>Start with expensive business problems, not “where can we use AI?”</li>
+<li>Vendor solutions succeed twice as often as internal builds</li>
+<li>Plan for production from day one—not as an afterthought</li>
+<li>If you can’t quantify the cost of the current problem, you’re not ready</li>
 </ul>
 <hr>
-<p><em>Struggling to prioritize technical work in a growth-stage company? I help CEOs and technical leaders cut through competing demands and focus on what actually moves the business forward. <a href="../booking.html">Let’s talk</a> about your prioritization challenges.</em></p>
+<p><strong>Evaluating GenAI initiatives?</strong> If you want an outside perspective on production readiness, that’s exactly the kind of strategic assessment I do as a fractional CTO. <a href="../booking.html">Let’s talk</a>.</p>
 
 
 </section>
