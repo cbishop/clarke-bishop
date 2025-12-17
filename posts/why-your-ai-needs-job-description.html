@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Clarke Bishop">
-<meta name="dcterms.date" content="2025-12-13">
-<meta name="description" content="73-95% of GenAI pilots never reach production. Learn the 5 failure patterns from RAND and MIT research—and what the successful 27% do differently.">
+<meta name="dcterms.date" content="2025-12-20">
+<meta name="description" content="Most AI projects fail—not because the technology is wrong, but because the specifications are missing. Learn how to write AI job descriptions that actually work.">
 
-<title>Clarke Bishop - Why 73% of GenAI Pilots Fail to Reach Production</title>
+<title>Clarke Bishop - Why Your AI Needs a Job Description (And You Probably Didn’t Write One)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -104,7 +104,7 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="canonical" href="https://clarkebishop.com/posts/why-73-percent-genai-pilots-fail-production.html">
+<link rel="canonical" href="https://clarkebishop.com/posts/why-your-ai-needs-job-description.html">
 </head>
 
 <body class="nav-fixed">
@@ -167,30 +167,21 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
-  <li><a href="#how-bad-is-it" id="toc-how-bad-is-it" class="nav-link" data-scroll-target="#how-bad-is-it">How bad is it?</a></li>
-  <li><a href="#why-projects-really-fail" id="toc-why-projects-really-fail" class="nav-link" data-scroll-target="#why-projects-really-fail">Why projects really fail</a>
+  <li><a href="#the-expensive-autocomplete-problem" id="toc-the-expensive-autocomplete-problem" class="nav-link" data-scroll-target="#the-expensive-autocomplete-problem">The expensive autocomplete problem</a></li>
+  <li><a href="#why-vague-prompts-fail" id="toc-why-vague-prompts-fail" class="nav-link" data-scroll-target="#why-vague-prompts-fail">Why vague prompts fail</a></li>
+  <li><a href="#ai-work-is-task-based-not-job-based" id="toc-ai-work-is-task-based-not-job-based" class="nav-link" data-scroll-target="#ai-work-is-task-based-not-job-based">AI work is task-based, not job-based</a></li>
+  <li><a href="#two-levels-of-ai-job-descriptions" id="toc-two-levels-of-ai-job-descriptions" class="nav-link" data-scroll-target="#two-levels-of-ai-job-descriptions">Two levels of AI job descriptions</a>
   <ul class="collapse">
-  <li><a href="#pattern-1-solving-the-wrong-problem" id="toc-pattern-1-solving-the-wrong-problem" class="nav-link" data-scroll-target="#pattern-1-solving-the-wrong-problem">Pattern 1: Solving the wrong problem</a></li>
-  <li><a href="#pattern-2-the-data-quality-crisis" id="toc-pattern-2-the-data-quality-crisis" class="nav-link" data-scroll-target="#pattern-2-the-data-quality-crisis">Pattern 2: The data quality crisis</a></li>
-  <li><a href="#pattern-3-pilot-paralysis" id="toc-pattern-3-pilot-paralysis" class="nav-link" data-scroll-target="#pattern-3-pilot-paralysis">Pattern 3: Pilot paralysis</a></li>
-  <li><a href="#pattern-4-infrastructure-gaps" id="toc-pattern-4-infrastructure-gaps" class="nav-link" data-scroll-target="#pattern-4-infrastructure-gaps">Pattern 4: Infrastructure gaps</a></li>
-  <li><a href="#pattern-5-organizational-unreadiness" id="toc-pattern-5-organizational-unreadiness" class="nav-link" data-scroll-target="#pattern-5-organizational-unreadiness">Pattern 5: Organizational unreadiness</a></li>
+  <li><a href="#level-1-the-chief-of-staff" id="toc-level-1-the-chief-of-staff" class="nav-link" data-scroll-target="#level-1-the-chief-of-staff">Level 1: The Chief of Staff</a></li>
+  <li><a href="#level-2-the-task-workers" id="toc-level-2-the-task-workers" class="nav-link" data-scroll-target="#level-2-the-task-workers">Level 2: The Task Workers</a></li>
   </ul></li>
-  <li><a href="#what-the-27-do-differently" id="toc-what-the-27-do-differently" class="nav-link" data-scroll-target="#what-the-27-do-differently">What the 27% do differently</a>
+  <li><a href="#what-an-ai-job-description-contains" id="toc-what-an-ai-job-description-contains" class="nav-link" data-scroll-target="#what-an-ai-job-description-contains">What an AI job description contains</a>
   <ul class="collapse">
-  <li><a href="#start-with-business-pain-not-technology" id="toc-start-with-business-pain-not-technology" class="nav-link" data-scroll-target="#start-with-business-pain-not-technology">Start with business pain, not technology</a></li>
-  <li><a href="#right-size-the-problem" id="toc-right-size-the-problem" class="nav-link" data-scroll-target="#right-size-the-problem">Right-size the problem</a></li>
-  <li><a href="#plan-for-production-from-day-one" id="toc-plan-for-production-from-day-one" class="nav-link" data-scroll-target="#plan-for-production-from-day-one">Plan for production from day one</a></li>
+  <li><a href="#the-ai-task-specification-framework" id="toc-the-ai-task-specification-framework" class="nav-link" data-scroll-target="#the-ai-task-specification-framework">The AI Task Specification Framework</a></li>
+  <li><a href="#good-vs.-bad-specifications" id="toc-good-vs.-bad-specifications" class="nav-link" data-scroll-target="#good-vs.-bad-specifications">Good vs.&nbsp;bad specifications</a></li>
   </ul></li>
-  <li><a href="#five-questions-before-your-next-pilot" id="toc-five-questions-before-your-next-pilot" class="nav-link" data-scroll-target="#five-questions-before-your-next-pilot">Five questions before your next pilot</a>
-  <ul class="collapse">
-  <li><a href="#what-specific-business-problem-does-this-solve" id="toc-what-specific-business-problem-does-this-solve" class="nav-link" data-scroll-target="#what-specific-business-problem-does-this-solve">1. What specific business problem does this solve?</a></li>
-  <li><a href="#do-you-have-the-dataand-is-it-clean" id="toc-do-you-have-the-dataand-is-it-clean" class="nav-link" data-scroll-target="#do-you-have-the-dataand-is-it-clean">2. Do you have the data—and is it clean?</a></li>
-  <li><a href="#what-does-production-look-like" id="toc-what-does-production-look-like" class="nav-link" data-scroll-target="#what-does-production-look-like">3. What does production look like?</a></li>
-  <li><a href="#is-your-organization-ready" id="toc-is-your-organization-ready" class="nav-link" data-scroll-target="#is-your-organization-ready">4. Is your organization ready?</a></li>
-  <li><a href="#build-or-buy" id="toc-build-or-buy" class="nav-link" data-scroll-target="#build-or-buy">5. Build or buy?</a></li>
-  </ul></li>
-  <li><a href="#the-real-question" id="toc-the-real-question" class="nav-link" data-scroll-target="#the-real-question">The real question</a></li>
+  <li><a href="#the-specification-tax" id="toc-the-specification-tax" class="nav-link" data-scroll-target="#the-specification-tax">The specification tax</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
   <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">Takeaways</a></li>
   </ul>
 </nav>
@@ -200,7 +191,7 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Why 73% of GenAI Pilots Fail to Reach Production</h1>
+<h1 class="title">Why Your AI Needs a Job Description (And You Probably Didn’t Write One)</h1>
   <div class="quarto-categories">
     <div class="quarto-category">ai</div>
     <div class="quarto-category">strategy</div>
@@ -210,7 +201,7 @@ cookieconsent.run({
 
 <div>
   <div class="description">
-    73-95% of GenAI pilots never reach production. Learn the 5 failure patterns from RAND and MIT research—and what the successful 27% do differently.
+    Most AI projects fail—not because the technology is wrong, but because the specifications are missing. Learn how to write AI job descriptions that actually work.
   </div>
 </div>
 
@@ -227,7 +218,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 13, 2025</p>
+      <p class="date">December 20, 2025</p>
     </div>
   </div>
   
@@ -239,140 +230,126 @@ cookieconsent.run({
 </header>
 
 
-<p><img src="../images/posts/why-73-percent-genai-pilots-fail-production.png" class="img-fluid"></p>
+<p><img src="../images/posts/why-your-ai-needs-job-description.png" class="img-fluid"></p>
 <section id="tldr" class="level2">
 <h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
 <ul>
-<li><strong>73-95% of GenAI pilots never reach production</strong>—not because the technology fails, but because organizations skip the fundamentals</li>
-<li><strong>Five failure patterns</strong> cause most failures: wrong problem, bad data, pilot paralysis, infrastructure gaps, and organizational unreadiness</li>
-<li><strong>Reframe the question</strong>: Ask “What problems were too expensive to fix?” not “Where can we use AI?”</li>
-<li><strong>Answer five questions</strong> before your next pilot—if you can’t, you’re building a demo, not a product</li>
+<li><strong>Most AI projects fail</strong> because they lack clear specifications—not because the technology doesn’t work</li>
+<li>AI needs <strong>two levels of job descriptions</strong>: a Chief of Staff to orchestrate, and task workers to execute</li>
+<li><strong>Single-responsibility agents</strong> with narrow specifications outperform broad “do-everything” prompts by 40%</li>
+<li>The time spent writing specifications isn’t overhead—it’s insurance against a <a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/">95% failure rate</a> when requirements aren’t defined</li>
 </ul>
 <hr>
-<p>Your GenAI pilot is probably going to fail.</p>
-<p>Not because the technology doesn’t work. Not because you picked the wrong model. Because <strong>73% of AI initiatives never escape the sandbox</strong>—and the real numbers are likely worse.</p>
-<p>I’ve watched this pattern repeat across dozens of companies. The technology demos beautifully. Executives get excited. Six months later, the pilot is quietly shelved while everyone moves on to the next shiny thing.</p>
-<p>Enterprise buyers poured billions into GenAI applications in 2024. Yet according to <a href="https://www.rand.org/pubs/research_reports/RRA2680-1.html">RAND Corporation research</a>, more than 80% of AI projects fail. That’s twice the failure rate of IT projects that don’t involve AI.</p>
-<p>The problem isn’t the AI. It’s how we’re approaching it.</p>
+<p>You’d never hire a contractor without a project brief. You’d never onboard an employee without a job description. So why are too many companies deploying AI with nothing but vague prompts?</p>
+<p>The numbers tell the story. Gartner predicts <a href="https://www.gartner.com/en/newsroom/press-releases/2024-07-29-gartner-predicts-30-percent-of-generative-ai-projects-will-be-abandoned-after-proof-of-concept-by-end-of-2025">30% of GenAI projects will be abandoned</a> after proof-of-concept by end of 2025. IDC found that <a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html">88% of AI proof-of-concepts</a> never reach production. The pattern is consistent: <strong>most AI initiatives stall before delivering value</strong>.</p>
+<p>This isn’t a technology problem. It’s a specification problem.</p>
+<p><a href="https://softwareoasis.com/ai-implementation-failure-rate-and-pilot-success-statistics/">“About 95% of AI efforts fail</a> when there’s too little time spent defining what you want it to do and how you’ll measure it,” says Kevin Carlson of TechCXO. That statistic should terrify every executive with an AI initiative in flight.</p>
 </section>
-<section id="how-bad-is-it" class="level2">
-<h2 class="anchored" data-anchor-id="how-bad-is-it">How bad is it?</h2>
-<p>The failure rates are worse than most executives realize—and multiple independent studies confirm the pattern.</p>
-<p><a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/">MIT’s 2025 GenAI Divide report</a> found that only about 5% of AI pilot programs achieve rapid revenue acceleration—the vast majority stall before reaching production.</p>
-<p><a href="https://www.gartner.com/en/newsroom/press-releases/2024-07-29-gartner-predicts-30-percent-of-generative-ai-projects-will-be-abandoned-after-proof-of-concept-by-end-of-2025">Gartner predicts</a> that 30% of GenAI projects will be abandoned after proof of concept by the end of 2025. <a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html">IDC found</a> that for every 33 AI POCs a company launched, only 4 graduated to production.</p>
-<p>The math is brutal. If you’re running GenAI pilots, the odds are stacked against you.</p>
-<p>Unless you understand what separates the 27% that succeed.</p>
+<section id="the-expensive-autocomplete-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-expensive-autocomplete-problem">The expensive autocomplete problem</h2>
+<p>Without clear specifications, AI becomes <strong>expensive autocomplete</strong>—technically impressive but business-irrelevant.</p>
+<p>I’ve seen this pattern across dozens of companies. Someone demos ChatGPT or Claude to the executive team. Everyone gets excited. “Let’s use this for customer service!” or “What if we automated our reports?” Six months later, the pilot is quietly shelved.</p>
+<p>The technology worked fine. What failed was the translation from “wouldn’t it be cool if” to “here’s exactly what we need it to do.”</p>
+<p>Generic AI tools like ChatGPT excel for individuals because of their flexibility. But they stall in enterprise settings because—as <a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/">MIT’s NANDA initiative</a> found—they don’t learn from or adapt to workflows. Enterprise problems require enterprise-grade specifications.</p>
 <blockquote class="blockquote">
-<p>The 73% failure rate isn’t a technology problem—it’s a strategy problem.</p>
+<p>If your AI doesn’t have a written job description, you’re not doing AI—you’re doing expensive autocomplete.</p>
 <p>— Clarke Bishop</p>
 </blockquote>
 </section>
-<section id="why-projects-really-fail" class="level2">
-<h2 class="anchored" data-anchor-id="why-projects-really-fail">Why projects really fail</h2>
-<p>RAND researchers interviewed 65 experienced data scientists and engineers to understand why AI projects fail. They identified five root causes—and most struggling organizations hit multiple patterns simultaneously.</p>
-<section id="pattern-1-solving-the-wrong-problem" class="level3">
-<h3 class="anchored" data-anchor-id="pattern-1-solving-the-wrong-problem">Pattern 1: Solving the wrong problem</h3>
-<p>Teams build what’s technically interesting, not what the business needs. There’s a persistent disconnect between technical staff and business stakeholders about what problem actually needs solving.</p>
-<p>I call this “technology bias”—chasing the latest models instead of solving real problems. When your AI team is more excited about fine-tuning techniques than about the business outcome, you have a problem.</p>
+<section id="why-vague-prompts-fail" class="level2">
+<h2 class="anchored" data-anchor-id="why-vague-prompts-fail">Why vague prompts fail</h2>
+<p>Research confirms what experience suggests: <strong>vague prompts produce vague results</strong>.</p>
+<p>Studies show that <a href="https://sparkco.ai/blog/single-vs-multi-prompt-topology-a-deep-dive-into-implementation">multi-prompt strategies</a>—breaking complex tasks into smaller, focused prompts—improve task effectiveness by up to 40% compared to single-prompt approaches. Meanwhile, single-prompt overextension leads to a 30% increase in output variance.</p>
+<p><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic’s engineering team</a> puts it this way: “Find the smallest possible set of high-signal tokens that maximize the likelihood of some desired outcome.” In plain English: be specific. Be precise. Every word matters.</p>
+<p>The “just ask ChatGPT” approach works for individuals drafting emails or summarizing documents. It fails for enterprises because enterprise problems are too complex for a single prompt to handle reliably.</p>
 </section>
-<section id="pattern-2-the-data-quality-crisis" class="level3">
-<h3 class="anchored" data-anchor-id="pattern-2-the-data-quality-crisis">Pattern 2: The data quality crisis</h3>
-<p>“Beneath every AI failure lies a data quality problem.” That’s from Informatica, and it matches what I’ve seen repeatedly.</p>
-<p>Organizations consistently underestimate data preparation requirements. They budget for model development but not for the unglamorous work of cleaning, labeling, and organizing their data. Poor data quality is one of the top reasons Gartner cites for GenAI project abandonment.</p>
+<section id="ai-work-is-task-based-not-job-based" class="level2">
+<h2 class="anchored" data-anchor-id="ai-work-is-task-based-not-job-based">AI work is task-based, not job-based</h2>
+<p>Here’s a critical insight most executives miss: <strong>AI doesn’t replace jobs—it handles tasks</strong>.</p>
+<p><a href="https://towardsdatascience.com/ai-agents-are-shaping-future-of-work-task-by-task-not-job-by-job/">Stanford’s WORKBank study</a>, combined with Anthropic’s Claude Economic Index analysis of 4.1 million AI conversations, found that fewer than 4% of occupations are close to full automation. But <a href="https://towardsdatascience.com/ai-agents-are-shaping-future-of-work-task-by-task-not-job-by-job/">46% of individual tasks</a> that employees perform could be automated—particularly the repetitive stuff like data entry, reporting, and basic analysis.</p>
+<p>Workers don’t want their jobs replaced. They want the <strong>boring parts automated</strong>. <a href="https://towardsdatascience.com/ai-agents-are-shaping-future-of-work-task-by-task-not-job-by-job/">45% prefer</a> an “equal partnership” model where AI handles the tedious work while humans focus on judgment, creativity, and relationships.</p>
+<p>The implication for AI specifications is profound. Don’t write AI a job description for a whole role. Write task specifications for specific, bounded work. The difference is everything.</p>
 </section>
-<section id="pattern-3-pilot-paralysis" class="level3">
-<h3 class="anchored" data-anchor-id="pattern-3-pilot-paralysis">Pattern 3: Pilot paralysis</h3>
-<p>POCs run in safe sandboxes with no clear path to production. Integration challenges—authentication, compliance workflows, user training—get ignored until someone asks for a go-live date.</p>
-<p>The technology works in isolation. But when it’s time to connect to real systems with real users, everything falls apart. The pilot becomes permanent, never graduating to production.</p>
+<section id="two-levels-of-ai-job-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="two-levels-of-ai-job-descriptions">Two levels of AI job descriptions</h2>
+<p>Here’s where most AI implementations go wrong: they think of AI as a single employee. It’s not. <strong>Effective AI systems often have two levels</strong>—and each needs its own job description.</p>
+<section id="level-1-the-chief-of-staff" class="level3">
+<h3 class="anchored" data-anchor-id="level-1-the-chief-of-staff">Level 1: The Chief of Staff</h3>
+<p>The Chief of Staff agent orchestrates the work. It understands the overall goal, breaks it down into tasks, assigns those tasks to specialists, and ensures the pieces come together coherently.</p>
+<p>Anthropic’s Claude Code architecture demonstrates this pattern. An initializer agent sets up the environment and context. It maintains a progress file that enables each new session to quickly understand state. It decides which specialist agents to deploy for which tasks.</p>
+<p>The Chief of Staff job description includes:</p>
+<ul>
+<li><strong>Scope</strong>: Coordinate multi-step workflows, not execute individual tasks</li>
+<li><strong>Inputs</strong>: High-level goals, context about the business situation, available resources</li>
+<li><strong>Outputs</strong>: Task assignments, progress tracking, quality checks, final synthesis</li>
+<li><strong>Success criteria</strong>: Overall workflow completed correctly, not individual task metrics</li>
+</ul>
 </section>
-<section id="pattern-4-infrastructure-gaps" class="level3">
-<h3 class="anchored" data-anchor-id="pattern-4-infrastructure-gaps">Pattern 4: Infrastructure gaps</h3>
-<p>Models that work in Jupyter notebooks fail at scale. Organizations lack MLOps pipelines, deployment infrastructure, and monitoring capabilities.</p>
-<p>The time from prototype to production often stretches to <strong>6-12 months or more</strong>. That’s not because the AI is slow—it’s because the infrastructure to deploy, monitor, and maintain AI systems doesn’t exist.</p>
-</section>
-<section id="pattern-5-organizational-unreadiness" class="level3">
-<h3 class="anchored" data-anchor-id="pattern-5-organizational-unreadiness">Pattern 5: Organizational unreadiness</h3>
-<p>This is the silent killer. Teams accumulate “implementation debt”—shortcuts and oversights that compound until they derail the project.</p>
-<p>There’s a skills gap between data scientists who build models and production engineers who deploy systems. Nobody owns the model post-launch. The organization isn’t ready for AI, even if the technology is ready for the organization.</p>
-<p>Which of these patterns do you recognize? Most struggling organizations hit two or three simultaneously.</p>
-</section>
-</section>
-<section id="what-the-27-do-differently" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-27-do-differently">What the 27% do differently</h2>
-<p>Successful GenAI deployments share three characteristics. None of them are about picking the right model.</p>
-<p><strong>OBJECTION:</strong> “We already know to start with a business problem. Everyone says that.”</p>
-<p>I’m sure you do. And yet most pilots still fail. Knowing isn’t the same as doing. The companies that succeed don’t just <em>say</em> they start with business problems—they refuse to write a single line of code until they can quantify exactly what the current problem costs.</p>
-<section id="start-with-business-pain-not-technology" class="level3">
-<h3 class="anchored" data-anchor-id="start-with-business-pain-not-technology">Start with business pain, not technology</h3>
-<p>The most reliable predictor of success is starting with process bottlenecks that already cost real money.</p>
-<p>Successful teams ask “What’s costing us?” not “Where can we use AI?” <a href="https://gaiinsights.com/blog/enterprise-genai-in-the-real-world-what-the-case-studies-reveal">Salesforce’s legal team</a> built a GenAI assistant for contract drafting and trimmed outside-counsel spend by over $5 million. <a href="https://cloud.google.com/customers/lloydsbankinggroup">Lloyds Banking Group</a> reduced income verification from days to seconds. Both started with expensive, painful problems.</p>
-<p>But here’s the thing: <strong>“start with a business problem” is incomplete.</strong> Many executives lack vision about what’s actually possible. They think “automation” when they should think “capability.”</p>
-<p>Here’s a better question: What could you do with an army of smart, minimum-wage employees? What problems have you been ignoring because they were too expensive to fix?</p>
-<p>This reframe surfaces latent demand—problems that got written off as “too expensive” are now viable. It shifts the mindset from “replace what we do” to “do what we couldn’t.”</p>
+<section id="level-2-the-task-workers" class="level3">
+<h3 class="anchored" data-anchor-id="level-2-the-task-workers">Level 2: The Task Workers</h3>
+<p>Task workers are <strong>single-responsibility agents</strong>, each with one clear goal and a narrow scope.</p>
+<p><a href="https://www.uipath.com/blog/ai/agent-builder-best-practices">UiPath’s research</a> is unambiguous: “Start with single-responsibility agents, each with one clear goal and narrow scope. Broad prompts decrease accuracy; narrow scopes ensure consistent performance.”</p>
+<p>Each task worker needs its own specification:</p>
+<ul>
+<li><strong>Task scope</strong>: One bounded task (classify tickets, extract data, generate summaries)</li>
+<li><strong>Inputs</strong>: Specific data in specific formats</li>
+<li><strong>Outputs</strong>: Specific deliverable with clear quality criteria</li>
+<li><strong>Success criteria</strong>: Measurable metrics for that task alone</li>
+</ul>
+<p>The magic happens when these two levels work together. <strong>Complexity lives in orchestration, not in individual agents.</strong> Your AI strategy should look like a well-designed microservices architecture, not a monolithic application.</p>
 <blockquote class="blockquote">
-<p>If you can’t quantify the cost of the current problem, you’re not ready for an AI solution.</p>
+<p>Don’t build one AI to do everything. Build multiple AIs with narrow specifications. Let the Chief of Staff handle the complexity.</p>
 <p>— Clarke Bishop</p>
 </blockquote>
 </section>
-<section id="right-size-the-problem" class="level3">
-<h3 class="anchored" data-anchor-id="right-size-the-problem">Right-size the problem</h3>
-<p>Successful deployments have three things in common: lots of content to process, clear boundaries on what the AI does, and obvious connection points to existing systems.</p>
-<p>Don’t boil the ocean. Start narrow, prove value, then expand.</p>
-<p>MIT’s research found that <strong>vendor solutions succeed twice as often</strong> as internal builds (67% vs 33%). That’s a big gap. Before building custom, ask whether you’re solving a problem that really requires proprietary AI—or whether you’re building because building feels more impressive than buying.</p>
 </section>
-<section id="plan-for-production-from-day-one" class="level3">
-<h3 class="anchored" data-anchor-id="plan-for-production-from-day-one">Plan for production from day one</h3>
-<p>Treat AI as a lifecycle project, not a prototype.</p>
-<p>Involve DevOps, SRE, and IT partners early. Build deployment, monitoring, and governance into the pilot scope—not as afterthoughts. Define who owns the model post-launch before you build it.</p>
-<p>The success factor for these deployments isn’t the models—it’s clear metrics, defined scope, and production architecture planned from the start. Companies that treat AI as a lifecycle project from day one are the ones reaching production.</p>
+<section id="what-an-ai-job-description-contains" class="level2">
+<h2 class="anchored" data-anchor-id="what-an-ai-job-description-contains">What an AI job description contains</h2>
+<p>Whether you’re writing for a Chief of Staff or a task worker, effective AI specifications have four components—the same components any good job description has.</p>
+<section id="the-ai-task-specification-framework" class="level3">
+<h3 class="anchored" data-anchor-id="the-ai-task-specification-framework">The AI Task Specification Framework</h3>
+<p><strong>1. Task Scope</strong> — What specific task is this AI handling? Not a role, not a department—a bounded task with clear start and end points.</p>
+<p><strong>2. Inputs</strong> — What information does the AI receive? Data sources, formats, context, constraints.</p>
+<p><strong>3. Outputs</strong> — What deliverable does the AI produce? Format, quality criteria, where it hands off to the next step.</p>
+<p><strong>4. Success Criteria</strong> — How do you verify the task is done correctly? Metrics, tests, human review triggers.</p>
 </section>
-</section>
-<section id="five-questions-before-your-next-pilot" class="level2">
-<h2 class="anchored" data-anchor-id="five-questions-before-your-next-pilot">Five questions before your next pilot</h2>
-<p>Before launching your next GenAI pilot, run it through this filter. If you can’t answer these questions clearly, you’re building a demo, not a product.</p>
-<section id="what-specific-business-problem-does-this-solve" class="level3">
-<h3 class="anchored" data-anchor-id="what-specific-business-problem-does-this-solve">1. What specific business problem does this solve?</h3>
-<p>If you can’t quantify the cost of the current problem, stop.</p>
-<p>“We want to use AI for customer service” is not a clear problem definition. “We’re spending $2M per year on Tier 1 support tickets that could be automated” is a clear business problem.</p>
-</section>
-<section id="do-you-have-the-dataand-is-it-clean" class="level3">
-<h3 class="anchored" data-anchor-id="do-you-have-the-dataand-is-it-clean">2. Do you have the data—and is it clean?</h3>
-<p>Audit data availability and quality before committing to a pilot. Budget 40-60% of project time for data preparation.</p>
-<p>If your data isn’t ready, that’s your first project—not AI.</p>
-</section>
-<section id="what-does-production-look-like" class="level3">
-<h3 class="anchored" data-anchor-id="what-does-production-look-like">3. What does production look like?</h3>
-<p>Define the deployment environment, integration points, and scale requirements upfront. Who will own it post-launch? Who monitors performance? Who retrains the model when it drifts?</p>
-<p>If you can’t answer these, you’re not ready for production.</p>
-</section>
-<section id="is-your-organization-ready" class="level3">
-<h3 class="anchored" data-anchor-id="is-your-organization-ready">4. Is your organization ready?</h3>
-<p>Do stakeholders understand what AI can and can’t do? Is there executive sponsorship for the full lifecycle, not just the pilot?</p>
-<p>RAND recommends committing to at least 12 months on a specific problem. AI projects that hop between use cases rarely succeed.</p>
-</section>
-<section id="build-or-buy" class="level3">
-<h3 class="anchored" data-anchor-id="build-or-buy">5. Build or buy?</h3>
-<p>Internal builds succeed 33% of the time. Vendor solutions succeed 67%.</p>
-<p>Ask: Does this need to be proprietary, or can you buy and customize? Often the best answer is buy the platform, build the application layer.</p>
+<section id="good-vs.-bad-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="good-vs.-bad-specifications">Good vs.&nbsp;bad specifications</h3>
+<p>Here’s the difference in practice:</p>
+<p><strong>Bad:</strong> “Use AI to improve customer service.”</p>
+<p><strong>Good:</strong> “Classify incoming support tickets into 5 categories (billing, technical, shipping, returns, other) with 95% accuracy. Route each ticket to the appropriate team within 30 seconds. Flag any ticket mentioning legal action or regulatory complaints for immediate human review.”</p>
+<p>The good specification is testable. You can measure whether it’s working. You can improve it systematically. The bad specification is a wish, not a job description.</p>
 </section>
 </section>
-<section id="the-real-question" class="level2">
-<h2 class="anchored" data-anchor-id="the-real-question">The real question</h2>
-<p>The 73% failure rate isn’t a technology problem. It’s a strategy problem.</p>
-<p>The companies successfully deploying GenAI treat it as a business initiative with clear ROI targets, not a technology experiment with vague potential. They start with expensive problems, right-size their scope, and plan for production from day one.</p>
-<p>Every failed pilot is an expensive lesson. The question isn’t whether GenAI can deliver value—it clearly can for the companies doing it right. The question is whether your organization is set up to be in the 27%.</p>
+<section id="the-specification-tax" class="level2">
+<h2 class="anchored" data-anchor-id="the-specification-tax">The specification tax</h2>
+<p><strong>OBJECTION:</strong> “Writing detailed specifications slows us down. We need to move fast.”</p>
+<p>I hear this constantly. And it’s exactly backwards.</p>
+<p>Yes, writing specifications takes time. That’s the point. The “specification tax” prevents the 95% failure rate that happens when teams skip the requirements work.</p>
+<p>Consider the math. As Kevin Carlson of TechCXO notes, <a href="https://softwareoasis.com/ai-implementation-failure-rate-and-pilot-success-statistics/">95% of AI efforts fail</a> when teams don’t spend enough time defining requirements and success metrics. The companies that succeed are the ones that treat specification as the work, not a delay before the work.</p>
+<p>Failed pilots aren’t free. They cost money, time, credibility, and organizational patience for AI initiatives. A pilot that fails after six months of development is slower than spending two weeks writing specifications upfront.</p>
+<p>The time spent writing AI specifications is not overhead. It’s the work. Skip it and you’re not saving time—you’re guaranteeing wasted time.</p>
+</section>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
+<p>Before your next AI initiative, write the job descriptions first.</p>
+<p>Start with the task workers. Identify the specific, bounded tasks you want to automate. For each one, document the inputs, outputs, and success criteria. Make them measurable. Make them testable.</p>
+<p>Then design the Chief of Staff. How will the workflow be orchestrated? What context does the coordinator need? How will it handle exceptions, errors, or edge cases?</p>
+<p>If you can’t write it clearly, AI can’t execute it reliably.</p>
+<p>The companies succeeding with AI aren’t using better models or bigger budgets. They’re writing better job descriptions—task specifications that give AI the same clarity you’d give a new hire.</p>
+<p>Stop asking “How do we use AI?” Start asking “What job descriptions would make AI successful?”</p>
 </section>
 <section id="takeaways" class="level2">
 <h2 class="anchored" data-anchor-id="takeaways">Takeaways</h2>
 <ul>
-<li>73% of AI projects fail—and it’s rarely a technology problem</li>
-<li>Start with expensive business problems, not “where can we use AI?”</li>
-<li>Vendor solutions succeed twice as often as internal builds</li>
-<li>Plan for production from day one—not as an afterthought</li>
-<li>If you can’t quantify the cost of the current problem, you’re not ready</li>
+<li>Most AI projects fail due to missing specifications, not bad technology</li>
+<li>AI systems need two levels of job descriptions: Chief of Staff (orchestration) and Task Workers (execution)</li>
+<li>Single-responsibility agents with narrow scopes outperform broad “do-everything” approaches</li>
+<li>Every AI task specification needs: scope, inputs, outputs, and success criteria</li>
+<li>The specification tax is insurance—skip it and you join the 95% who fail without clear requirements</li>
 </ul>
 <hr>
-<p><strong>Evaluating GenAI initiatives?</strong> If you want an outside perspective on production readiness, that’s exactly the kind of strategic assessment I do as a fractional CTO. <a href="../booking.html">Let’s talk</a>.</p>
+<p><strong>Planning an AI initiative?</strong> If you want help writing AI job descriptions that actually work, that’s exactly the kind of strategic work I do as a fractional CTO. <a href="../booking.html">Let’s talk</a>.</p>
 
 
 </section>
