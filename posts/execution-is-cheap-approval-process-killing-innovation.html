@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Clarke Bishop">
+<meta name="dcterms.date" content="2026-01-26">
+<meta name="description" content="Developers complete 21% more tasks with AI—but companies see no gains. The bottleneck has shifted from execution to approvals. Here’s how to fix it.">
+
+<title>Clarke Bishop - Execution Is Cheap Now—Why Your Approval Process Is Killing Innovation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/clarke-bishop-logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PQS92ZVBZ6"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PQS92ZVBZ6', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://clarkebishop.com/posts/execution-is-cheap-approval-process-killing-innovation.html">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/clarke-bishop-logo.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Clarke Bishop</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#the-bottleneck-has-moved" id="toc-the-bottleneck-has-moved" class="nav-link" data-scroll-target="#the-bottleneck-has-moved">The bottleneck has moved</a></li>
+  <li><a href="#the-hidden-cost-of-approval-culture" id="toc-the-hidden-cost-of-approval-culture" class="nav-link" data-scroll-target="#the-hidden-cost-of-approval-culture">The hidden cost of approval culture</a></li>
+  <li><a href="#why-ai-makes-this-worse" id="toc-why-ai-makes-this-worse" class="nav-link" data-scroll-target="#why-ai-makes-this-worse">Why AI makes this worse</a></li>
+  <li><a href="#what-high-performing-teams-do-differently" id="toc-what-high-performing-teams-do-differently" class="nav-link" data-scroll-target="#what-high-performing-teams-do-differently">What high-performing teams do differently</a></li>
+  <li><a href="#permission-by-default-the-new-model" id="toc-permission-by-default-the-new-model" class="nav-link" data-scroll-target="#permission-by-default-the-new-model">Permission by default: the new model</a></li>
+  <li><a href="#a-practical-diagnostic" id="toc-a-practical-diagnostic" class="nav-link" data-scroll-target="#a-practical-diagnostic">A practical diagnostic</a>
+  <ul class="collapse">
+  <li><a href="#measure-the-gap" id="toc-measure-the-gap" class="nav-link" data-scroll-target="#measure-the-gap">Measure the gap</a></li>
+  <li><a href="#calculate-your-approval-tax" id="toc-calculate-your-approval-tax" class="nav-link" data-scroll-target="#calculate-your-approval-tax">Calculate your approval tax</a></li>
+  <li><a href="#ask-the-hard-questions" id="toc-ask-the-hard-questions" class="nav-link" data-scroll-target="#ask-the-hard-questions">Ask the hard questions</a></li>
+  </ul></li>
+  <li><a href="#when-approvals-make-sense" id="toc-when-approvals-make-sense" class="nav-link" data-scroll-target="#when-approvals-make-sense">When approvals make sense</a></li>
+  <li><a href="#the-organizational-implications" id="toc-the-organizational-implications" class="nav-link" data-scroll-target="#the-organizational-implications">The organizational implications</a></li>
+  <li><a href="#what-to-do-this-week" id="toc-what-to-do-this-week" class="nav-link" data-scroll-target="#what-to-do-this-week">What to do this week</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Execution Is Cheap Now—Why Your Approval Process Is Killing Innovation</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">engineering productivity</div>
+    <div class="quarto-category">AI tools</div>
+    <div class="quarto-category">organizational design</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Developers complete 21% more tasks with AI—but companies see no gains. The bottleneck has shifted from execution to approvals. Here’s how to fix it.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Clarke Bishop </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 26, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Title Options:
+A: Execution Is Cheap Now—Why Your Approval Process Is Killing Innovation (Direct)
+B: Your Engineers Complete 21% More Tasks—So Why Isn't Your Company Faster? (Curiosity)
+C: The 91% Problem: Why AI-Powered Teams Still Can't Ship Faster (Data-led)
+-->
+<p><img src="../images/posts/execution-is-cheap-approval-process-killing-innovation.png" class="img-fluid"></p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<ul>
+<li><strong>AI has made execution cheap</strong>—developers complete <a href="https://www.faros.ai/blog/ai-software-engineering">21% more tasks</a> and merge 98% more PRs, but companies see no improvement in delivery velocity</li>
+<li><strong>The bottleneck has shifted</strong> from “can we build it?” to “can we get permission?”—PR review times have increased <a href="https://www.faros.ai/blog/ai-software-engineering">91%</a> even as output soars</li>
+<li><strong>Permission-by-default beats permission-by-exception</strong>—teams with decision-making autonomy consistently outperform those waiting on approvals</li>
+<li><strong>Audit your approval tax</strong> this week: count the gates between idea and production, then eliminate the ones that aren’t earning their keep</li>
+</ul>
+<hr>
+<p>Here’s a paradox I keep seeing: Teams using AI coding tools complete <a href="https://www.faros.ai/blog/ai-software-engineering">21% more tasks</a> and merge <a href="https://www.faros.ai/blog/ai-software-engineering">98% more pull requests</a>. Sounds like a productivity revolution, right?</p>
+<p>But there’s a catch. PR review time has increased <a href="https://www.faros.ai/blog/ai-software-engineering">91%</a>.</p>
+<p><strong>AI is making developers faster.</strong> Companies aren’t seeing the gains. The bottleneck has shifted—and most organizations haven’t noticed.</p>
+<p>This post builds on an insight from <a href="https://www.youtube.com/watch?v=hpDC29JdgjI">Nate Jones</a>: when execution becomes cheap, permission structures designed for expensive execution become the constraint. The companies that recognize this shift will outperform those still gatekeeping every decision.</p>
+</section>
+<section id="the-bottleneck-has-moved" class="level2">
+<h2 class="anchored" data-anchor-id="the-bottleneck-has-moved">The bottleneck has moved</h2>
+<p>Before AI, execution was the constraint. Writing code, debugging, translating specs into working software—that’s where the time went. AI has dramatically reduced that friction.</p>
+<p>The data is striking: developers using AI tools complete <a href="https://www.faros.ai/blog/ai-software-engineering">21% more tasks</a>, touch 47% more PRs per day, and report feeling significantly more productive. Most engineering teams now use AI coding tools.</p>
+<p>But here’s the paradox: a <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">2025 controlled study</a> found experienced developers actually took <strong>19% longer</strong> with AI—while believing they were 20% faster. And at the company level, there’s <a href="https://www.faros.ai/blog/ai-software-engineering">no significant correlation</a> between AI adoption and improved delivery velocity. Individual output goes up. Organizational throughput stays flat.</p>
+<p><strong>The bottleneck has moved.</strong> It’s no longer execution. It’s everything else: approvals, reviews, decisions, waiting.</p>
+<p>If your developers are faster but your delivery isn’t, you don’t have a people problem. You have a process problem.</p>
+</section>
+<section id="the-hidden-cost-of-approval-culture" class="level2">
+<h2 class="anchored" data-anchor-id="the-hidden-cost-of-approval-culture">The hidden cost of approval culture</h2>
+<p>The structures we built to manage expensive execution are now the constraint.</p>
+<p>Consider the numbers: <a href="https://www.cortex.io/report/the-2024-state-of-developer-productivity">58% of engineering leaders</a> say their developers lose more than 5 hours per week to unproductive work. And when asked about the biggest productivity leaks, <a href="https://www.cortex.io/report/the-2024-state-of-developer-productivity">26% cite “waiting on approvals”</a> as a top culprit.</p>
+<p>It gets worse. Dr.&nbsp;Gloria Mark’s research shows it takes <a href="https://gloriamark.com/attention-span/">over 23 minutes</a> to fully regain focus after an interruption. Every approval request doesn’t just cost the wait time—it destroys nearly half an hour of productive work.</p>
+<blockquote class="blockquote">
+<p>The cost of a wrong decision has dropped dramatically. The cost of slow decisions hasn’t changed at all.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+<p>Every approval gate you add has a compounding cost. The question isn’t “is this approval necessary?” It’s “is this approval worth the 30 minutes of lost productivity it creates?”</p>
+</section>
+<section id="why-ai-makes-this-worse" class="level2">
+<h2 class="anchored" data-anchor-id="why-ai-makes-this-worse">Why AI makes this worse</h2>
+<p>AI amplifies whatever process you have—efficient or broken.</p>
+<p>When AI helps developers generate more code, the existing bottleneck of code review gets <a href="https://www.faros.ai/blog/ai-software-engineering">significantly worse</a>. Output goes up. Review capacity stays flat. The queue grows.</p>
+<p>Here’s the vicious cycle I’ve seen play out:</p>
+<ol type="1">
+<li>AI generates code faster</li>
+<li>Batch sizes grow (might as well wait for more changes)</li>
+<li>Reviews take longer</li>
+<li>Developers context-switch while waiting</li>
+<li>Quality drops, requiring more review</li>
+<li>Repeat</li>
+</ol>
+<p>DORA’s research confirms this pattern: heavyweight change approval processes <a href="https://dora.dev/capabilities/streamlining-change-approval/">negatively impact</a> software delivery performance. A system moves only as fast as its slowest link. Right now, for most organizations, that slowest link is human approval.</p>
+<p>Your AI investment is generating negative returns if your approval process can’t keep pace. You’re paying for a sports car and driving it in first gear.</p>
+</section>
+<section id="what-high-performing-teams-do-differently" class="level2">
+<h2 class="anchored" data-anchor-id="what-high-performing-teams-do-differently">What high-performing teams do differently</h2>
+<p>Elite teams have flipped the model. Permission is the default, not the exception.</p>
+<p>The data backs this up. Teams with decision-making autonomy <a href="https://dora.dev/research/2024/dora-report/">show stronger performance</a> across all DORA metrics. Elite performers deploy <a href="https://octopus.com/devops/metrics/dora-metrics/">multiple times per day</a>, recover from failures in less than an hour, and maintain change failure rates as low as 5%.</p>
+<p>Small teams consistently outperform larger ones on per-person productivity—<a href="https://linearb.io/blog/2025-engineering-benchmarks-insights">20% higher PR velocity</a> and 25% faster lead times—largely because they have less coordination overhead.</p>
+<p><strong>The pattern is consistent:</strong></p>
+<ul>
+<li>Lightweight change approval workflows</li>
+<li>Automation for low-risk changes</li>
+<li>Minimal manual approvals (each one compounds delay)</li>
+<li>Trust engineers with real decisions</li>
+</ul>
+<p>Amazon’s two-pizza teams. Valve’s no-hierarchy structure. The common thread isn’t the specific organizational model—it’s that engineers have permission to execute without running every decision through a committee.</p>
+</section>
+<section id="permission-by-default-the-new-model" class="level2">
+<h2 class="anchored" data-anchor-id="permission-by-default-the-new-model">Permission by default: the new model</h2>
+<p>The old model looks like this:</p>
+<ol type="1">
+<li>Ask permission</li>
+<li>Wait for approval</li>
+<li>Execute</li>
+<li>Get reviewed</li>
+</ol>
+<p>The new model inverts it:</p>
+<ol type="1">
+<li>Execute (small batch)</li>
+<li>Show results</li>
+<li>Iterate</li>
+<li>Ask forgiveness for the rare mistakes</li>
+</ol>
+<p>This requires three things:</p>
+<p><strong>Clear boundaries.</strong> Engineers need to know what they can decide autonomously. Not everything—but more than most companies allow today.</p>
+<p><strong>Trust in your people.</strong> If you don’t trust your engineers to make good decisions, you have a hiring problem, not a process problem.</p>
+<p><strong>Psychological safety.</strong> Mistakes can’t be career-ending. When every error triggers an inquisition, people stop taking initiative.</p>
+<blockquote class="blockquote">
+<p>The organizations that win will restructure for cheap execution—shifting from permission-by-exception to permission-by-default.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+<p>The cost of a wrong decision has dropped. Most bad code can be reverted in minutes. Most wrong architectural choices can be corrected within a sprint. The cost of slow decisions—missed market windows, demoralized engineers, competitors who ship while you deliberate—hasn’t changed at all.</p>
+</section>
+<section id="a-practical-diagnostic" class="level2">
+<h2 class="anchored" data-anchor-id="a-practical-diagnostic">A practical diagnostic</h2>
+<p>How do you know if approvals are killing your velocity? Here’s a quick diagnostic:</p>
+<section id="measure-the-gap" class="level3">
+<h3 class="anchored" data-anchor-id="measure-the-gap">Measure the gap</h3>
+<ul>
+<li>How long from “idea” to “code complete”?</li>
+<li>How long from “code complete” to “in production”?</li>
+</ul>
+<p>If the second number is larger than the first, you have a process problem, not a development problem.</p>
+</section>
+<section id="calculate-your-approval-tax" class="level3">
+<h3 class="anchored" data-anchor-id="calculate-your-approval-tax">Calculate your approval tax</h3>
+<ul>
+<li>Count the approvals required to ship a feature</li>
+<li>Multiply by average wait time per approval</li>
+<li>Add 23 minutes per approval for context-switching cost</li>
+</ul>
+<p>That’s your approval tax on every feature. What’s it buying you?</p>
+</section>
+<section id="ask-the-hard-questions" class="level3">
+<h3 class="anchored" data-anchor-id="ask-the-hard-questions">Ask the hard questions</h3>
+<ul>
+<li>When was the last time an engineer shipped something without asking permission?</li>
+<li>How many people need to say “yes” before code reaches production?</li>
+<li>What’s the smallest change that requires a meeting?</li>
+</ul>
+<p>If your answers make you uncomfortable, you know where to focus.</p>
+</section>
+</section>
+<section id="when-approvals-make-sense" class="level2">
+<h2 class="anchored" data-anchor-id="when-approvals-make-sense">When approvals make sense</h2>
+<p>I’m not saying eliminate all approvals. That would be reckless.</p>
+<p>Approvals exist for reasons—compliance, risk management, coordination across teams. In regulated industries like healthcare and fintech, some gates are non-negotiable.</p>
+<p>But even in those environments, the answer isn’t more approvals. It’s smarter approvals:</p>
+<p><strong>Automate low-risk changes.</strong> If a change follows established patterns and passes automated tests, why does a human need to review it?</p>
+<p><strong>Streamline medium-risk changes.</strong> Single approver, async review, clear SLAs. No committee meetings for routine work.</p>
+<p><strong>Reserve heavyweight process for high-risk, irreversible decisions.</strong> Database schema changes that affect production. Security-critical code paths. Architectural decisions that will be expensive to reverse.</p>
+<p>The goal isn’t zero approvals. It’s appropriate approvals. Most organizations have far too many.</p>
+</section>
+<section id="the-organizational-implications" class="level2">
+<h2 class="anchored" data-anchor-id="the-organizational-implications">The organizational implications</h2>
+<p>This isn’t just about software delivery. It’s about how companies will need to operate.</p>
+<p>When execution was expensive, layers of management made sense. You needed people to allocate scarce resources, to decide which projects were worth the investment, to coordinate large teams of specialists.</p>
+<p>When execution is cheap, those layers become overhead. Flatter structures—fewer approval layers, more autonomous teams—aren’t just fashionable. They’re economically rational.</p>
+<p>The companies that figure this out will:</p>
+<ul>
+<li><strong>Move faster</strong> than competitors still stuck in approval loops</li>
+<li><strong>Attract better talent</strong> (engineers want autonomy, not permission slips)</li>
+<li><strong>Learn faster</strong> through rapid iteration rather than slow deliberation</li>
+</ul>
+<p>The companies that don’t will wonder why their AI investments aren’t paying off.</p>
+</section>
+<section id="what-to-do-this-week" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do-this-week">What to do this week</h2>
+<p>AI has made execution cheap. The bottleneck has moved from “can we build it?” to “can we get permission?”</p>
+<p><strong>Audit your approval process this week.</strong> Count the gates between idea and production. Calculate the real cost—not just wait time, but context-switching, demoralized engineers, and missed opportunities.</p>
+<p>Then start removing the gates that aren’t earning their keep.</p>
+<p>The organizations that win won’t be the ones with the best AI tools. They’ll be the ones that restructured their processes to match the new reality: execution is cheap, and permission should be the default.</p>
+<hr>
+<p><strong>Ready to accelerate your engineering velocity?</strong> <a href="../booking.html">Let’s talk</a> about how fractional CTO support can help your team ship faster without sacrificing quality.</p>
+
+
+</section>
+
+<div id="cta-bar" class="cta-bar">
+<p><a href="https://clarkebishop.com/booking.html" class="cta-bar-link"> Schedule a Strategy Call → </a></p>
+</div></main> <!-- /main -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname.includes('booking')) {
+      var ctaBar = document.getElementById('cta-bar');
+      if (ctaBar) ctaBar.style.display = 'none';
+    }
+  });
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/clarkebishop\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Clarke Bishop Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fractional CTO | Gen AI • Data Strategy • Cloud Architecture</p>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
