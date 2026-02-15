@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Clarke Bishop">
+<meta name="dcterms.date" content="2026-02-12">
+<meta name="description" content="77% of organizations can’t prove AI delivers value. Learn the Three-Pillar Framework that separates the 6% of high performers from everyone else.">
+
+<title>Clarke Bishop - How to Measure AI ROI That Actually Matters</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/clarke-bishop-logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PQS92ZVBZ6"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PQS92ZVBZ6', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://clarkebishop.com/posts/how-to-measure-ai-roi-that-actually-matters.html">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/clarke-bishop-logo.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Clarke Bishop</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#the-measurement-crisis-is-real" id="toc-the-measurement-crisis-is-real" class="nav-link" data-scroll-target="#the-measurement-crisis-is-real">The measurement crisis is real</a></li>
+  <li><a href="#why-traditional-metrics-fail" id="toc-why-traditional-metrics-fail" class="nav-link" data-scroll-target="#why-traditional-metrics-fail">Why traditional metrics fail</a></li>
+  <li><a href="#the-three-pillar-framework" id="toc-the-three-pillar-framework" class="nav-link" data-scroll-target="#the-three-pillar-framework">The Three-Pillar Framework</a>
+  <ul class="collapse">
+  <li><a href="#pillar-1-financial-returns" id="toc-pillar-1-financial-returns" class="nav-link" data-scroll-target="#pillar-1-financial-returns">Pillar 1: Financial returns</a></li>
+  <li><a href="#pillar-2-operational-efficiency" id="toc-pillar-2-operational-efficiency" class="nav-link" data-scroll-target="#pillar-2-operational-efficiency">Pillar 2: Operational efficiency</a></li>
+  <li><a href="#pillar-3-strategic-positioning" id="toc-pillar-3-strategic-positioning" class="nav-link" data-scroll-target="#pillar-3-strategic-positioning">Pillar 3: Strategic positioning</a></li>
+  </ul></li>
+  <li><a href="#the-measurement-playbook" id="toc-the-measurement-playbook" class="nav-link" data-scroll-target="#the-measurement-playbook">The measurement playbook</a>
+  <ul class="collapse">
+  <li><a href="#step-1-establish-baselines-before-deployment" id="toc-step-1-establish-baselines-before-deployment" class="nav-link" data-scroll-target="#step-1-establish-baselines-before-deployment">Step 1: Establish baselines before deployment</a></li>
+  <li><a href="#step-2-define-leading-and-lagging-indicators" id="toc-step-2-define-leading-and-lagging-indicators" class="nav-link" data-scroll-target="#step-2-define-leading-and-lagging-indicators">Step 2: Define leading and lagging indicators</a></li>
+  <li><a href="#step-3-use-ab-testing-where-possible" id="toc-step-3-use-ab-testing-where-possible" class="nav-link" data-scroll-target="#step-3-use-ab-testing-where-possible">Step 3: Use A/B testing where possible</a></li>
+  <li><a href="#step-4-review-and-adjust-quarterly" id="toc-step-4-review-and-adjust-quarterly" class="nav-link" data-scroll-target="#step-4-review-and-adjust-quarterly">Step 4: Review and adjust quarterly</a></li>
+  </ul></li>
+  <li><a href="#what-high-performers-do-differently" id="toc-what-high-performers-do-differently" class="nav-link" data-scroll-target="#what-high-performers-do-differently">What high performers do differently</a></li>
+  <li><a href="#the-counter-argument-addressed" id="toc-the-counter-argument-addressed" class="nav-link" data-scroll-target="#the-counter-argument-addressed">The counter-argument addressed</a></li>
+  <li><a href="#start-with-baselines" id="toc-start-with-baselines" class="nav-link" data-scroll-target="#start-with-baselines">Start with baselines</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How to Measure AI ROI That Actually Matters</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">AI Strategy</div>
+    <div class="quarto-category">ROI</div>
+    <div class="quarto-category">Leadership</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    77% of organizations can’t prove AI delivers value. Learn the Three-Pillar Framework that separates the 6% of high performers from everyone else.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Clarke Bishop </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 12, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="../images/posts/how-to-measure-ai-roi-that-actually-matters.png" class="img-fluid"></p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<ul>
+<li><strong>77% of organizations deploying AI can’t prove it delivers value</strong>—not because AI doesn’t work, but because they’re measuring wrong</li>
+<li>The METR study found developers felt 20% faster while actually being 19% slower—this perception gap is happening at the organizational level too</li>
+<li>High performers (just 6% of companies) measure across three pillars: financial returns, operational efficiency, and strategic positioning</li>
+<li>Start with baselines before deployment—you can’t prove improvement without “before” data</li>
+</ul>
+<hr>
+<p>Here’s a statistic that should make every executive uncomfortable: <a href="https://byteiota.com/ai-roi-crisis-why-77-cant-measure-value-in-2026/">77% of organizations deploying AI</a> cannot prove whether it delivers value.</p>
+<p>Not “haven’t measured yet.” Cannot prove.</p>
+<p>Meanwhile, your competitors are claiming AI transformed their operations. Your board wants to know when you’ll see returns on that seven-figure investment. And your team swears the new tools are making them faster.</p>
+<p>But here’s the uncomfortable truth: they might be wrong about that last part. A <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">METR study from July 2025</a> found that developers expected AI to speed them up by 24%. It actually made them 19% slower. Yet after the experiment, they still believed it had sped them up by 20%.</p>
+<p>That’s not a rounding error. That’s organizational self-deception at scale.</p>
+</section>
+<section id="the-measurement-crisis-is-real" class="level2">
+<h2 class="anchored" data-anchor-id="the-measurement-crisis-is-real">The measurement crisis is real</h2>
+<p>The numbers are stark. <a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/">95% of enterprise GenAI pilots fail</a> to achieve measurable financial returns within six months, according to MIT’s “The GenAI Divide” report.</p>
+<p>And it’s getting worse, not better. <a href="https://www.ciodive.com/news/AI-project-fail-data-SPGlobal/742590/">42% of companies scrapped most of their AI initiatives in 2025</a>, up from 17% the year before, according to S&amp;P Global.</p>
+<p>That’s not a technology problem. That’s a measurement problem.</p>
+<p><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">Only 6% of organizations qualify as “AI high performers”</a>—those seeing 5% or more EBIT impact from AI, according to McKinsey’s 2025 State of AI report. What separates them from the 94%? They measure differently.</p>
+<blockquote class="blockquote">
+<p>The gap between AI leaders and everyone else isn’t about technology. It’s about knowing what to measure.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+</section>
+<section id="why-traditional-metrics-fail" class="level2">
+<h2 class="anchored" data-anchor-id="why-traditional-metrics-fail">Why traditional metrics fail</h2>
+<p>Most organizations make the same mistakes when trying to measure AI ROI.</p>
+<p><strong>They measure activity, not outcomes.</strong> “We processed 10,000 queries last month” sounds impressive until you ask: did those queries create value? Did they replace work that needed doing? Or did they just generate busy work that justified the investment?</p>
+<p><strong>They skip the baseline.</strong> If you didn’t measure cycle time, error rates, and costs before deploying AI, you can’t prove AI improved them. Hope is not a measurement strategy.</p>
+<p><strong>They trust feelings over facts.</strong> The METR study is a warning shot. Your team believes AI makes them faster. They’re probably wrong. <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">66% of developers cite AI’s “almost correct” solutions</a> as their biggest time sink because debugging subtle errors takes longer than writing code from scratch.</p>
+<p><strong>They expect results too fast.</strong> <a href="https://www.cio.com/article/4114010/2026-the-year-ai-roi-gets-real.html">53% of investors expect positive ROI in six months or less</a>. That’s unrealistic for most enterprise AI deployments. Realistic timelines are 3-6 months for initial indicators, 12-18 months for strategic returns.</p>
+</section>
+<section id="the-three-pillar-framework" class="level2">
+<h2 class="anchored" data-anchor-id="the-three-pillar-framework">The Three-Pillar Framework</h2>
+<p>High performers don’t just measure cost savings. They measure across three dimensions that together tell the complete story.</p>
+<section id="pillar-1-financial-returns" class="level3">
+<h3 class="anchored" data-anchor-id="pillar-1-financial-returns">Pillar 1: Financial returns</h3>
+<p>This is where most organizations stop—and where most get it wrong. Financial returns include:</p>
+<ul>
+<li><strong>Infrastructure and license costs</strong> — What are you actually spending?</li>
+<li><strong>Operational savings</strong> — What costs have decreased? (Prove it with before/after data)</li>
+<li><strong>Revenue attribution</strong> — Can you trace new revenue to AI capabilities?</li>
+<li><strong>Time to value</strong> — How long from deployment to measurable returns?</li>
+</ul>
+<p>The trap here is counting only savings while ignoring the cost of integration, training, and ongoing maintenance. I’ve seen organizations claim $500K in savings while spending $800K to achieve them.</p>
+</section>
+<section id="pillar-2-operational-efficiency" class="level3">
+<h3 class="anchored" data-anchor-id="pillar-2-operational-efficiency">Pillar 2: Operational efficiency</h3>
+<p>This is where the perception gap lives. You need hard metrics, not team sentiment:</p>
+<ul>
+<li><strong>Cycle time reduction</strong> — How long do tasks take now vs.&nbsp;before AI?</li>
+<li><strong>Error rates</strong> — Are mistakes going up or down? (Include AI-generated errors)</li>
+<li><strong>Throughput changes</strong> — Are you producing more with the same resources?</li>
+<li><strong>Quality metrics</strong> — What do customers actually experience?</li>
+</ul>
+<p>A mid-market SaaS company I worked with tracked their AI coding tools carefully. They found a 15% efficiency gain in initial development—offset by a 20% increase in bugs caught in QA. Net impact? Negative until they adjusted their review processes.</p>
+</section>
+<section id="pillar-3-strategic-positioning" class="level3">
+<h3 class="anchored" data-anchor-id="pillar-3-strategic-positioning">Pillar 3: Strategic positioning</h3>
+<p>Some AI value doesn’t show up on this quarter’s P&amp;L:</p>
+<ul>
+<li><strong>Competitive capabilities</strong> — What can you do now that you couldn’t before?</li>
+<li><strong>Speed to market</strong> — Are you shipping faster than competitors?</li>
+<li><strong>Team capacity</strong> — Is AI freeing your best people for higher-value work?</li>
+<li><strong>Knowledge retention</strong> — Are you capturing expertise that would otherwise walk out the door?</li>
+</ul>
+<p>These metrics matter, but they’re not a substitute for Pillars 1 and 2. Strategic value that never converts to financial or operational impact isn’t value—it’s hope.</p>
+<blockquote class="blockquote">
+<p>If you can’t measure it, you can’t manage it. And if you can’t manage it, you’re probably in the 77%.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+</section>
+</section>
+<section id="the-measurement-playbook" class="level2">
+<h2 class="anchored" data-anchor-id="the-measurement-playbook">The measurement playbook</h2>
+<p>Here’s how to actually implement proper AI ROI tracking.</p>
+<section id="step-1-establish-baselines-before-deployment" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-establish-baselines-before-deployment">Step 1: Establish baselines before deployment</h3>
+<p>This is non-negotiable. Measure current state for 3-6 months minimum before AI deployment:</p>
+<ul>
+<li>Cycle times for key processes</li>
+<li>Error rates and quality metrics</li>
+<li>Costs per unit of output</li>
+<li>Employee time allocation</li>
+</ul>
+<p>Yes, this delays your AI rollout by weeks. It also makes your ROI credible instead of fictional.</p>
+</section>
+<section id="step-2-define-leading-and-lagging-indicators" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-define-leading-and-lagging-indicators">Step 2: Define leading and lagging indicators</h3>
+<p><strong>Leading indicators</strong> (measure early):</p>
+<ul>
+<li>Adoption rates — Are people actually using the tools?</li>
+<li>Time savings — Hours saved per week per user</li>
+<li>Quality improvements — Error reduction in early outputs</li>
+</ul>
+<p><strong>Lagging indicators</strong> (measure later):</p>
+<ul>
+<li>Revenue impact — New business attributable to AI capabilities</li>
+<li>Cost reduction — Actual spend decrease, not projected</li>
+<li>Customer satisfaction — NPS or CSAT changes</li>
+</ul>
+<p>Set specific targets upfront. “Improve productivity” is not a KPI. “Reduce average ticket resolution time from 4.2 hours to 3.0 hours” is.</p>
+</section>
+<section id="step-3-use-ab-testing-where-possible" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-use-ab-testing-where-possible">Step 3: Use A/B testing where possible</h3>
+<p>Compare AI-assisted vs.&nbsp;non-AI workflows on the same types of tasks. This isolates the AI impact from other variables like seasonal changes or team composition shifts.</p>
+<p>Not every process can be A/B tested, but more can than you think. The effort is worth it for credible data.</p>
+</section>
+<section id="step-4-review-and-adjust-quarterly" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-review-and-adjust-quarterly">Step 4: Review and adjust quarterly</h3>
+<p>AI capabilities change fast. What worked six months ago may not work now. New models emerge. Your team’s skill with prompting improves. Use cases that failed early might succeed later.</p>
+<p>Build quarterly reviews into your governance process. Reallocate investment based on actual returns, not sunk cost fallacy.</p>
+</section>
+</section>
+<section id="what-high-performers-do-differently" class="level2">
+<h2 class="anchored" data-anchor-id="what-high-performers-do-differently">What high performers do differently</h2>
+<p>The <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">6% of organizations seeing real AI ROI</a> share common practices:</p>
+<p><strong>They redesign workflows first.</strong> High performers are almost three times more likely to fundamentally rework processes when deploying AI. Bolting AI onto broken processes just automates dysfunction.</p>
+<p><strong>They partner with specialists.</strong> <a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/">Purchasing from specialized vendors succeeds about 67% of the time</a> versus 33% for internal builds, according to MIT research. The “build it ourselves” instinct often leads to the 95% failure rate.</p>
+<p><strong>They focus on back-office first.</strong> The highest ROI typically comes from operations, finance, and customer support—not the flashy customer-facing use cases that get exec attention.</p>
+<p><strong>They define success before deployment.</strong> Specific KPIs, agreed baselines, measurement methodology—all locked in before the first line of code. Not after.</p>
+</section>
+<section id="the-counter-argument-addressed" class="level2">
+<h2 class="anchored" data-anchor-id="the-counter-argument-addressed">The counter-argument addressed</h2>
+<p>Yes, some AI investments are strategic bets without immediate ROI. Jensen Huang has argued that demanding quick returns from AI is like forcing a child to make a business plan.</p>
+<p>But here’s the distinction: strategic investments still need leading indicators. You should still track adoption, capability development, and competitive positioning. “We don’t know if it’s working” is never acceptable.</p>
+<p>The question isn’t whether to measure—it’s what to measure and when to expect returns. A 12-month investment horizon is different from “we’ll figure it out eventually.”</p>
+</section>
+<section id="start-with-baselines" class="level2">
+<h2 class="anchored" data-anchor-id="start-with-baselines">Start with baselines</h2>
+<p>The 77% measurement gap isn’t about AI failing. It’s about measurement failing.</p>
+<p>Organizations that measure properly <a href="https://cloud.google.com/resources/content/roi-of-ai-2025">report 74% success in achieving ROI</a>. The difference isn’t the technology. It’s the methodology.</p>
+<p>Here’s your starting point: pick one AI initiative. Apply the Three-Pillar Framework. Establish baselines before you deploy anything new. Define specific KPIs with realistic timeframes.</p>
+<p>The clarity will be worth the effort. And you’ll finally have an answer when the board asks whether AI is working.</p>
+<hr>
+<p><strong>Ready to build an AI measurement strategy that actually works?</strong> <a href="../booking.html">Let’s talk</a> about how fractional CTO support can help you move from the 77% to the 6%.</p>
+
+
+</section>
+
+<div id="cta-bar" class="cta-bar">
+<p><a href="https://clarkebishop.com/booking.html" class="cta-bar-link"> Schedule a Strategy Call → </a></p>
+</div></main> <!-- /main -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname.includes('booking')) {
+      var ctaBar = document.getElementById('cta-bar');
+      if (ctaBar) ctaBar.style.display = 'none';
+    }
+  });
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/clarkebishop\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Clarke Bishop Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fractional CTO | Gen AI • Data Strategy • Cloud Architecture</p>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
