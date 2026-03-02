@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Clarke Bishop">
+<meta name="dcterms.date" content="2026-02-27">
+<meta name="description" content="AI is making everyone a generalist. That sounds great—until nobody owns anything, accountability vanishes, and your org chart becomes fiction.">
+
+<title>Clarke Bishop - When everyone can do everything, nobody knows their job</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/clarke-bishop-logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PQS92ZVBZ6"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PQS92ZVBZ6', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://clarkebishop.com/posts/when-everyone-can-do-everything-nobody-knows-job.html">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/clarke-bishop-logo.svg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Clarke Bishop</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#when-everyone-can-do-everything-nobody-owns-anything" id="toc-when-everyone-can-do-everything-nobody-owns-anything" class="nav-link" data-scroll-target="#when-everyone-can-do-everything-nobody-owns-anything">When everyone can do everything, nobody owns anything</a></li>
+  <li><a href="#flatter-isnt-better-if-nobody-knows-who-decides" id="toc-flatter-isnt-better-if-nobody-knows-who-decides" class="nav-link" data-scroll-target="#flatter-isnt-better-if-nobody-knows-who-decides">Flatter isn’t better if nobody knows who decides</a></li>
+  <li><a href="#role-confusion-is-the-most-expensive-problem-youre-not-tracking" id="toc-role-confusion-is-the-most-expensive-problem-youre-not-tracking" class="nav-link" data-scroll-target="#role-confusion-is-the-most-expensive-problem-youre-not-tracking">Role confusion is the most expensive problem you’re not tracking</a></li>
+  <li><a href="#three-things-to-do-before-your-next-ai-rollout" id="toc-three-things-to-do-before-your-next-ai-rollout" class="nav-link" data-scroll-target="#three-things-to-do-before-your-next-ai-rollout">Three things to do before your next AI rollout</a>
+  <ul class="collapse">
+  <li><a href="#define-ownership-not-tasks" id="toc-define-ownership-not-tasks" class="nav-link" data-scroll-target="#define-ownership-not-tasks">1. Define ownership, not tasks</a></li>
+  <li><a href="#create-explicit-boundaries-for-ai-assisted-work" id="toc-create-explicit-boundaries-for-ai-assisted-work" class="nav-link" data-scroll-target="#create-explicit-boundaries-for-ai-assisted-work">2. Create explicit boundaries for AI-assisted work</a></li>
+  <li><a href="#rebuild-accountability-around-decisions-not-activities" id="toc-rebuild-accountability-around-decisions-not-activities" class="nav-link" data-scroll-target="#rebuild-accountability-around-decisions-not-activities">3. Rebuild accountability around decisions, not activities</a></li>
+  </ul></li>
+  <li><a href="#the-org-chart-problem-is-the-ai-problem" id="toc-the-org-chart-problem-is-the-ai-problem" class="nav-link" data-scroll-target="#the-org-chart-problem-is-the-ai-problem">The org chart problem is the AI problem</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">When everyone can do everything, nobody knows their job</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Leadership</div>
+    <div class="quarto-category">Organizational Design</div>
+    <div class="quarto-category">AI Strategy</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    AI is making everyone a generalist. That sounds great—until nobody owns anything, accountability vanishes, and your org chart becomes fiction.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Clarke Bishop </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 27, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="../images/posts/when-everyone-can-do-everything-nobody-knows-job.png" class="img-fluid"></p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<ul>
+<li>AI’s biggest organizational impact isn’t productivity—it’s <strong>role confusion</strong></li>
+<li>When everyone can do everything, accountability evaporates and <a href="https://www.gallup.com/workplace/692954/anemic-employee-engagement-points-leadership-challenges.aspx">engagement drops</a></li>
+<li>Employees with <strong>clear roles are 53% more efficient</strong>—role clarity is a competitive advantage</li>
+<li>The fix: redesign ownership and accountability structures, not just adopt more AI tools</li>
+</ul>
+<p>Something happened quietly in 2025. AI didn’t replace jobs. It blurred them.</p>
+<p>Product managers started writing code. Designers built working prototypes. Engineers ran product research. Analysts created dashboards nobody asked for.</p>
+<p>An <a href="https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it">eight-month HBR study</a> found that task expansion—not time savings—was the dominant pattern when companies rolled out AI tools. Workers didn’t do their jobs faster. They started doing other people’s jobs too.</p>
+<p>And <a href="https://investors.upwork.com/news-releases/news-release-details/upwork-study-finds-employee-workloads-rising-despite-increased-c">77% of employees</a> say AI tools added to their workload. Not reduced it. Added to it.</p>
+<p>The problem isn’t that people can do more. It’s that nobody knows who owns what anymore.</p>
+</section>
+<section id="when-everyone-can-do-everything-nobody-owns-anything" class="level2">
+<h2 class="anchored" data-anchor-id="when-everyone-can-do-everything-nobody-owns-anything">When everyone can do everything, nobody owns anything</h2>
+<p>Here’s the pattern I see in company after company.</p>
+<p>The org chart says one thing. Reality says something different. AI gives everyone the capability to step outside their lane—and they do, with the best of intentions.</p>
+<p>A product manager generates mock-ups in an AI tool. The design team doesn’t know which ones are approved concepts and which are rough explorations.</p>
+<p>An engineer writes a product spec. The PM doesn’t know what’s been promised to a customer. An analyst builds a polished dashboard overnight. The data team doesn’t know which metrics are now “official.”</p>
+<p>Each of these feels productive in isolation. Together, they create chaos.</p>
+<p>Here’s an example from a mid-market software company. The CTO gave everyone access to AI coding assistants. Within three months, non-engineers were building internal tools, prototypes, and data pipelines. Good stuff, mostly.</p>
+<p>But nobody knew which tools were “real” and which were experiments. Support tickets piled up for tools that had no owner. Two teams built nearly identical dashboards. The VP of Engineering told me, “We’re moving faster and slower at the same time.”</p>
+<p>That’s the paradox of AI-enabled generalism. Speed goes up. Clarity goes down. And the longer you wait to fix the clarity problem, the harder it gets to untangle.</p>
+<blockquote class="blockquote">
+<p>AI didn’t eliminate jobs. It eliminated job descriptions.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+<p>The data backs this up. Only <a href="https://www.gallup.com/workplace/692954/anemic-employee-engagement-points-leadership-challenges.aspx">47% of employees</a> strongly agree they know what’s expected of them at work. That’s a crisis in expectations clarity.</p>
+<p>U.S. employee engagement sits at just <a href="https://www.gallup.com/workplace/654911/employee-engagement-sinks-year-low.aspx">31%</a>—a decade low. <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx">Manager engagement</a> dropped from 30% to 27%.</p>
+<p>Young managers under 35 saw a five-point decline. Female managers dropped seven points.</p>
+<p>When your managers don’t know what they own, nobody else will either.</p>
+</section>
+<section id="flatter-isnt-better-if-nobody-knows-who-decides" class="level2">
+<h2 class="anchored" data-anchor-id="flatter-isnt-better-if-nobody-knows-who-decides">Flatter isn’t better if nobody knows who decides</h2>
+<p>Companies are responding to AI by flattening their organizations. Amazon, Moderna, and McKinsey are all <a href="https://fortune.com/2025/12/10/ai-managers-automate-busy-work-org-chart-brainstorm-ai/">cutting management layers</a>. Moderna <a href="https://www.cio.com/article/4002321/modernas-hr-it-merger-trend-or-exception-to-the-rule.html">merged its technology and HR departments</a> entirely. McKinsey now has <a href="https://marketrealist.com/how-is-mc-kinsey-changing-its-workforce/">25,000 AI agents</a> working alongside 40,000 human employees.</p>
+<p>Salesforce CEO Marc Benioff said that <a href="https://fortune.com/2025/01/24/marc-benioff-salesforce-human-workforces-ai-agents/">we’re “the last generation”</a> to manage only humans.</p>
+<p>They’re not wrong about the direction. But flattening without redesigning ownership creates a different kind of problem.</p>
+<p>Fewer managers means fewer people defining boundaries. AI agents handling routine work means humans are left with… what, exactly? If you remove the management layer but don’t redefine who makes which decisions, you’ve created an accountability vacuum. And there are fewer people to notice.</p>
+<p>This matters more than most leaders realize. Managers drive <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx">70% of team engagement</a> variation, according to Gallup. When you cut the layer responsible for clarity, you cut the layer responsible for engagement.</p>
+<p>That’s why disengaged employees cost the global economy an estimated <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx">$438 billion annually</a>.</p>
+<p>I’ve watched this play out at multiple companies. The reorg happens. Layers get cut. AI tools get deployed. Six months later, leadership wonders why projects are stalling and people seem confused.</p>
+<p>The pattern is always the same. <strong>Companies reorganize for AI’s capabilities</strong> without redesigning human accountability. That’s backwards.</p>
+</section>
+<section id="role-confusion-is-the-most-expensive-problem-youre-not-tracking" class="level2">
+<h2 class="anchored" data-anchor-id="role-confusion-is-the-most-expensive-problem-youre-not-tracking">Role confusion is the most expensive problem you’re not tracking</h2>
+<p>Here’s what the data says about the cost of unclear ownership.</p>
+<p>Employees with role clarity are <a href="https://www.effectory.com/knowledge/hr-analytics-role-clarity-impacts-performance/">53% more efficient</a> and 27% more effective than those with role ambiguity. That’s not a marginal gain. It’s the difference between a team that ships and a team that spins.</p>
+<p>Technical debt—often a direct symptom of unclear ownership—is the <a href="https://survey.stackoverflow.co/2024/professional-developers">top frustration for 62%</a> of developers. That’s roughly twice the rate of any other complaint. When nobody owns the codebase clearly, shortcuts pile up. When nobody owns the AI initiative, it dies.</p>
+<p>And <a href="https://www.ciodive.com/news/AI-project-fail-data-SPGlobal/742590/">42% of companies</a> abandoned most of their AI initiatives in 2025, up from 17% in 2024. The average org scrapped 46% of AI proof-of-concepts before production.</p>
+<p>Those aren’t technical failures. They’re organizational failures.</p>
+<p>When I dig into failed AI projects, the root cause is almost never the model or the data pipeline. It’s that nobody owned the outcome.</p>
+<p>The data science team built it. The business team didn’t adopt it. And leadership couldn’t tell you who was responsible for either decision.</p>
+<p>Here’s a question I ask every CEO I work with: “Who owns your AI strategy?” Not who sponsors it. Not who manages the budget. Who wakes up at night thinking about whether it’s working?</p>
+<p>Most can’t give me a clear answer. That tells me everything.</p>
+<blockquote class="blockquote">
+<p>The companies that win with AI won’t have the best tools. They’ll have the clearest ownership.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+</section>
+<section id="three-things-to-do-before-your-next-ai-rollout" class="level2">
+<h2 class="anchored" data-anchor-id="three-things-to-do-before-your-next-ai-rollout">Three things to do before your next AI rollout</h2>
+<p>The fix isn’t slowing down AI adoption. It’s redesigning how your organization thinks about ownership. Here’s the framework I use with clients.</p>
+<section id="define-ownership-not-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="define-ownership-not-tasks">1. Define ownership, not tasks</h3>
+<p>Stop writing job descriptions as task lists. AI is making task lists obsolete. Any tool that generates code, copy, or analysis can handle individual tasks.</p>
+<p>Instead, define what each role <strong>owns</strong>. Not what they do—what they’re responsible for.</p>
+<ul>
+<li>Who owns the decision about which features ship?</li>
+<li>Who owns the quality of customer-facing output?</li>
+<li>Who owns the accuracy of the data dashboard?</li>
+</ul>
+<p><strong>AI handles tasks. Humans own outcomes.</strong> When you define roles around outcomes, it doesn’t matter whether a person or an AI completed the work. What matters is who’s accountable.</p>
+<p>A healthcare company rewrote every job description around three questions: What do you own? What decisions can you make without approval? What are you measured on?</p>
+<p>It took two weeks. Onboarding time dropped by half. Cross-team confusion dropped even more.</p>
+</section>
+<section id="create-explicit-boundaries-for-ai-assisted-work" class="level3">
+<h3 class="anchored" data-anchor-id="create-explicit-boundaries-for-ai-assisted-work">2. Create explicit boundaries for AI-assisted work</h3>
+<p>This is the one most companies skip. When someone uses AI to create something outside their role, what happens next?</p>
+<p>Set clear rules:</p>
+<ul>
+<li>Who approves AI-generated work before it’s “official”?</li>
+<li>What can someone create outside their role? What needs sign-off?</li>
+<li>When does an AI-generated draft become a commitment?</li>
+</ul>
+<p>This isn’t bureaucracy. It’s clarity. Without these boundaries, you get product managers making design decisions, engineers making product commitments, and analysts publishing metrics. All without the domain expertise or accountability those decisions require.</p>
+<p>Think of it like code review—but for everything. Someone can write it. But someone with ownership has to approve it before it’s real. This sounds simple. In practice, it’s the single most impactful thing you can do to prevent AI-enabled chaos.</p>
+</section>
+<section id="rebuild-accountability-around-decisions-not-activities" class="level3">
+<h3 class="anchored" data-anchor-id="rebuild-accountability-around-decisions-not-activities">3. Rebuild accountability around decisions, not activities</h3>
+<p>The old management model measured who did the work. That model is dead. AI makes it irrelevant who typed the code or drafted the memo.</p>
+<p>The new model measures <strong>who made the decision</strong> and who’s responsible for the outcome.</p>
+<ul>
+<li>Track decision ownership, not task completion</li>
+<li>Make decision rights explicit at every project kickoff</li>
+<li>When something goes wrong, ask “who decided?”—not “who did the work?”</li>
+</ul>
+<p>This shift changes how you run meetings, structure projects, and evaluate performance. It’s a big change. But it’s the only model that works when AI handles execution.</p>
+<p>One practical step: start every project with a “decision rights” doc. List the five biggest decisions the project will face. Assign each one to a person—not a team.</p>
+<p>Review it monthly. This one practice prevents more confusion than any process framework I’ve seen.</p>
+</section>
+</section>
+<section id="the-org-chart-problem-is-the-ai-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-org-chart-problem-is-the-ai-problem">The org chart problem is the AI problem</h2>
+<p>The companies that will thrive in the AI era aren’t the ones with the best tools or the biggest budgets. They’re the ones that redesigned ownership before they rolled out the technology.</p>
+<p>The HBR study found task expansion, not elimination. That means more responsibility per person, not less. Without clear ownership, that’s a recipe for burnout, confusion, and failed initiatives.</p>
+<p>You don’t need to slow down your AI adoption. You need to speed up your organizational clarity.</p>
+<p>Here’s your checklist:</p>
+<ul>
+<li><strong>Audit role clarity</strong> before your next AI initiative</li>
+<li><strong>Define ownership</strong> around outcomes, not tasks</li>
+<li><strong>Set explicit boundaries</strong> for AI-assisted work across roles</li>
+<li><strong>Flatten your org chart</strong> only after you’ve redesigned accountability</li>
+</ul>
+<p>AI is the most powerful capability multiplier most companies have ever deployed. But capability without clarity is just expensive confusion.</p>
+<hr>
+<p><strong>Ready to accelerate your AI initiatives?</strong> <a href="../booking.html">Let’s talk</a> about how fractional CTO support can help your team move faster—with clear ownership and accountability.</p>
+
+
+</section>
+
+<div id="cta-bar" class="cta-bar">
+<p><a href="https://clarkebishop.com/booking.html" class="cta-bar-link"> Schedule a Strategy Call → </a></p>
+</div></main> <!-- /main -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname.includes('booking')) {
+      var ctaBar = document.getElementById('cta-bar');
+      if (ctaBar) ctaBar.style.display = 'none';
+    }
+  });
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/clarkebishop\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Clarke Bishop Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fractional CTO | Gen AI • Data Strategy • Cloud Architecture</p>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
