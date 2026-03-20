@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Clarke Bishop">
+<meta name="dcterms.date" content="2026-03-19">
+<meta name="description" content="A fractional CTO reveals the 7 technology red flags that kill M&amp;A deal valuations — and how to fix them before a buyer ever looks.">
+
+<title>7 Red Flags That Kill Deals in Technical Due Diligence – Clarke Bishop</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/clarke-bishop-logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8ad03fe86e570ceba7d3bfbbc87c6450.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-464fab4b5c42ec2e27203d183b8cc9b4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PQS92ZVBZ6"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PQS92ZVBZ6', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://clarkebishop.com/posts/technical-due-diligence-red-flags-every-audit.html">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/clarke-bishop-logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../images/clarke-bishop-logo.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Clarke Bishop</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../services.html"> 
+<span class="menu-text">Services</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#why-technology-due-diligence-matters-more-than-ever" id="toc-why-technology-due-diligence-matters-more-than-ever" class="nav-link" data-scroll-target="#why-technology-due-diligence-matters-more-than-ever">Why technology due diligence matters more than ever</a></li>
+  <li><a href="#red-flag-1-technical-debt-consuming-the-roadmap" id="toc-red-flag-1-technical-debt-consuming-the-roadmap" class="nav-link" data-scroll-target="#red-flag-1-technical-debt-consuming-the-roadmap">Red flag #1: Technical debt consuming the roadmap</a></li>
+  <li><a href="#red-flag-2-key-person-dependency" id="toc-red-flag-2-key-person-dependency" class="nav-link" data-scroll-target="#red-flag-2-key-person-dependency">Red flag #2: Key person dependency</a></li>
+  <li><a href="#red-flag-3-missing-or-outdated-documentation" id="toc-red-flag-3-missing-or-outdated-documentation" class="nav-link" data-scroll-target="#red-flag-3-missing-or-outdated-documentation">Red flag #3: Missing or outdated documentation</a></li>
+  <li><a href="#red-flag-4-security-and-compliance-gaps" id="toc-red-flag-4-security-and-compliance-gaps" class="nav-link" data-scroll-target="#red-flag-4-security-and-compliance-gaps">Red flag #4: Security and compliance gaps</a></li>
+  <li><a href="#red-flag-5-vendor-lock-in-with-no-exit-strategy" id="toc-red-flag-5-vendor-lock-in-with-no-exit-strategy" class="nav-link" data-scroll-target="#red-flag-5-vendor-lock-in-with-no-exit-strategy">Red flag #5: Vendor lock-in with no exit strategy</a></li>
+  <li><a href="#red-flag-6-architecture-that-doesnt-scale" id="toc-red-flag-6-architecture-that-doesnt-scale" class="nav-link" data-scroll-target="#red-flag-6-architecture-that-doesnt-scale">Red flag #6: Architecture that doesn’t scale</a></li>
+  <li><a href="#red-flag-7-no-data-governance-or-migration-path" id="toc-red-flag-7-no-data-governance-or-migration-path" class="nav-link" data-scroll-target="#red-flag-7-no-data-governance-or-migration-path">Red flag #7: No data governance or migration path</a></li>
+  <li><a href="#what-to-do-about-it" id="toc-what-to-do-about-it" class="nav-link" data-scroll-target="#what-to-do-about-it">What to do about it</a></li>
+  <li><a href="#the-bottom-line" id="toc-the-bottom-line" class="nav-link" data-scroll-target="#the-bottom-line">The bottom line</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">7 Red Flags That Kill Deals in Technical Due Diligence</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">M&amp;A</div>
+    <div class="quarto-category">Technical Leadership</div>
+    <div class="quarto-category">Due Diligence</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A fractional CTO reveals the 7 technology red flags that kill M&amp;A deal valuations — and how to fix them before a buyer ever looks.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Clarke Bishop </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 19, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="../images/posts/technical-due-diligence-red-flags-every-audit.png" class="img-fluid"></p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<ul>
+<li><strong>Technical debt, key person risk, and security gaps</strong> are the red flags that kill deal valuations — and acquirers know exactly where to look</li>
+<li><strong><a href="https://www.designrush.com/agency/cybersecurity/trends/role-of-cybersecurity-in-mergers-and-acquisitions">53% of dealmakers</a> discover</strong> major cyber issues only after closing — by then, you’ve already lost leverage</li>
+<li><strong>Every red flag is fixable</strong>, but remediation takes 6-18 months — not 6 weeks before a deal</li>
+<li><strong>A fractional CTO paired with AI dev tools</strong> can compress that timeline from years to months</li>
+</ul>
+<p><a href="https://pmistack.com/blog/post-merger-integration-statistics">83% of M&amp;A deals fail</a> to boost shareholder returns. That’s a staggering number. And while there are plenty of reasons deals go sideways — cultural mismatch, overvalued synergies, integration failures — technology problems are increasingly at the top of the list.</p>
+<p>As a fractional CTO, I see these same red flags in company after company. They’re not exotic. They’re not surprises. They’re the predictable patterns that acquirers have learned to spot in the first week of due diligence.</p>
+<p>The good news? Every one of them is fixable. But only if you know what buyers are looking for — and you start early enough to do something about it.</p>
+</section>
+<section id="why-technology-due-diligence-matters-more-than-ever" class="level2">
+<h2 class="anchored" data-anchor-id="why-technology-due-diligence-matters-more-than-ever">Why technology due diligence matters more than ever</h2>
+<p>Your technology is going to be audited. The question is whether you’re ready.</p>
+<p>Technology isn’t just infrastructure anymore — for most mid-market companies, it IS the business. Your software, your data, your security posture — these are core assets that directly affect valuation.</p>
+<p>Buyers have gotten sophisticated. A decade ago, tech due diligence was a checkbox. Today, acquirers bring in specialized teams that evaluate your codebase, architecture, security controls, and team structure with the same rigor they apply to your financials.</p>
+<p>And <a href="https://pmistack.com/blog/post-merger-integration-statistics">fewer than 20% of acquirers</a> successfully improve IT costs and quality after closing. That means buyers are pricing in your technology problems upfront. They’re not planning to fix them later — they’re discounting your valuation now.</p>
+</section>
+<section id="red-flag-1-technical-debt-consuming-the-roadmap" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-1-technical-debt-consuming-the-roadmap">Red flag #1: Technical debt consuming the roadmap</h2>
+<p>When more than 25% of developer time goes to maintenance and firefighting instead of building new features, it signals systematic underinvestment. Acquirers see this immediately.</p>
+<p>McKinsey estimates that <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/demystifying-digital-dark-matter-a-new-standard-to-tame-technical-debt">tech debt represents 20-40%</a> of the average technology estate. And <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/demystifying-digital-dark-matter-a-new-standard-to-tame-technical-debt">30% of CIOs</a> report that more than 20% of their budget for new products gets diverted to resolving tech debt instead.</p>
+<p>If your dev team can’t ship new features because they’re constantly fixing old ones, buyers see a liability, not an asset.</p>
+<p><strong>The AI fix:</strong> AI code analysis tools can scan your entire codebase in hours — identifying the highest-risk debt, flagging security vulnerabilities, and prioritizing what to fix first. AI-assisted refactoring accelerates cleanup that used to take quarters into weeks.</p>
+</section>
+<section id="red-flag-2-key-person-dependency" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-2-key-person-dependency">Red flag #2: Key person dependency</h2>
+<p>Critical knowledge locked in one or two people’s heads is one of the fastest ways to kill a deal.</p>
+<p><a href="https://finerva.com/advice/how-key-person-dependency-affects-your-exit-valuation/">Valuation discounts of 10-25%</a> are common for companies with key person risk — and that’s for public companies with some institutional structure. For private, closely held companies, the discount can be far steeper.</p>
+<p>A “bus factor” of one means maximum risk. If your lead developer or CTO left tomorrow, could the team still ship? If the answer is no — or even “maybe” — acquirers will factor that into the price.</p>
+<blockquote class="blockquote">
+<p>When critical knowledge lives in one person’s head, it doesn’t just create risk — it creates a ceiling on what the company is worth.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+<p><strong>The AI fix:</strong> AI tools can reverse-engineer undocumented code into plain-language explanations, generate onboarding documentation, and map system dependencies automatically. What used to require months of knowledge transfer sessions can now be captured in weeks.</p>
+</section>
+<section id="red-flag-3-missing-or-outdated-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-3-missing-or-outdated-documentation">Red flag #3: Missing or outdated documentation</h2>
+<p>Architecture diagrams that haven’t been updated in three years. API specs that don’t match the actual endpoints. Runbooks that reference servers you decommissioned in 2024.</p>
+<p>Then there are the “shadow integrations” — scripts and scheduled jobs that nobody remembers building but that quietly connect critical systems. They work fine until they don’t, and the only person who understands them left the company two years ago.</p>
+<p>Poor documentation doesn’t just slow integration. It makes the acquirer question whether your team can operate at scale. If you can’t explain how your own systems work, why would a buyer trust that they can?</p>
+<p><strong>The AI fix:</strong> AI can generate architecture documentation, API specs, and runbooks directly from your existing code. It reads the codebase and produces the documentation your team never got around to writing. What was always the lowest-priority backlog item becomes a solvable problem.</p>
+</section>
+<section id="red-flag-4-security-and-compliance-gaps" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-4-security-and-compliance-gaps">Red flag #4: Security and compliance gaps</h2>
+<p>This is where deals die.</p>
+<p><a href="https://www.designrush.com/agency/cybersecurity/trends/role-of-cybersecurity-in-mergers-and-acquisitions">53% of dealmakers</a> discover significant cybersecurity issues only after a deal closes. And <a href="https://www.designrush.com/agency/cybersecurity/trends/role-of-cybersecurity-in-mergers-and-acquisitions">73% would walk away</a> entirely if undisclosed breaches or security issues surfaced during due diligence.</p>
+<p>The numbers are painful. <a href="https://www.designrush.com/agency/cybersecurity/trends/role-of-cybersecurity-in-mergers-and-acquisitions">62% of deals are delayed</a> by cybersecurity problems. The <a href="https://www.thinkbrg.com/insights/publications/key-cyber-and-data-privacy-considerations-in-ma-due-diligence/">average breach costs $4.88M</a> — the steepest jump since the pandemic.</p>
+<p>Missing SOC 2 certification. Gaps in HIPAA compliance. No penetration testing history. No incident response plan. Any of these alone can stall a deal — together, they signal a company that treats security as an afterthought.</p>
+<p><strong>The AI fix:</strong> AI-powered security scanners identify vulnerabilities that manual code reviews miss. They can map your entire attack surface and generate compliance gap analyses for SOC 2 and HIPAA. This doesn’t replace a proper security program, but it dramatically accelerates the assessment.</p>
+</section>
+<section id="red-flag-5-vendor-lock-in-with-no-exit-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-5-vendor-lock-in-with-no-exit-strategy">Red flag #5: Vendor lock-in with no exit strategy</h2>
+<p>Your entire stack runs on one cloud provider. Your core application depends on a niche vendor’s proprietary platform. Your data lives in a format that only one tool can read.</p>
+<p>If your critical vendor goes under, gets acquired, or raises prices 300% — what’s your plan?</p>
+<p>If you don’t have one, acquirers see that as an ongoing liability they’ll inherit. Vendor lock-in means unpredictable costs, limited negotiating leverage, and a dependency that could blow up at any time.</p>
+<p>No source code escrow. No data portability plan. No documented exit path. Every one of these gaps is a negotiating chip for the buyer — and a discount on your valuation.</p>
+<p><strong>The AI fix:</strong> AI-assisted code migration tools can analyze vendor-specific dependencies, generate abstraction layers, and produce portable alternatives. Exit strategies move from theoretical planning documents to executable migration plans.</p>
+</section>
+<section id="red-flag-6-architecture-that-doesnt-scale" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-6-architecture-that-doesnt-scale">Red flag #6: Architecture that doesn’t scale</h2>
+<p>The demo works perfectly. The pitch deck shows beautiful dashboards. But under real-world load? The system crumbles.</p>
+<p>No load testing evidence. No performance benchmarks. A monolithic system with no clear path to modernization. Acquirers want to grow the business — if the technology can’t grow with it, the deal loses value fast.</p>
+<p>This red flag is particularly insidious because everything looks fine at current scale. It only shows up when someone asks, “What happens when we double the user base?” If your answer involves hand-waving instead of data, buyers notice.</p>
+<blockquote class="blockquote">
+<p>The technology that works at your current scale might be the biggest liability at the scale a buyer is planning for.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+<p><strong>The AI fix:</strong> AI tools can analyze architecture patterns, identify scaling bottlenecks, suggest modernization paths, and generate load test scripts. You get evidence-based answers to the scalability question — not guesswork.</p>
+</section>
+<section id="red-flag-7-no-data-governance-or-migration-path" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-7-no-data-governance-or-migration-path">Red flag #7: No data governance or migration path</h2>
+<p>Data is often the most valuable asset in a deal — but only if it can be extracted, migrated, and integrated.</p>
+<p><a href="https://pmistack.com/blog/post-merger-integration-statistics">83% of data migration projects</a> fail or exceed their budget. That’s not a typo. When acquirers see data silos across departments, no data dictionary, no schema documentation, and no integration plan, they’re pricing in a migration disaster.</p>
+<p>Undocumented data relationships, inconsistent formats across systems, and no clear ownership of data quality — these problems don’t just make integration expensive. They make the acquirer question the value of the data itself.</p>
+<p><strong>The AI fix:</strong> AI can catalog data assets across your entire organization, generate data dictionaries, map schemas, and identify relationships between silos. The tedious, expensive work that nobody wants to do manually becomes automated — and you get a clear picture of what you actually have before a buyer asks.</p>
+</section>
+<section id="what-to-do-about-it" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do-about-it">What to do about it</h2>
+<p>Every red flag on this list is fixable. But fixing them takes intentional work and time — which is why starting early matters so much.</p>
+<p><strong>Start your tech audit 12-18 months</strong> before any potential exit. Don’t wait until a buyer is in the room. By then, you’re negotiating from weakness, and every red flag becomes a discount on your price.</p>
+<p><strong>Prioritize in this order:</strong></p>
+<ol type="1">
+<li><strong>Security and compliance</strong> — these are deal killers, and they take the longest to remediate properly</li>
+<li><strong>Key person risk</strong> — start documenting and cross-training now, before someone leaves</li>
+<li><strong>Technical debt</strong> — tackle the highest-risk items first, not the most annoying ones</li>
+<li><strong>Documentation</strong> — AI tools make this dramatically faster than it used to be</li>
+<li><strong>Architecture, data governance, vendor lock-in</strong> — these require strategic decisions, not just execution</li>
+</ol>
+<p>Here’s the critical point: <strong>a fractional CTO plus AI dev tools</strong> can accomplish in months what used to take years. AI compresses the remediation timeline across every red flag — automated code analysis, documentation generation, security scanning, architecture assessment. The 6-18 month remediation window becomes achievable precisely because these tools now exist.</p>
+<p>You need the human judgment to know what matters — which red flags are deal-critical versus nice-to-have, how to prioritize when everything feels urgent, how to communicate progress to a board or PE partner. But you need AI tools to execute the fixes at a speed that actually fits the timeline.</p>
+</section>
+<section id="the-bottom-line" class="level2">
+<h2 class="anchored" data-anchor-id="the-bottom-line">The bottom line</h2>
+<p>These red flags aren’t exotic. They’re the same patterns that show up in company after company. The technology problems that kill M&amp;A deals are almost never surprises — they’re the predictable result of years of deferred decisions.</p>
+<p>Every one of them is fixable with time and intention. The companies that get the best valuations aren’t the ones with perfect technology. They’re the ones that did the work before the buyer showed up.</p>
+<p>If you’re thinking about an exit in the next two to three years, now is the time to start. Not next quarter. Not when the LOI arrives. Now.</p>
+<hr>
+<p><strong>Want an objective assessment of your technology stack?</strong> <a href="../booking.html">Let’s talk</a> about how a fractional CTO engagement can help you fix these red flags before a buyer ever looks.</p>
+
+
+</section>
+
+<div id="cta-bar" class="cta-bar">
+<p><a href="https://clarkebishop.com/booking.html" class="cta-bar-link"> Schedule a Strategy Call → </a></p>
+</div></main> <!-- /main -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname.includes('booking')) {
+      var ctaBar = document.getElementById('cta-bar');
+      if (ctaBar) ctaBar.style.display = 'none';
+    }
+  });
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/clarkebishop\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Clarke Bishop Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>Fractional CTO | Gen AI • Data Strategy • Cloud Architecture</p>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/clarkebishop">
+      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
