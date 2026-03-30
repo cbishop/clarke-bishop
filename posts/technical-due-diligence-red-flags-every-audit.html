@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Clarke Bishop">
-<meta name="dcterms.date" content="2025-12-20">
-<meta name="description" content="Most AI projects fail—not because the technology is wrong, but because the specifications are missing. Learn how to write AI job descriptions that actually work.">
+<meta name="dcterms.date" content="2026-03-26">
+<meta name="description" content="A fractional CTO reveals the 5 technology red flags that kill M&amp;A deal valuations — and how to fix them before a buyer ever looks.">
 
-<title>Why Your AI Needs a Job Description (And You Probably Didn’t Write One) – Clarke Bishop</title>
+<title>5 Red Flags That Kill Deals in Technical Due Diligence – Clarke Bishop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ cookieconsent.run({
 
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="canonical" href="https://clarkebishop.com/posts/why-your-ai-needs-job-description.html">
+<link rel="canonical" href="https://clarkebishop.com/posts/technical-due-diligence-red-flags-every-audit.html">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -169,22 +169,14 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
-  <li><a href="#the-expensive-autocomplete-problem" id="toc-the-expensive-autocomplete-problem" class="nav-link" data-scroll-target="#the-expensive-autocomplete-problem">The expensive autocomplete problem</a></li>
-  <li><a href="#why-vague-prompts-fail" id="toc-why-vague-prompts-fail" class="nav-link" data-scroll-target="#why-vague-prompts-fail">Why vague prompts fail</a></li>
-  <li><a href="#ai-work-is-task-based-not-job-based" id="toc-ai-work-is-task-based-not-job-based" class="nav-link" data-scroll-target="#ai-work-is-task-based-not-job-based">AI work is task-based, not job-based</a></li>
-  <li><a href="#two-levels-of-ai-job-descriptions" id="toc-two-levels-of-ai-job-descriptions" class="nav-link" data-scroll-target="#two-levels-of-ai-job-descriptions">Two levels of AI job descriptions</a>
-  <ul class="collapse">
-  <li><a href="#level-1-the-chief-of-staff" id="toc-level-1-the-chief-of-staff" class="nav-link" data-scroll-target="#level-1-the-chief-of-staff">Level 1: The Chief of Staff</a></li>
-  <li><a href="#level-2-the-task-workers" id="toc-level-2-the-task-workers" class="nav-link" data-scroll-target="#level-2-the-task-workers">Level 2: The Task Workers</a></li>
-  </ul></li>
-  <li><a href="#what-an-ai-job-description-contains" id="toc-what-an-ai-job-description-contains" class="nav-link" data-scroll-target="#what-an-ai-job-description-contains">What an AI job description contains</a>
-  <ul class="collapse">
-  <li><a href="#the-ai-task-specification-framework" id="toc-the-ai-task-specification-framework" class="nav-link" data-scroll-target="#the-ai-task-specification-framework">The AI Task Specification Framework</a></li>
-  <li><a href="#good-vs.-bad-specifications" id="toc-good-vs.-bad-specifications" class="nav-link" data-scroll-target="#good-vs.-bad-specifications">Good vs.&nbsp;bad specifications</a></li>
-  </ul></li>
-  <li><a href="#the-specification-tax" id="toc-the-specification-tax" class="nav-link" data-scroll-target="#the-specification-tax">The specification tax</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
-  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">Takeaways</a></li>
+  <li><a href="#why-technology-due-diligence-matters-more-than-ever" id="toc-why-technology-due-diligence-matters-more-than-ever" class="nav-link" data-scroll-target="#why-technology-due-diligence-matters-more-than-ever">Why technology due diligence matters more than ever</a></li>
+  <li><a href="#red-flag-1-technical-debt-consuming-the-roadmap" id="toc-red-flag-1-technical-debt-consuming-the-roadmap" class="nav-link" data-scroll-target="#red-flag-1-technical-debt-consuming-the-roadmap">Red flag #1: Technical debt consuming the roadmap</a></li>
+  <li><a href="#red-flag-2-key-person-dependency-and-missing-documentation" id="toc-red-flag-2-key-person-dependency-and-missing-documentation" class="nav-link" data-scroll-target="#red-flag-2-key-person-dependency-and-missing-documentation">Red flag #2: Key person dependency and missing documentation</a></li>
+  <li><a href="#red-flag-3-security-and-compliance-gaps" id="toc-red-flag-3-security-and-compliance-gaps" class="nav-link" data-scroll-target="#red-flag-3-security-and-compliance-gaps">Red flag #3: Security and compliance gaps</a></li>
+  <li><a href="#red-flag-4-architecture-that-cant-scale-and-cant-be-escaped" id="toc-red-flag-4-architecture-that-cant-scale-and-cant-be-escaped" class="nav-link" data-scroll-target="#red-flag-4-architecture-that-cant-scale-and-cant-be-escaped">Red flag #4: Architecture that can’t scale — and can’t be escaped</a></li>
+  <li><a href="#red-flag-5-no-data-governance-or-migration-path" id="toc-red-flag-5-no-data-governance-or-migration-path" class="nav-link" data-scroll-target="#red-flag-5-no-data-governance-or-migration-path">Red flag #5: No data governance or migration path</a></li>
+  <li><a href="#how-ai-compresses-the-remediation-timeline" id="toc-how-ai-compresses-the-remediation-timeline" class="nav-link" data-scroll-target="#how-ai-compresses-the-remediation-timeline">How AI compresses the remediation timeline</a></li>
+  <li><a href="#what-to-do-about-it" id="toc-what-to-do-about-it" class="nav-link" data-scroll-target="#what-to-do-about-it">What to do about it</a></li>
   </ul>
 </nav>
     </div>
@@ -193,17 +185,17 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Why Your AI Needs a Job Description (And You Probably Didn’t Write One)</h1>
+<h1 class="title">5 Red Flags That Kill Deals in Technical Due Diligence</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">ai</div>
-    <div class="quarto-category">strategy</div>
-    <div class="quarto-category">leadership</div>
+    <div class="quarto-category">M&amp;A</div>
+    <div class="quarto-category">Technical Leadership</div>
+    <div class="quarto-category">Due Diligence</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Most AI projects fail—not because the technology is wrong, but because the specifications are missing. Learn how to write AI job descriptions that actually work.
+    A fractional CTO reveals the 5 technology red flags that kill M&amp;A deal valuations — and how to fix them before a buyer ever looks.
   </div>
 </div>
 
@@ -220,7 +212,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 20, 2025</p>
+      <p class="date">March 26, 2026</p>
     </div>
   </div>
   
@@ -232,126 +224,95 @@ cookieconsent.run({
 </header>
 
 
-<p><img src="../images/posts/why-your-ai-needs-job-description.png" class="img-fluid"></p>
+<p><img src="../images/posts/technical-due-diligence-red-flags-every-audit.png" class="img-fluid"></p>
 <section id="tldr" class="level2">
 <h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
 <ul>
-<li><strong>Most AI projects fail</strong> because they lack clear specifications—not because the technology doesn’t work</li>
-<li>AI needs <strong>two levels of job descriptions</strong>: a Chief of Staff to orchestrate, and task workers to execute</li>
-<li><strong>Single-responsibility agents</strong> with narrow specifications outperform broad “do-everything” prompts by 40%</li>
-<li>The time spent writing specifications isn’t overhead—it’s insurance against a <a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/">95% failure rate</a> when requirements aren’t defined</li>
+<li><strong>Technical debt, key person risk, and security gaps</strong> are the red flags that kill deal valuations — and acquirers know exactly where to look</li>
+<li><strong><a href="https://www.designrush.com/agency/cybersecurity/trends/role-of-cybersecurity-in-mergers-and-acquisitions">53% of dealmakers</a> discover</strong> major cyber issues only after closing — by then, you’ve already lost leverage</li>
+<li><strong>Every red flag is fixable</strong>, but remediation takes 6-18 months — not 6 weeks before a deal</li>
+<li><strong>A fractional CTO paired with AI dev tools</strong> can compress that timeline from years to months</li>
 </ul>
-<hr>
-<p>You’d never hire a contractor without a project brief. You’d never onboard an employee without a job description. So why are too many companies deploying AI with nothing but vague prompts?</p>
-<p>The numbers tell the story. Gartner predicts <a href="https://www.gartner.com/en/newsroom/press-releases/2024-07-29-gartner-predicts-30-percent-of-generative-ai-projects-will-be-abandoned-after-proof-of-concept-by-end-of-2025">30% of GenAI projects will be abandoned</a> after proof-of-concept by end of 2025. IDC found that <a href="https://www.cio.com/article/3850763/88-of-ai-pilots-fail-to-reach-production-but-thats-not-all-on-it.html">88% of AI proof-of-concepts</a> never reach production. The pattern is consistent: <strong>most AI initiatives stall before delivering value</strong>.</p>
-<p>This isn’t a technology problem. It’s a specification problem.</p>
-<p><a href="https://softwareoasis.com/ai-implementation-failure-rate-and-pilot-success-statistics/">“About 95% of AI efforts fail</a> when there’s too little time spent defining what you want it to do and how you’ll measure it,” says Kevin Carlson of TechCXO. That statistic should terrify every executive with an AI initiative in flight.</p>
+<p><a href="https://pmistack.com/blog/post-merger-integration-statistics">83% of M&amp;A deals fail</a> to boost shareholder returns. That’s a staggering number. And while there are plenty of reasons deals go sideways — cultural mismatch, overvalued synergies, integration failures — technology problems are increasingly at the top of the list.</p>
+<p>As a fractional CTO, I see these same red flags in company after company. They’re not exotic. They’re not surprises. They’re the predictable patterns that acquirers have learned to spot in the first week of due diligence.</p>
+<p>The good news? Every one of them is fixable. But only if you know what buyers are looking for — and you start early enough to do something about it.</p>
 </section>
-<section id="the-expensive-autocomplete-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-expensive-autocomplete-problem">The expensive autocomplete problem</h2>
-<p>Without clear specifications, AI becomes <strong>expensive autocomplete</strong>—technically impressive but business-irrelevant.</p>
-<p>I’ve seen this pattern across dozens of companies. Someone demos ChatGPT or Claude to the executive team. Everyone gets excited. “Let’s use this for customer service!” or “What if we automated our reports?” Six months later, the pilot is quietly shelved.</p>
-<p>The technology worked fine. What failed was the translation from “wouldn’t it be cool if” to “here’s exactly what we need it to do.”</p>
-<p>Generic AI tools like ChatGPT excel for individuals because of their flexibility. But they stall in enterprise settings because—as <a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/">MIT’s NANDA initiative</a> found—they don’t learn from or adapt to workflows. Enterprise problems require enterprise-grade specifications.</p>
+<section id="why-technology-due-diligence-matters-more-than-ever" class="level2">
+<h2 class="anchored" data-anchor-id="why-technology-due-diligence-matters-more-than-ever">Why technology due diligence matters more than ever</h2>
+<p>Your technology is going to be audited. The question is whether you’re ready.</p>
+<p>Technology isn’t just infrastructure anymore — for most mid-market companies, it IS the business. Your software, your data, your security posture — these are core assets that directly affect valuation.</p>
+<p>Buyers have gotten sophisticated. A decade ago, tech due diligence was a checkbox. Today, acquirers bring in specialized teams that evaluate your codebase, architecture, security controls, and team structure with the same rigor they apply to your financials.</p>
+<p>And <a href="https://pmistack.com/blog/post-merger-integration-statistics">fewer than 20% of acquirers</a> successfully improve IT costs and quality after closing. That means buyers are pricing in your technology problems upfront. They’re not planning to fix them later — they’re discounting your valuation now.</p>
+</section>
+<section id="red-flag-1-technical-debt-consuming-the-roadmap" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-1-technical-debt-consuming-the-roadmap">Red flag #1: Technical debt consuming the roadmap</h2>
+<p>When more than 25% of developer time goes to maintenance and firefighting instead of building new features, it signals systematic underinvestment. Acquirers see this immediately.</p>
+<p>McKinsey estimates that <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/demystifying-digital-dark-matter-a-new-standard-to-tame-technical-debt">tech debt represents 20-40%</a> of the average technology estate. And <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/demystifying-digital-dark-matter-a-new-standard-to-tame-technical-debt">30% of CIOs</a> report that more than 20% of their budget for new products gets diverted to resolving tech debt instead.</p>
+<p>If your dev team can’t ship new features because they’re constantly fixing old ones, buyers see a liability, not an asset.</p>
+</section>
+<section id="red-flag-2-key-person-dependency-and-missing-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-2-key-person-dependency-and-missing-documentation">Red flag #2: Key person dependency and missing documentation</h2>
+<p>Critical knowledge locked in one or two people’s heads is one of the fastest ways to kill a deal. And the documentation that should capture that knowledge? It’s either missing, outdated, or both.</p>
+<p><a href="https://finerva.com/advice/how-key-person-dependency-affects-your-exit-valuation/">Valuation discounts of 10-25%</a> are common for companies with key person risk — and that’s for public companies with some institutional structure. For private, closely held companies, the discount can be far steeper.</p>
+<p>A “bus factor” of one means maximum risk. If your lead developer or CTO left tomorrow, could the team still ship? If the answer is no — or even “maybe” — acquirers will factor that into the price.</p>
+<p>Then there are the “shadow integrations” — scripts and scheduled jobs that nobody remembers building but that quietly connect critical systems. Architecture diagrams that haven’t been updated in three years. API specs that don’t match actual endpoints. The only person who understands them left the company two years ago.</p>
 <blockquote class="blockquote">
-<p>If your AI doesn’t have a written job description, you’re not doing AI—you’re doing expensive autocomplete.</p>
+<p>When critical knowledge lives in one person’s head, it doesn’t just create risk — it creates a ceiling on what the company is worth.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
+<p>Poor documentation doesn’t just slow integration. It makes the acquirer question whether your team can operate at scale. If you can’t explain how your own systems work, why would a buyer trust that they can?</p>
+</section>
+<section id="red-flag-3-security-and-compliance-gaps" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-3-security-and-compliance-gaps">Red flag #3: Security and compliance gaps</h2>
+<p>This is where deals die.</p>
+<p><a href="https://www.designrush.com/agency/cybersecurity/trends/role-of-cybersecurity-in-mergers-and-acquisitions">53% of dealmakers</a> discover significant cybersecurity issues only after a deal closes. And <a href="https://www.designrush.com/agency/cybersecurity/trends/role-of-cybersecurity-in-mergers-and-acquisitions">73% would walk away</a> entirely if undisclosed breaches or security issues surfaced during due diligence.</p>
+<p>The numbers are painful. <a href="https://www.designrush.com/agency/cybersecurity/trends/role-of-cybersecurity-in-mergers-and-acquisitions">62% of deals are delayed</a> by cybersecurity problems. The <a href="https://www.thinkbrg.com/insights/publications/key-cyber-and-data-privacy-considerations-in-ma-due-diligence/">average breach costs $4.88M</a> — the steepest jump since the pandemic.</p>
+<p>Missing SOC 2 certification. Gaps in HIPAA compliance. No penetration testing history. No incident response plan. Any of these alone can stall a deal — together, they signal a company that treats security as an afterthought.</p>
+</section>
+<section id="red-flag-4-architecture-that-cant-scale-and-cant-be-escaped" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-4-architecture-that-cant-scale-and-cant-be-escaped">Red flag #4: Architecture that can’t scale — and can’t be escaped</h2>
+<p>The demo works perfectly. The pitch deck shows beautiful dashboards. But under real-world load? The system crumbles.</p>
+<p>No load testing evidence. No performance benchmarks. A monolithic system with no clear path to modernization. Acquirers want to grow the business — if the technology can’t grow with it, the deal loses value fast.</p>
+<p>This gets worse when scaling problems are tangled with vendor lock-in. Your entire stack runs on one cloud provider. Your core application depends on a niche vendor’s proprietary platform. Your data lives in a format that only one tool can read.</p>
+<p>If your critical vendor goes under, gets acquired, or raises prices 300% — what’s your plan? No source code escrow. No data portability plan. No documented exit path. Every one of these gaps is a negotiating chip for the buyer — and a discount on your valuation.</p>
+<blockquote class="blockquote">
+<p>The technology that works at your current scale might be the biggest liability at the scale a buyer is planning for.</p>
 <p>— Clarke Bishop</p>
 </blockquote>
 </section>
-<section id="why-vague-prompts-fail" class="level2">
-<h2 class="anchored" data-anchor-id="why-vague-prompts-fail">Why vague prompts fail</h2>
-<p>Research confirms what experience suggests: <strong>vague prompts produce vague results</strong>.</p>
-<p>Studies show that <a href="https://sparkco.ai/blog/single-vs-multi-prompt-topology-a-deep-dive-into-implementation">multi-prompt strategies</a>—breaking complex tasks into smaller, focused prompts—improve task effectiveness by up to 40% compared to single-prompt approaches. Meanwhile, single-prompt overextension leads to a 30% increase in output variance.</p>
-<p><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic’s engineering team</a> puts it this way: “Find the smallest possible set of high-signal tokens that maximize the likelihood of some desired outcome.” In plain English: be specific. Be precise. Every word matters.</p>
-<p>The “just ask ChatGPT” approach works for individuals drafting emails or summarizing documents. It fails for enterprises because enterprise problems are too complex for a single prompt to handle reliably.</p>
+<section id="red-flag-5-no-data-governance-or-migration-path" class="level2">
+<h2 class="anchored" data-anchor-id="red-flag-5-no-data-governance-or-migration-path">Red flag #5: No data governance or migration path</h2>
+<p>Data is often the most valuable asset in a deal — but only if it can be extracted, migrated, and integrated.</p>
+<p><a href="https://pmistack.com/blog/post-merger-integration-statistics">83% of data migration projects</a> fail or exceed their budget. That’s not a typo. When acquirers see data silos across departments, no data dictionary, no schema documentation, and no integration plan, they’re pricing in a migration disaster.</p>
+<p>Undocumented data relationships, inconsistent formats across systems, and no clear ownership of data quality — these problems don’t just make integration expensive. They make the acquirer question the value of the data itself.</p>
 </section>
-<section id="ai-work-is-task-based-not-job-based" class="level2">
-<h2 class="anchored" data-anchor-id="ai-work-is-task-based-not-job-based">AI work is task-based, not job-based</h2>
-<p>Here’s a critical insight most executives miss: <strong>AI doesn’t replace jobs—it handles tasks</strong>.</p>
-<p><a href="https://towardsdatascience.com/ai-agents-are-shaping-future-of-work-task-by-task-not-job-by-job/">Stanford’s WORKBank study</a>, combined with Anthropic’s Claude Economic Index analysis of 4.1 million AI conversations, found that fewer than 4% of occupations are close to full automation. But <a href="https://towardsdatascience.com/ai-agents-are-shaping-future-of-work-task-by-task-not-job-by-job/">46% of individual tasks</a> that employees perform could be automated—particularly the repetitive stuff like data entry, reporting, and basic analysis.</p>
-<p>Workers don’t want their jobs replaced. They want the <strong>boring parts automated</strong>. <a href="https://towardsdatascience.com/ai-agents-are-shaping-future-of-work-task-by-task-not-job-by-job/">45% prefer</a> an “equal partnership” model where AI handles the tedious work while humans focus on judgment, creativity, and relationships.</p>
-<p>The implication for AI specifications is profound. Don’t write AI a job description for a whole role. Write task specifications for specific, bounded work. The difference is everything.</p>
-</section>
-<section id="two-levels-of-ai-job-descriptions" class="level2">
-<h2 class="anchored" data-anchor-id="two-levels-of-ai-job-descriptions">Two levels of AI job descriptions</h2>
-<p>Here’s where most AI implementations go wrong: they think of AI as a single employee. It’s not. <strong>Effective AI systems often have two levels</strong>—and each needs its own job description.</p>
-<section id="level-1-the-chief-of-staff" class="level3">
-<h3 class="anchored" data-anchor-id="level-1-the-chief-of-staff">Level 1: The Chief of Staff</h3>
-<p>The Chief of Staff agent orchestrates the work. It understands the overall goal, breaks it down into tasks, assigns those tasks to specialists, and ensures the pieces come together coherently.</p>
-<p>Anthropic’s Claude Code architecture demonstrates this pattern. An initializer agent sets up the environment and context. It maintains a progress file that enables each new session to quickly understand state. It decides which specialist agents to deploy for which tasks.</p>
-<p>The Chief of Staff job description includes:</p>
+<section id="how-ai-compresses-the-remediation-timeline" class="level2">
+<h2 class="anchored" data-anchor-id="how-ai-compresses-the-remediation-timeline">How AI compresses the remediation timeline</h2>
+<p>Every red flag on this list is fixable. But fixing them traditionally takes 6-18 months of expensive, grinding work. That timeline is shrinking.</p>
+<p>AI dev tools are changing what’s possible across every one of these areas:</p>
 <ul>
-<li><strong>Scope</strong>: Coordinate multi-step workflows, not execute individual tasks</li>
-<li><strong>Inputs</strong>: High-level goals, context about the business situation, available resources</li>
-<li><strong>Outputs</strong>: Task assignments, progress tracking, quality checks, final synthesis</li>
-<li><strong>Success criteria</strong>: Overall workflow completed correctly, not individual task metrics</li>
+<li><strong>Technical debt:</strong> AI code analysis scans your entire codebase in hours — identifying the highest-risk debt, flagging vulnerabilities, and prioritizing fixes. AI-assisted refactoring compresses cleanup that used to take quarters into weeks</li>
+<li><strong>Key person risk and documentation:</strong> AI tools reverse-engineer undocumented code into plain-language explanations, generate architecture docs and API specs directly from the codebase, and map system dependencies automatically. The backlog item nobody ever prioritized becomes a solvable problem</li>
+<li><strong>Security gaps:</strong> AI-powered scanners identify vulnerabilities that manual reviews miss, map your entire attack surface, and generate compliance gap analyses for SOC 2 and HIPAA. This doesn’t replace a proper security program, but it dramatically accelerates assessment</li>
+<li><strong>Architecture and vendor lock-in:</strong> AI tools analyze architecture patterns, identify scaling bottlenecks, generate load test scripts, and produce migration plans for vendor-specific dependencies. Exit strategies move from theoretical documents to executable plans</li>
+<li><strong>Data governance:</strong> AI catalogs data assets across your organization, generates data dictionaries, maps schemas, and identifies relationships between silos. The tedious work nobody wants to do manually becomes automated</li>
 </ul>
+<p>The critical combination is <strong>human judgment plus AI execution</strong>. You need the experience to know which red flags are deal-critical versus nice-to-have, how to prioritize when everything feels urgent, and how to communicate progress to a board or PE partner. But you need AI tools to execute at a speed that actually fits the timeline.</p>
 </section>
-<section id="level-2-the-task-workers" class="level3">
-<h3 class="anchored" data-anchor-id="level-2-the-task-workers">Level 2: The Task Workers</h3>
-<p>Task workers are <strong>single-responsibility agents</strong>, each with one clear goal and a narrow scope.</p>
-<p><a href="https://www.uipath.com/blog/ai/agent-builder-best-practices">UiPath’s research</a> is unambiguous: “Start with single-responsibility agents, each with one clear goal and narrow scope. Broad prompts decrease accuracy; narrow scopes ensure consistent performance.”</p>
-<p>Each task worker needs its own specification:</p>
-<ul>
-<li><strong>Task scope</strong>: One bounded task (classify tickets, extract data, generate summaries)</li>
-<li><strong>Inputs</strong>: Specific data in specific formats</li>
-<li><strong>Outputs</strong>: Specific deliverable with clear quality criteria</li>
-<li><strong>Success criteria</strong>: Measurable metrics for that task alone</li>
-</ul>
-<p>The magic happens when these two levels work together. <strong>Complexity lives in orchestration, not in individual agents.</strong> Your AI strategy should look like a well-designed microservices architecture, not a monolithic application.</p>
-<blockquote class="blockquote">
-<p>Don’t build one AI to do everything. Build multiple AIs with narrow specifications. Let the Chief of Staff handle the complexity.</p>
-<p>— Clarke Bishop</p>
-</blockquote>
-</section>
-</section>
-<section id="what-an-ai-job-description-contains" class="level2">
-<h2 class="anchored" data-anchor-id="what-an-ai-job-description-contains">What an AI job description contains</h2>
-<p>Whether you’re writing for a Chief of Staff or a task worker, effective AI specifications have four components—the same components any good job description has.</p>
-<section id="the-ai-task-specification-framework" class="level3">
-<h3 class="anchored" data-anchor-id="the-ai-task-specification-framework">The AI Task Specification Framework</h3>
-<p><strong>1. Task Scope</strong> — What specific task is this AI handling? Not a role, not a department—a bounded task with clear start and end points.</p>
-<p><strong>2. Inputs</strong> — What information does the AI receive? Data sources, formats, context, constraints.</p>
-<p><strong>3. Outputs</strong> — What deliverable does the AI produce? Format, quality criteria, where it hands off to the next step.</p>
-<p><strong>4. Success Criteria</strong> — How do you verify the task is done correctly? Metrics, tests, human review triggers.</p>
-</section>
-<section id="good-vs.-bad-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="good-vs.-bad-specifications">Good vs.&nbsp;bad specifications</h3>
-<p>Here’s the difference in practice:</p>
-<p><strong>Bad:</strong> “Use AI to improve customer service.”</p>
-<p><strong>Good:</strong> “Classify incoming support tickets into 5 categories (billing, technical, shipping, returns, other) with 95% accuracy. Route each ticket to the appropriate team within 30 seconds. Flag any ticket mentioning legal action or regulatory complaints for immediate human review.”</p>
-<p>The good specification is testable. You can measure whether it’s working. You can improve it systematically. The bad specification is a wish, not a job description.</p>
-</section>
-</section>
-<section id="the-specification-tax" class="level2">
-<h2 class="anchored" data-anchor-id="the-specification-tax">The specification tax</h2>
-<p><strong>OBJECTION:</strong> “Writing detailed specifications slows us down. We need to move fast.”</p>
-<p>I hear this constantly. And it’s exactly backwards.</p>
-<p>Yes, writing specifications takes time. That’s the point. The “specification tax” prevents the 95% failure rate that happens when teams skip the requirements work.</p>
-<p>Consider the math. As Kevin Carlson of TechCXO notes, <a href="https://softwareoasis.com/ai-implementation-failure-rate-and-pilot-success-statistics/">95% of AI efforts fail</a> when teams don’t spend enough time defining requirements and success metrics. The companies that succeed are the ones that treat specification as the work, not a delay before the work.</p>
-<p>Failed pilots aren’t free. They cost money, time, credibility, and organizational patience for AI initiatives. A pilot that fails after six months of development is slower than spending two weeks writing specifications upfront.</p>
-<p>The time spent writing AI specifications is not overhead. It’s the work. Skip it and you’re not saving time—you’re guaranteeing wasted time.</p>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>Before your next AI initiative, write the job descriptions first.</p>
-<p>Start with the task workers. Identify the specific, bounded tasks you want to automate. For each one, document the inputs, outputs, and success criteria. Make them measurable. Make them testable.</p>
-<p>Then design the Chief of Staff. How will the workflow be orchestrated? What context does the coordinator need? How will it handle exceptions, errors, or edge cases?</p>
-<p>If you can’t write it clearly, AI can’t execute it reliably.</p>
-<p>The companies succeeding with AI aren’t using better models or bigger budgets. They’re writing better job descriptions—task specifications that give AI the same clarity you’d give a new hire.</p>
-<p>Stop asking “How do we use AI?” Start asking “What job descriptions would make AI successful?”</p>
-</section>
-<section id="takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="takeaways">Takeaways</h2>
-<ul>
-<li>Most AI projects fail due to missing specifications, not bad technology</li>
-<li>AI systems need two levels of job descriptions: Chief of Staff (orchestration) and Task Workers (execution)</li>
-<li>Single-responsibility agents with narrow scopes outperform broad “do-everything” approaches</li>
-<li>Every AI task specification needs: scope, inputs, outputs, and success criteria</li>
-<li>The specification tax is insurance—skip it and you join the 95% who fail without clear requirements</li>
-</ul>
+<section id="what-to-do-about-it" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do-about-it">What to do about it</h2>
+<p><strong>Start your tech audit 12-18 months</strong> before any potential exit. Don’t wait until a buyer is in the room. By then, you’re negotiating from weakness, and every red flag becomes a discount on your price.</p>
+<p><strong>Prioritize in this order:</strong></p>
+<ol type="1">
+<li><strong>Security and compliance</strong> — these are deal killers, and they take the longest to remediate properly</li>
+<li><strong>Key person risk and documentation</strong> — start documenting and cross-training now, before someone leaves</li>
+<li><strong>Technical debt</strong> — tackle the highest-risk items first, not the most annoying ones</li>
+<li><strong>Architecture, data governance, vendor lock-in</strong> — these require strategic decisions, not just execution</li>
+</ol>
+<p>These red flags aren’t exotic. They’re the same patterns that show up in company after company. The companies that get the best valuations aren’t the ones with perfect technology. They’re the ones that did the work before the buyer showed up.</p>
+<p>If you’re thinking about an exit in the next two to three years, now is the time to start. Not next quarter. Not when the LOI arrives. Now.</p>
 <hr>
-<p><strong>Planning an AI initiative?</strong> If you want help writing AI job descriptions that actually work, that’s exactly the kind of strategic work I do as a fractional CTO. <a href="../booking.html">Let’s talk</a>.</p>
+<p><strong>Want an objective assessment of your technology stack?</strong> <a href="../booking.html">Let’s talk</a> about how a fractional CTO engagement can help you fix these red flags before a buyer ever looks.</p>
 
 
 </section>
