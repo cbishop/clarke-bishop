@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/mcp-server-security-vulnerabilities-command-injection.html",
       "/posts/stop-treating-ai-as-it-project-transformation.html",
       "/posts/technical-due-diligence-red-flags-every-audit.html",
       "/posts/first-department-automate-not-what-you-think.html",

